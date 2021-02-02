@@ -1,0 +1,2154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.owl-ontologies.com/Ontology1257867994.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:swrlb="http://www.w3.org/2003/11/swrlb#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#" xml:base="http://www.owl-ontologies.com/Ontology1257867994.owl">
+   <rdf:Description rdf:nodeID="A0">
+      <rdf:first rdf:resource="#Competition" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Xia">
+      <hasForHumanName rdf:resource="#HumanName_CXia" />
+      <hasTeam rdf:resource="#Team_Millenium_CS" />
+      <HasTeammate rdf:resource="#Player_Majer" />
+      <HasTeammate rdf:resource="#Player_Geno" />
+      <playTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</Age>
+      <rdf:type rdf:resource="#Player" />
+      <isPaid rdf:resource="#Team_Millenium_CS" />
+      <HasTeammate rdf:resource="#Player_Ozstrik3r" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-05-15</InTheTeamSince>
+      <HasTeammate rdf:resource="#Player_Yoshoow" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Currency">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+      <rdfs:domain rdf:resource="#Money" />
+      <rdfs:range rdf:nodeID="A1" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Mouse">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#InputOutput" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_DualsShock2">
+      <rdf:type rdf:resource="#ThingName" />
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dualshock 2.0</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A2">
+      <rdf:rest rdf:nodeID="A3" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Team_MeetYourMakersWar3">
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">9</Age>
+      <hasMember rdf:resource="#Player_Lucifron" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German</Nationality>
+      <rdf:type rdf:resource="#Team" />
+      <isNamed rdf:resource="#ThingName_MeetYourMakers" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A4">
+      <owl:onProperty rdf:resource="#isNamed" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A5">
+      <owl:unionOf rdf:nodeID="A6" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#playTheGame">
+      <rdfs:range rdf:resource="#Game" />
+      <rdfs:domain rdf:nodeID="A5" />
+      <owl:inverseOf rdf:resource="#hasForPlayer" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Capacity_Tournament_Cs_WCG2009">
+      <rdf:type rdf:resource="#Capacity" />
+      <CapacityNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">64</CapacityNumber>
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasSpectatorCapacity">
+      <rdfs:range rdf:resource="#Capacity" />
+      <rdfs:domain rdf:nodeID="A7" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A8">
+      <rdf:rest rdf:nodeID="A9" />
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International</rdf:first>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A10">
+      <rdf:first rdf:resource="#Competition" />
+      <rdf:rest rdf:nodeID="A11" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A12">
+      <rdf:rest rdf:nodeID="A13" />
+      <rdf:first rdf:resource="#Team" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Name">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A14">
+      <rdf:first rdf:resource="#Staff" />
+      <rdf:rest rdf:nodeID="A15" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A16">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A2" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A17">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chinese</rdf:first>
+      <rdf:rest rdf:nodeID="A18" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Intel">
+      <rdf:type rdf:resource="#ThingName" />
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A19">
+      <owl:onProperty rdf:resource="#hasGame" />
+      <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#travelCost">
+      <rdfs:domain rdf:nodeID="A20" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:range rdf:resource="#Money" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_Millenium">
+      <rdf:type rdf:resource="#Website" />
+      <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nice website with all the different millenium teams</Description>
+      <hasURL rdf:resource="#URL_Millenium" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A21">
+      <rdf:rest rdf:nodeID="A22" />
+      <rdf:first rdf:resource="#Media" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Follow">
+      <rdfs:domain rdf:nodeID="A23" />
+      <rdfs:range rdf:nodeID="A24" />
+      <owl:inverseOf rdf:resource="#isFollowedBy" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Brand_Kingston">
+      <isNamed rdf:resource="#ThingName_Kingston" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <hasWebsite rdf:resource="#Website_Kingston" />
+      <rdf:type rdf:resource="#Brand" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Ben">
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <HasTeammate rdf:resource="#Player_Evolution" />
+      <HasTeammate rdf:resource="#Player_Perez" />
+      <hasForHumanName rdf:resource="#HumanName_BHui" />
+      <isPaid rdf:resource="#Team_Turmoil_CS" />
+      <HasTeammate rdf:resource="#Player_ImpulsivE" />
+      <hasEquipment rdf:resource="#Memory_Kingston" />
+      <hasTeam rdf:resource="#Team_Turmoil_CS" />
+      <HasTeammate rdf:resource="#Player_Goodfornothing" />
+      <rdf:type rdf:resource="#Player" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">19</Age>
+      <hasEquipment rdf:resource="#CPU_AMD_Phenom_II_X2_550_Black_Edition" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-10-12</InTheTeamSince>
+      <playTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <hasEquipment rdf:resource="#Mouse_RazerMamba" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A25">
+      <rdf:first rdf:resource="#Competition" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_EKipeli">
+      <rdf:type rdf:resource="#HumanName" />
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kipeli</LastName>
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engin</FirstName>
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Majer</Nickname>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A26">
+      <rdf:rest rdf:nodeID="A27" />
+      <rdf:first rdf:resource="#Media" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A28">
+      <rdf:rest rdf:nodeID="A29" />
+      <rdf:first rdf:resource="#Team" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URLValue">
+      <rdfs:domain rdf:resource="#URL" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Brand_Intel">
+      <isNamed rdf:resource="#ThingName_Intel" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <rdf:type rdf:resource="#Brand" />
+      <sponsorize rdf:resource="#Team_SKGamingWarcraft" />
+      <hasWebsite rdf:resource="#Website_Intel" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasVisitorCapacity">
+      <rdfs:domain rdf:resource="#LanParty" />
+      <rdfs:range rdf:resource="#Capacity" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:subPropertyOf rdf:resource="#hasSpectatorCapacity" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A30">
+      <rdf:first rdf:resource="#Player" />
+      <rdf:rest rdf:nodeID="A31" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#InRealSpectator_JPRiviere">
+      <hasForHumanName rdf:resource="#HumanName_JPRiviere" />
+      <rdf:type rdf:resource="#InRealSpectator" />
+      <travelCost rdf:resource="#Cost_SpecCostFranceChinaWCG2009" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <Follow rdf:resource="#Match_MilleniumVsTurmoil1" />
+      <Follow rdf:resource="#LanParty_WCG2009" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A32">
+      <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:onProperty rdf:resource="#isLocatedIn" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Keyboard">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#InputOutput" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_RLievreName">
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard</FirstName>
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LiÃ¨vre</LastName>
+      <rdf:type rdf:resource="#HumanName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_Sony">
+      <hasURL rdf:resource="#URL_Sony" />
+      <rdf:type rdf:resource="#Website" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Capacity_Totat_WCG2009">
+      <rdf:type rdf:resource="#Capacity" />
+      <CapacityNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">800</CapacityNumber>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_MemoryKingston">
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">550</MoneyValue>
+      <rdf:type rdf:resource="#Money" />
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dollar</Currency>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A33">
+      <rdf:first rdf:resource="#Player" />
+      <rdf:rest rdf:nodeID="A0" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A34">
+      <rdf:first rdf:resource="#Media" />
+      <rdf:rest rdf:nodeID="A35" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#SalesRepresentative">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#Staff" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A36">
+      <rdf:rest rdf:nodeID="A37" />
+      <rdf:first rdf:resource="#Staff" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A38">
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:onProperty rdf:resource="#isNamed" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#MousePad">
+      <rdfs:subClassOf rdf:resource="#InputOutput" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A39">
+      <rdf:first rdf:resource="#Spectator" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasURL">
+      <rdfs:range rdf:resource="#URL" />
+      <rdfs:domain rdf:resource="#Website" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A40">
+      <owl:onProperty rdf:resource="#MoneyValue" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasForBrand">
+      <rdfs:domain rdf:resource="#MaterialEquipment" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:range rdf:resource="#Brand" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Battle.net_Season_6">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle.net Season 6</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A9">
+      <rdf:rest rdf:nodeID="A41" />
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</rdf:first>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A42">
+      <rdf:first rdf:resource="#Player" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Razer">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Razer</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Keyboard_Razer-Tarantula">
+      <cost rdf:resource="#Cost_razer-tarantula" />
+      <rdf:type rdf:resource="#Keyboard" />
+      <hasForBrand rdf:resource="#Brand_Razer" />
+      <isNamed rdf:resource="#ThingName_razerTarantula" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A43">
+      <rdf:first rdf:resource="#Player" />
+      <rdf:rest rdf:nodeID="A25" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_War3">
+      <rdf:type rdf:resource="#URL" />
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.warcraft3.fr/</URLValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_Intel">
+      <rdf:type rdf:resource="#URL" />
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.intel.com</URLValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Brand_Acer">
+      <isNamed rdf:resource="#ThingName_Acer" />
+      <hasWebsite rdf:resource="#Website_Acer" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <rdf:type rdf:resource="#Brand" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Competition">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:nodeID="A19" />
+      <rdfs:subClassOf rdf:nodeID="A44" />
+      <rdfs:subClassOf rdf:nodeID="A45" />
+      <rdfs:subClassOf rdf:nodeID="A46" />
+      <rdfs:subClassOf rdf:nodeID="A47" />
+      <rdfs:subClassOf rdf:nodeID="A48" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+      <protege:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_razer-tarantula">
+      <rdf:type rdf:resource="#Money" />
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</Currency>
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">60</MoneyValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="#DPI">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int" />
+      <rdfs:domain rdf:resource="#Mouse" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Age">
+      <rdfs:domain rdf:nodeID="A49" />
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A50">
+      <rdf:rest rdf:nodeID="A51" />
+      <rdf:first rdf:resource="#Match" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_MMartin">
+      <rdf:type rdf:resource="#HumanName" />
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MaÃ©</FirstName>
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin</LastName>
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yoshoow</Nickname>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A52">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#InRealSpectator" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_JPRiviere">
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <rdf:type rdf:resource="#HumanName" />
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RiviÃ¨re</LastName>
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jean Paul</FirstName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#isFollowedBy">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:range rdf:nodeID="A53" />
+      <owl:inverseOf rdf:resource="#Follow" />
+      <rdfs:domain rdf:nodeID="A54" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName">
+      <rdfs:subClassOf rdf:resource="#Name" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_War3">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warcraft 3</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#comments">
+      <rdfs:range rdf:nodeID="A55" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:domain rdf:resource="#Commentator" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_Fee_WCG_CS">
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</MoneyValue>
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</Currency>
+      <rdf:type rdf:resource="#Money" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Brand_AMD">
+      <rdf:type rdf:resource="#Brand" />
+      <hasWebsite rdf:resource="#Website_AMD" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <isNamed rdf:resource="#ThingName_AMD" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+      <rdfs:subClassOf rdf:nodeID="A56" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A57">
+      <owl:unionOf rdf:nodeID="A58" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A59">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A34" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#cashPrize">
+      <rdfs:range rdf:resource="#Money" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:domain rdf:resource="#Tournament" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A18">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other</rdf:first>
+      <rdf:rest rdf:nodeID="A8" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_JPark">
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Park</LastName>
+      <rdf:type rdf:resource="#HumanName" />
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyn</Nickname>
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">June</FirstName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_RazerMegasoma">
+      <rdf:type rdf:resource="#Money" />
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</MoneyValue>
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</Currency>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://protege.stanford.edu/plugins/owl/protege#abstract">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty" />
+      <rdfs:domain rdf:resource="#MaterialEquipment" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#leadBy">
+      <rdfs:domain rdf:resource="#Tournament" />
+      <rdfs:range rdf:resource="#Admin" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A60">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A61" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_SKGaming">
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.sk-gaming.com</URLValue>
+      <rdf:type rdf:resource="#URL" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasHumanName">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:range rdf:resource="#HumanName" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A62">
+      <rdf:rest rdf:nodeID="A10" />
+      <rdf:first rdf:resource="#Team" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Memory">
+      <rdfs:subClassOf rdf:resource="#ComputationEquipment" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A63">
+      <owl:onProperty rdf:resource="#CapacityNumber" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasForHumanName">
+      <rdfs:range rdf:resource="#HumanName" />
+      <rdfs:domain rdf:nodeID="A64" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A65">
+      <rdf:rest rdf:nodeID="A66" />
+      <rdf:first rdf:resource="#Team" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_CashPrize_WCG2009_CS">
+      <rdf:type rdf:resource="#Money" />
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</Currency>
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5000</MoneyValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_FDourthe">
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dourthe</LastName>
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Florian</FirstName>
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TheLecturer</Nickname>
+      <rdf:type rdf:resource="#HumanName" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A3">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#OnlineSpectator" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#SalesRepresentative_NSop">
+      <rdf:type rdf:resource="#SalesRepresentative" />
+      <hasForHumanName rdf:resource="#HumanName_NSop" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norwegian</Nationality>
+      <representsCompany rdf:resource="#Brand_Razer" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#simpleName">
+      <rdfs:domain rdf:resource="#ThingName" />
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasTeam">
+      <rdfs:domain rdf:resource="#Player" />
+      <rdfs:range rdf:resource="#Team" />
+      <owl:inverseOf rdf:resource="#hasMember" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A67">
+      <rdf:rest rdf:nodeID="A68" />
+      <rdf:first rdf:resource="#Match" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A69">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Brand" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_DTruong">
+      <rdf:type rdf:resource="#HumanName" />
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Truong</LastName>
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">impulsivE</Nickname>
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derrick</FirstName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:nodeID="A70" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A27">
+      <rdf:rest rdf:nodeID="A71" />
+      <rdf:first rdf:resource="#Tournament" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A72">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A73">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Commentator" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Media">
+      <rdfs:subClassOf rdf:nodeID="A74" />
+      <rdfs:subClassOf rdf:nodeID="A75" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+      <protege:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A76">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Brand" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A23">
+      <owl:unionOf rdf:nodeID="A77" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_Razer">
+      <rdf:type rdf:resource="#URL" />
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.razerzone.com</URLValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_Lucifron">
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LucifroN</Nickname>
+      <rdf:type rdf:resource="#HumanName" />
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pedro Moreno</FirstName>
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DurÃ¡n</LastName>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A78">
+      <rdf:first rdf:resource="#Mouse" />
+      <rdf:rest rdf:nodeID="A79" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#cost">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:domain rdf:resource="#MaterialEquipment" />
+      <rdfs:range rdf:resource="#Money" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_RNewton">
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newton</LastName>
+      <rdf:type rdf:resource="#HumanName" />
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JustAnAdmin</Nickname>
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard</FirstName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#GPU">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#ComputationEquipment" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_WCG2009">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World Cyber Games 2009</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#MoneyValue">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int" />
+      <rdfs:domain rdf:resource="#Money" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A80">
+      <owl:onProperty rdf:resource="#Nationality" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A24">
+      <owl:unionOf rdf:nodeID="A81" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_WCG">
+      <hasURL rdf:resource="#URL_WCG" />
+      <rdf:type rdf:resource="#Website" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_EsportsFrance">
+      <hasURL rdf:resource="#URL_Esportsfrance" />
+      <rdf:type rdf:resource="#Website" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_BHui">
+      <rdf:type rdf:resource="#HumanName" />
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hui</LastName>
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben</FirstName>
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ben</Nickname>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Admin_RNewton">
+      <rdf:type rdf:resource="#Admin" />
+      <hasForHumanName rdf:resource="#HumanName_RNewton" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</Nationality>
+      <engagedIn rdf:resource="#LanParty_WCG2009" />
+      <onTheGame rdf:resource="#GameMulti_CounterStrike" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#GameMulti_CounterStrike">
+      <PlayerNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">10</PlayerNumber>
+      <hasForPlayer rdf:resource="#Player_Majer" />
+      <isNamed rdf:resource="#ThingName_Counter-Strike" />
+      <isPlayedBy rdf:resource="#Team_Millenium_CS" />
+      <rdf:type rdf:resource="#GameMulti" />
+      <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The most famous action game, 5vs5</Description>
+      <isPlayedBy rdf:resource="#Player_Geno" />
+      <hasForPlayer rdf:resource="#Player_Ben" />
+      <isPlayedBy rdf:resource="#Player_Yoshoow" />
+      <hasForPlayer rdf:resource="#Player_Geno" />
+      <hasForPlayer rdf:resource="#Player_Ozstrik3r" />
+      <hasForPlayer rdf:resource="#Player_ImpulsivE" />
+      <hasForPlayer rdf:resource="#Player_Goodfornothing" />
+      <isPlayedBy rdf:resource="#Player_Perez" />
+      <hasForPlayer rdf:resource="#Player_Evolution" />
+      <isPlayedBy rdf:resource="#Team_Turmoil_CS" />
+      <hasForPlayer rdf:resource="#Player_Perez" />
+      <isPlayedBy rdf:resource="#Player_Evolution" />
+      <isPlayedBy rdf:resource="#Player_Goodfornothing" />
+      <isPlayedBy rdf:resource="#Player_ImpulsivE" />
+      <isPlayedBy rdf:resource="#Player_Xia" />
+      <isPlayedBy rdf:resource="#Player_Ben" />
+      <hasForPlayer rdf:resource="#Player_Xia" />
+      <IsPlayedIn rdf:resource="#LanParty_WCG2009" />
+      <hasForPlayer rdf:resource="#Player_Yoshoow" />
+      <isPlayedBy rdf:resource="#Player_Ozstrik3r" />
+      <isPlayedBy rdf:resource="#Player_Majer" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#GameSolo_Warcraft3">
+      <hasForPlayer rdf:resource="#Player_Lyn" />
+      <hasForPlayer rdf:resource="#Player_Lucifron" />
+      <hasForPlayer rdf:resource="#Commentator_TGuerinaud" />
+      <rdf:type rdf:resource="#GameSolo" />
+      <Rule rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The 2 opponents have to destroy each other !</Rule>
+      <hasWebsite rdf:resource="#Website_Warcraft3" />
+      <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <IsPlayedIn rdf:resource="#LanParty_WCG2009" />
+      <isNamed rdf:resource="#ThingName_War3" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A82">
+      <rdf:first rdf:resource="#Tournament" />
+      <rdf:rest rdf:nodeID="A83" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Team_SKGamingWarcraft">
+      <hasMember rdf:resource="#Player_Lyn" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">11</Age>
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swedish</Nationality>
+      <isNamed rdf:resource="#ThingName_SKGaming" />
+      <hasWebsite rdf:resource="#Website_SKGaming" />
+      <rdf:type rdf:resource="#Team" />
+      <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One of the most famous international team ever</Description>
+      <isSponsorizedby rdf:resource="#Brand_Intel" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A84">
+      <rdf:first rdf:resource="#Brand" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A85">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Staff" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_Sony">
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.sony.com</URLValue>
+      <rdf:type rdf:resource="#URL" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_Acer">
+      <rdf:type rdf:resource="#URL" />
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.acer.com</URLValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Tournament">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:nodeID="A86" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+      <rdfs:subClassOf rdf:nodeID="A87" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A88">
+      <rdf:rest rdf:nodeID="A89" />
+      <rdf:first rdf:resource="#Media" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Memory_Kingston">
+      <rdf:type rdf:resource="#Memory" />
+      <cost rdf:resource="#Cost_MemoryKingston" />
+      <hasForBrand rdf:resource="#Brand_Kingston" />
+      <isNamed rdf:resource="#ThingName_MemoryKingston" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#isALecturerIn">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:range rdf:resource="#LanParty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#commentsInReal">
+      <rdfs:subPropertyOf rdf:resource="#comments" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A90">
+      <owl:onProperty rdf:resource="#isNamed" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A91">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A92" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A93">
+      <rdf:rest rdf:nodeID="A94" />
+      <rdf:first rdf:resource="#Place" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_MLeCam">
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LeCam</LastName>
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emmanuel</FirstName>
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manuuu</Nickname>
+      <rdf:type rdf:resource="#HumanName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Team">
+      <rdfs:subClassOf rdf:nodeID="A38" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#City">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      <rdfs:domain rdf:resource="#Place" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_SCavallero">
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scott</FirstName>
+      <rdf:type rdf:resource="#HumanName" />
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">evolution</Nickname>
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cavallero</LastName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_Razer">
+      <rdf:type rdf:resource="#Website" />
+      <hasURL rdf:resource="#URL_Razer" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Brand_Nvidia">
+      <isNamed rdf:resource="#ThingName_Nvidia" />
+      <hasWebsite rdf:resource="#Website_Nvidia" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <rdf:type rdf:resource="#Brand" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#SpecialCorrespondent">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#Staff" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ComputationEquipment">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#MaterialEquipment" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#OnlineSpectator_RLievre">
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <hasForHumanName rdf:resource="#HumanName_RLievreName" />
+      <Follow rdf:resource="#LanParty_WCG2009" />
+      <hasEquipment rdf:resource="#GPU_GeForce_GTX_295" />
+      <hasEquipment rdf:resource="#MousePad_RazerMegasoma" />
+      <hasEquipment rdf:resource="#Pad_DualShock2" />
+      <hasEquipment rdf:resource="#CPU_AMD_Phenom_II_X2_550_Black_Edition" />
+      <hasEquipment rdf:resource="#Keyboard_Razer-Tarantula" />
+      <rdf:type rdf:resource="#OnlineSpectator" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_razerMambaMouse">
+      <rdf:type rdf:resource="#ThingName" />
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">razer-mamba</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A79">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Pad" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A95">
+      <owl:onProperty rdf:resource="#hasPlayer" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</owl:cardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_AMD">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_Nvidia">
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.nvidia.com</URLValue>
+      <rdf:type rdf:resource="#URL" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#isFromCompetition">
+      <rdfs:domain rdf:resource="#Tournament" />
+      <rdfs:range rdf:resource="#Competition" />
+      <owl:inverseOf rdf:resource="#hasTournament" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A96">
+      <owl:oneOf rdf:nodeID="A97" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataRange" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A98">
+      <rdf:rest rdf:nodeID="A99" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Description">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      <rdfs:domain rdf:nodeID="A100" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A45">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+      <owl:onProperty rdf:resource="#Description" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#CompetitionOnline_Battle.net_Season6">
+      <hasTournament rdf:resource="#Tournament_Battle.net_Season_6_War3" />
+      <rdf:type rdf:resource="#CompetitionOnline" />
+      <isNamed rdf:resource="#ThingName_Battle.net_Season_6" />
+      <hasPlayerCapacity rdf:resource="#Capacity_Battle.net_Season_6" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International</Nationality>
+      <Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-10-16T00:00:00</Date>
+      <hasGame rdf:resource="#GameSolo_Warcraft3" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Manager">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#Player" />
+      <owl:disjointWith rdf:resource="#Captain" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Street">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+      <rdfs:domain rdf:resource="#Place" />
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A101">
+      <rdf:rest rdf:nodeID="A102" />
+      <rdf:first rdf:resource="#Media" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A48">
+      <owl:onProperty rdf:resource="#Nationality" />
+      <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A47">
+      <owl:onProperty rdf:resource="#Date" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_NSop">
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">driZer</Nickname>
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sop</LastName>
+      <rdf:type rdf:resource="#HumanName" />
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norman</FirstName>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A103">
+      <rdf:first rdf:resource="#Keyboard" />
+      <rdf:rest rdf:nodeID="A78" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#isNamed">
+      <rdfs:range rdf:resource="#ThingName" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:domain rdf:nodeID="A104" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Majer">
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</Age>
+      <HasTeammate rdf:resource="#Player_Yoshoow" />
+      <playTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <isPaid rdf:resource="#Team_Millenium_CS" />
+      <hasForHumanName rdf:resource="#HumanName_EKipeli" />
+      <hasTeam rdf:resource="#Team_Millenium_CS" />
+      <HasTeammate rdf:resource="#Player_Xia" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <HasTeammate rdf:resource="#Player_Ozstrik3r" />
+      <rdf:type rdf:resource="#Player" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-05-15</InTheTeamSince>
+      <HasTeammate rdf:resource="#Player_Geno" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A1">
+      <owl:oneOf rdf:nodeID="A105" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DataRange" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_GeForce_GTX_295">
+      <rdf:type rdf:resource="#ThingName" />
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce GTX 295 - 1792 Mo DDR3 - PCI Express 2.0</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Kingston">
+      <rdf:type rdf:resource="#ThingName" />
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kingston</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Team_Millenium_CS">
+      <hasWon rdf:resource="#Tournament_WCG_CS" />
+      <hasMember rdf:resource="#Player_Xia" />
+      <hasMember rdf:resource="#Player_Yoshoow" />
+      <isNamed rdf:resource="#ThingName_Counter-Strike" />
+      <engagedIn rdf:resource="#LanParty_WCG2009" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <hasWon rdf:resource="#Match_MilleniumVsTurmoil1" />
+      <hasMember rdf:resource="#Player_Majer" />
+      <hasMember rdf:resource="#Player_Ozstrik3r" />
+      <hasMember rdf:resource="#Player_Geno" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">7</Age>
+      <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best french team since 2007</Description>
+      <isFollowedBy rdf:resource="#SpecializedWebsite_Esportsfrance" />
+      <rdf:type rdf:resource="#Team" />
+      <isFollowedBy rdf:resource="#TelevisionChannel_GameOne" />
+      <hasWebsite rdf:resource="#Website_Millenium" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A37">
+      <rdf:first rdf:resource="#Team" />
+      <rdf:rest rdf:nodeID="A30" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A15">
+      <rdf:first rdf:resource="#Spectator" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#correspondantFrom">
+      <rdfs:range rdf:resource="#Media" />
+      <rdfs:domain rdf:resource="#SpecialCorrespondent" />
+      <owl:inverseOf rdf:resource="#hasForCorrespondant" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A106">
+      <rdf:rest rdf:nodeID="A107" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Match_MilleniumVsTurmoil1">
+      <WInner rdf:resource="#Team_Millenium_CS" />
+      <rdf:type rdf:resource="#Match" />
+      <hasPlayer rdf:resource="#Team_Millenium_CS" />
+      <hasPlayer rdf:resource="#Team_Turmoil_CS" />
+      <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+      <isFollowedBy rdf:resource="#SpecializedWebsite_Esportsfrance" />
+      <isFollowedBy rdf:resource="#InRealSpectator_JPRiviere" />
+      <fromCompetition rdf:resource="#LanParty_WCG2009" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#representedBy">
+      <owl:inverseOf rdf:resource="#representsCompany" />
+      <rdfs:range rdf:resource="#SalesRepresentative" />
+      <rdfs:domain rdf:resource="#Brand" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A108">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A109" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#PlayerNumber">
+      <rdfs:domain rdf:resource="#GameMulti" />
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Pad">
+      <rdfs:subClassOf rdf:resource="#InputOutput" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#WInner">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <owl:inverseOf rdf:resource="#hasWon" />
+      <rdfs:domain rdf:nodeID="A91" />
+      <rdfs:range rdf:nodeID="A110" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#CPU_AMD_Phenom_II_X2_550_Black_Edition">
+      <rdf:type rdf:resource="#CPU" />
+      <hasForBrand rdf:resource="#Brand_AMD" />
+      <cost rdf:resource="#Cost_AMD_Phenom_II_X2_550_Black_Edition" />
+      <isNamed rdf:resource="#ThingName_AMD_Phenom_II" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasTournament">
+      <rdfs:domain rdf:resource="#Competition" />
+      <rdfs:range rdf:resource="#Tournament" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <owl:inverseOf rdf:resource="#isFromCompetition" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#onTheGame">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:range rdf:resource="#Game" />
+      <rdfs:domain rdf:nodeID="A111" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasMember">
+      <owl:inverseOf rdf:resource="#hasTeam" />
+      <rdfs:domain rdf:resource="#Team" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A112">
+      <rdf:first rdf:resource="#Team" />
+      <rdf:rest rdf:nodeID="A72" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_GameOne">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GameOne</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A113">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A103" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_ACER_19p">
+      <rdf:type rdf:resource="#ThingName" />
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACER Ecran Plat TFT 19'' Wide - VGA - 50000:1 - 5 ms - P195HQb</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A114">
+      <rdf:first rdf:resource="#Competition" />
+      <rdf:rest rdf:nodeID="A106" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A55">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A115" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Nvidia">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nvidia</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_GeForceGTX295">
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">500</MoneyValue>
+      <rdf:type rdf:resource="#Money" />
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</Currency>
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_JPerez">
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perez</Nickname>
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe</FirstName>
+      <rdf:type rdf:resource="#HumanName" />
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perez</LastName>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A100">
+      <owl:unionOf rdf:nodeID="A101" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A116">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A88" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A87">
+      <owl:onProperty rdf:resource="#isFromCompetition" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Yoshoow">
+      <HasTeammate rdf:resource="#Player_Xia" />
+      <HasTeammate rdf:resource="#Player_Majer" />
+      <playTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <isPaid rdf:resource="#Team_Millenium_CS" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-10-15</InTheTeamSince>
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <HasTeammate rdf:resource="#Player_Ozstrik3r" />
+      <HasTeammate rdf:resource="#Player_Geno" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</Age>
+      <hasForHumanName rdf:resource="#HumanName_MMartin" />
+      <rdf:type rdf:resource="#Player" />
+      <hasTeam rdf:resource="#Team_Millenium_CS" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A49">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A117" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasWebsite">
+      <rdfs:domain rdf:nodeID="A118" />
+      <rdfs:range rdf:resource="#Website" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_ACER_19p">
+      <rdf:type rdf:resource="#Money" />
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</Currency>
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">180</MoneyValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Screen">
+      <rdfs:subClassOf rdf:resource="#InputOutput" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A89">
+      <rdf:rest rdf:nodeID="A43" />
+      <rdf:first rdf:resource="#Team" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_CXia">
+      <rdf:type rdf:resource="#HumanName" />
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christophe</FirstName>
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sixer</Nickname>
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xia</LastName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_Acer">
+      <rdf:type rdf:resource="#Website" />
+      <hasURL rdf:resource="#URL_Acer" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#LanParty">
+      <rdfs:subClassOf rdf:resource="#Competition" />
+      <rdfs:subClassOf rdf:nodeID="A32" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_GNtep">
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guillaume</FirstName>
+      <rdf:type rdf:resource="#HumanName" />
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geno</Nickname>
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ntep</LastName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#participationFee">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:range rdf:resource="#Money" />
+      <rdfs:domain rdf:resource="#Tournament" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A107">
+      <rdf:rest rdf:nodeID="A119" />
+      <rdf:first rdf:resource="#Team" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A54">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A114" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A120">
+      <owl:unionOf rdf:nodeID="A50" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A29">
+      <rdf:rest rdf:nodeID="A121" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A58">
+      <rdf:rest rdf:nodeID="A122" />
+      <rdf:first rdf:resource="#Competition" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A111">
+      <owl:unionOf rdf:nodeID="A82" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#sponsorize">
+      <rdfs:range rdf:nodeID="A123" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <owl:inverseOf rdf:resource="#isSponsorizedby" />
+      <rdfs:domain rdf:resource="#Brand" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasForCorrespondant">
+      <rdfs:domain rdf:resource="#Media" />
+      <owl:inverseOf rdf:resource="#correspondantFrom" />
+      <rdfs:range rdf:resource="#SpecialCorrespondent" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#InTheTeamSince">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date" />
+      <rdfs:domain rdf:resource="#Player" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_SFlavigni">
+      <rdf:type rdf:resource="#HumanName" />
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steeve</FirstName>
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ozstrik3r</Nickname>
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flavigni</LastName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_AMD_Phenom_II">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Phenom II X2 550 Black Edition</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Tournament_WCG_CS">
+      <hasPlayerCapacity rdf:resource="#Capacity_Tournament_Cs_WCG2009" />
+      <rdf:type rdf:resource="#Tournament" />
+      <participationFee rdf:resource="#Cost_Fee_WCG_CS" />
+      <isFromCompetition rdf:resource="#LanParty_WCG2009" />
+      <WInner rdf:resource="#Team_Millenium_CS" />
+      <onTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <cashPrize rdf:resource="#Cost_CashPrize_WCG2009_CS" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_SKGaming">
+      <hasURL rdf:resource="#URL_SKGaming" />
+      <rdf:type rdf:resource="#Website" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Capacity_Battle.net_Season_6">
+      <rdf:type rdf:resource="#Capacity" />
+      <CapacityNumber rdf:datatype="http://www.w3.org/2001/XMLSchema#int">16</CapacityNumber>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A56">
+      <owl:onProperty rdf:resource="#URLValue" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A124">
+      <rdf:rest rdf:nodeID="A125" />
+      <rdf:first rdf:resource="#Staff" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A126">
+      <rdf:rest rdf:nodeID="A127" />
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norwegian</rdf:first>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A128">
+      <rdf:first rdf:resource="#Match" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#CommentsOnline">
+      <rdfs:subPropertyOf rdf:resource="#comments" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Commentator">
+      <rdfs:subClassOf rdf:resource="#Staff" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Nationality">
+      <rdfs:domain rdf:nodeID="A129" />
+      <rdfs:range rdf:nodeID="A96" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A74">
+      <owl:onProperty rdf:resource="#isNamed" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_IntelSponsor">
+      <rdf:type rdf:resource="#ThingName" />
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel processor</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#SpecialCorrespondent_MLeCam">
+      <hasForHumanName rdf:resource="#HumanName_MLeCam" />
+      <correspondantFrom rdf:resource="#SpecializedWebsite_Esportsfrance" />
+      <rdf:type rdf:resource="#SpecialCorrespondent" />
+      <travelCost rdf:resource="#Cost_SpecCostFranceChinaWCG2009" />
+      <engagedIn rdf:resource="#LanParty_WCG2009" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_ImpulsivE">
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <playTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <hasForHumanName rdf:resource="#HumanName_DTruong" />
+      <HasTeammate rdf:resource="#Player_Goodfornothing" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">26</Age>
+      <HasTeammate rdf:resource="#Player_Perez" />
+      <HasTeammate rdf:resource="#Player_Evolution" />
+      <hasTeam rdf:resource="#Team_Turmoil_CS" />
+      <rdf:type rdf:resource="#Player" />
+      <isPaid rdf:resource="#Team_Turmoil_CS" />
+      <HasTeammate rdf:resource="#Player_Ben" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-05-12</InTheTeamSince>
+   </rdf:Description>
+   <rdf:Description rdf:about="#InRealSpectator">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#Spectator" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A81">
+      <rdf:rest rdf:nodeID="A65" />
+      <rdf:first rdf:resource="#Match" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_Intel">
+      <rdf:type rdf:resource="#Website" />
+      <hasURL rdf:resource="#URL_Intel" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A64">
+      <owl:unionOf rdf:nodeID="A130" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#OnlineSpectator">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#Spectator" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A131">
+      <rdf:first rdf:resource="#Player" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A132">
+      <rdf:rest rdf:nodeID="A131" />
+      <rdf:first rdf:resource="#Team" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasEquipment">
+      <rdfs:domain rdf:nodeID="A16" />
+      <rdfs:range rdf:resource="#MaterialEquipment" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Perez">
+      <HasTeammate rdf:resource="#Player_Goodfornothing" />
+      <isPaid rdf:resource="#Team_Turmoil_CS" />
+      <HasTeammate rdf:resource="#Player_ImpulsivE" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-09-12</InTheTeamSince>
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">27</Age>
+      <playTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <hasTeam rdf:resource="#Team_Turmoil_CS" />
+      <hasForHumanName rdf:resource="#HumanName_JPerez" />
+      <HasTeammate rdf:resource="#Player_Evolution" />
+      <HasTeammate rdf:resource="#Player_Ben" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <rdf:type rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A133">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Competition" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A66">
+      <rdf:rest rdf:nodeID="A133" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A46">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:minCardinality>
+      <owl:onProperty rdf:resource="#hasTournament" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A134">
+      <rdf:rest rdf:nodeID="A135" />
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</rdf:first>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A53">
+      <owl:unionOf rdf:nodeID="A21" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#representsCompany">
+      <owl:inverseOf rdf:resource="#representedBy" />
+      <rdfs:domain rdf:resource="#SalesRepresentative" />
+      <rdfs:range rdf:resource="#Brand" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A22">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Spectator" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Battle.net_Saison_6">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle.net Saison 6</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasSpectator">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:domain rdf:nodeID="A120" />
+      <rdfs:range rdf:resource="#Spectator" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Millenium">
+      <rdf:type rdf:resource="#ThingName" />
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Millenium</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#FirstName">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+      <rdfs:domain rdf:resource="#HumanName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Counter-Strike">
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_AMD">
+      <hasURL rdf:resource="#URL_AMD" />
+      <rdf:type rdf:resource="#Website" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_EsportsFrance">
+      <rdf:type rdf:resource="#ThingName" />
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EsportsFrance</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#CompetitionOnline">
+      <rdfs:subClassOf rdf:resource="#Competition" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A71">
+      <rdf:first rdf:resource="#Team" />
+      <rdf:rest rdf:nodeID="A33" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#SpecializedWebsite">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#Media" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Ozstrik3r">
+      <HasTeammate rdf:resource="#Player_Xia" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-05-15</InTheTeamSince>
+      <hasForHumanName rdf:resource="#HumanName_SFlavigni" />
+      <HasTeammate rdf:resource="#Player_Geno" />
+      <HasTeammate rdf:resource="#Player_Majer" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <playTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <HasTeammate rdf:resource="#Player_Yoshoow" />
+      <hasTeam rdf:resource="#Team_Millenium_CS" />
+      <isPaid rdf:resource="#Team_Millenium_CS" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">30</Age>
+      <rdf:type rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A99">
+      <rdf:first rdf:resource="#Staff" />
+      <rdf:rest rdf:nodeID="A52" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_razer-mamba">
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">50</MoneyValue>
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</Currency>
+      <rdf:type rdf:resource="#Money" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Lecturer_FDourthe">
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <hasForHumanName rdf:resource="#HumanName_FDourthe" />
+      <rdf:type rdf:resource="#Lecturer" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Staff">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <protege:abstract rdf:datatype="http://www.w3.org/2001/XMLSchema#string" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_CashPrizeBattleNetSeason6">
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dollar</Currency>
+      <rdf:type rdf:resource="#Money" />
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25000</MoneyValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="#engagedIn">
+      <rdfs:range rdf:resource="#Competition" />
+      <rdfs:domain rdf:nodeID="A136" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A118">
+      <owl:unionOf rdf:nodeID="A137" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_Kingston">
+      <rdf:type rdf:resource="#Website" />
+      <hasURL rdf:resource="#URL_Kingston" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A129">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A138" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Place">
+      <rdfs:subClassOf rdf:nodeID="A80" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place where a lan party is organised. The choice of it is really important: it can make people come .. or not. Better if it's near a train station for example. A mcdonald around is also a plus.</rdfs:comment>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A139">
+      <rdf:first rdf:resource="#Media" />
+      <rdf:rest rdf:nodeID="A140" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A127">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corean</rdf:first>
+      <rdf:rest rdf:nodeID="A17" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_AMD_Phenom_II_X2_550_Black_Edition">
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">200</MoneyValue>
+      <rdf:type rdf:resource="#Money" />
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</Currency>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A94">
+      <rdf:rest rdf:nodeID="A76" />
+      <rdf:first rdf:resource="#Spectator" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_AMD">
+      <rdf:type rdf:resource="#URL" />
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.amd.com</URLValue>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A141">
+      <rdf:first rdf:resource="#Game" />
+      <rdf:rest rdf:nodeID="A142" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A143">
+      <rdf:first rdf:resource="#Tournament" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#MousePad_RazerMegasoma">
+      <cost rdf:resource="#Cost_RazerMegasoma" />
+      <hasForBrand rdf:resource="#Brand_Razer" />
+      <isNamed rdf:resource="#ThingName_RazerMegasoma" />
+      <rdf:type rdf:resource="#MousePad" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#isPaid">
+      <rdfs:domain rdf:resource="#Player" />
+      <rdfs:range rdf:resource="#Team" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A86">
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:onProperty rdf:resource="#onTheGame" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Commentator_TGuerinaud">
+      <hasForHumanName rdf:resource="#HumanName_TGuerinaud" />
+      <engagedIn rdf:resource="#LanParty_WCG2009" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <CommentsOnline rdf:resource="#Match_LucifroNVsLyn1" />
+      <CommentsOnline rdf:resource="#CompetitionOnline_Battle.net_Season6" />
+      <playTheGame rdf:resource="#GameSolo_Warcraft3" />
+      <rdf:type rdf:resource="#Commentator" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_Kingston">
+      <rdf:type rdf:resource="#URL" />
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.kingston.com</URLValue>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A117">
+      <rdf:rest rdf:nodeID="A144" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A104">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A139" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Game">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+      <rdfs:subClassOf rdf:nodeID="A4" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A121">
+      <rdf:first rdf:resource="#Competition" />
+      <rdf:rest rdf:nodeID="A145" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A146">
+      <rdf:rest rdf:nodeID="A85" />
+      <rdf:first rdf:resource="#Media" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#isPlayedBy">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:domain rdf:resource="#Game" />
+      <rdfs:range rdf:nodeID="A108" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#IsPlayedIn">
+      <rdfs:domain rdf:resource="#Game" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:range rdf:resource="#Competition" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A147">
+      <rdf:rest rdf:nodeID="A148" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#GameSolo">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#Game" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Money">
+      <rdfs:subClassOf rdf:nodeID="A40" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A149">
+      <rdf:first rdf:resource="#MaterialEquipment" />
+      <rdf:rest rdf:nodeID="A150" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A151">
+      <rdf:first rdf:resource="#Competition" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Screen_ACER_19p">
+      <cost rdf:resource="#Cost_ACER_19p" />
+      <isNamed rdf:resource="#ThingName_ACER_19p" />
+      <hasForBrand rdf:resource="#Brand_Acer" />
+      <rdf:type rdf:resource="#Screen" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A75">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      <owl:onProperty rdf:resource="#Nationality" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A11">
+      <rdf:rest rdf:nodeID="A84" />
+      <rdf:first rdf:resource="#MaterialEquipment" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Goodfornothing">
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-06-12</InTheTeamSince>
+      <rdf:type rdf:resource="#Player" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <isPaid rdf:resource="#Team_Turmoil_CS" />
+      <playTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <hasTeam rdf:resource="#Team_Turmoil_CS" />
+      <HasTeammate rdf:resource="#Player_Ben" />
+      <hasForHumanName rdf:resource="#HumanName_EBasol" />
+      <HasTeammate rdf:resource="#Player_Evolution" />
+      <HasTeammate rdf:resource="#Player_Perez" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</Age>
+      <hasEquipment rdf:resource="#Screen_ACER_19p" />
+      <HasTeammate rdf:resource="#Player_ImpulsivE" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Captain">
+      <owl:disjointWith rdf:resource="#Manager" />
+      <rdfs:subClassOf rdf:resource="#Player" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HasTeammate">
+      <rdfs:domain rdf:resource="#Player" />
+      <owl:inverseOf rdf:resource="#HasTeammate" />
+      <rdfs:range rdf:resource="#Player" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A68">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Tournament" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Team_Turmoil_CS">
+      <hasMember rdf:resource="#Player_Evolution" />
+      <rdf:type rdf:resource="#Team" />
+      <hasMember rdf:resource="#Player_ImpulsivE" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <hasMember rdf:resource="#Player_Perez" />
+      <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First american cs team to play versus Millenium in the WCG 2009</Description>
+      <isNamed rdf:resource="#ThingName_Turmoil" />
+      <engagedIn rdf:resource="#LanParty_WCG2009" />
+      <hasMember rdf:resource="#Player_Ben" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</Age>
+      <hasMember rdf:resource="#Player_Goodfornothing" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A83">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Admin" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_MemoryKingston">
+      <rdf:type rdf:resource="#ThingName" />
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Memory KINGSTON DDR3 PC3-8500 - 4 Go 1066 MHz - CAS 7 - Value Ram - KVR1066D3N7/4G</simpleName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#fromCompetition">
+      <rdfs:domain rdf:resource="#Match" />
+      <rdfs:range rdf:resource="#Competition" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Brand">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A109">
+      <rdf:rest rdf:nodeID="A152" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A35">
+      <rdf:rest rdf:nodeID="A12" />
+      <rdf:first rdf:resource="#Tournament" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_Esportsfrance">
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.esportsfrance.com</URLValue>
+      <rdf:type rdf:resource="#URL" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_GameOne">
+      <rdf:type rdf:resource="#URL" />
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.gameone.net/</URLValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_RazerMegasoma">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Razer Megasoma</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A153">
+      <rdf:rest rdf:nodeID="A124" />
+      <rdf:first rdf:resource="#Match" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Brand_Sony">
+      <isNamed rdf:resource="#ThingName_Sony" />
+      <hasWebsite rdf:resource="#Website_Sony" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <rdf:type rdf:resource="#Brand" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_Millenium">
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.millenium.org/</URLValue>
+      <rdf:type rdf:resource="#URL" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Match">
+      <rdfs:subClassOf rdf:nodeID="A95" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+      <rdfs:subClassOf rdf:nodeID="A154" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName">
+      <rdfs:subClassOf rdf:resource="#Name" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A155">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swedish</rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Sony">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sony</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_MeetYourMakers">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MeetYourMakers</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Match_LucifroNVsLyn1">
+      <rdf:type rdf:resource="#Match" />
+      <WInner rdf:resource="#Player_Lyn" />
+      <fromCompetition rdf:resource="#CompetitionOnline_Battle.net_Season6" />
+      <hasPlayer rdf:resource="#Player_Lyn" />
+      <hasPlayer rdf:resource="#Player_Lucifron" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#SpecializedWebsite_Esportsfrance">
+      <engagedIn rdf:resource="#LanParty_WCG2009" />
+      <isNamed rdf:resource="#ThingName_EsportsFrance" />
+      <Follow rdf:resource="#LanParty_WCG2009" />
+      <Follow rdf:resource="#Team_Millenium_CS" />
+      <Follow rdf:resource="#Match_MilleniumVsTurmoil1" />
+      <hasWebsite rdf:resource="#Website_EsportsFrance" />
+      <rdf:type rdf:resource="#SpecializedWebsite" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <hasForCorrespondant rdf:resource="#SpecialCorrespondent_MLeCam" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A6">
+      <rdf:rest rdf:nodeID="A73" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Pad_DualShock2">
+      <hasForBrand rdf:resource="#Brand_Sony" />
+      <cost rdf:resource="#Cost_Dualshock2" />
+      <isNamed rdf:resource="#ThingName_DualsShock2" />
+      <rdf:type rdf:resource="#Pad" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_EBasol">
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ediz</FirstName>
+      <rdf:type rdf:resource="#HumanName" />
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basol</LastName>
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">goodfornothing</Nickname>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_Warcraft3">
+      <hasURL rdf:resource="#URL_War3" />
+      <rdf:type rdf:resource="#Website" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A31">
+      <rdf:first rdf:resource="#Competition" />
+      <rdf:rest rdf:nodeID="A93" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_SKGaming">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SK-Gaming (Schroet-Kommando Gaming)</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Date">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime" />
+      <rdfs:domain rdf:resource="#Competition" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A115">
+      <rdf:first rdf:resource="#Competition" />
+      <rdf:rest rdf:nodeID="A128" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A125">
+      <rdf:first rdf:resource="#Game" />
+      <rdf:rest rdf:nodeID="A28" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A140">
+      <rdf:rest rdf:nodeID="A62" />
+      <rdf:first rdf:resource="#Game" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasGame">
+      <rdfs:range rdf:resource="#Game" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:domain rdf:resource="#Competition" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Brand_Razer">
+      <isNamed rdf:resource="#ThingName_Razer" />
+      <hasWebsite rdf:resource="#Website_Razer" />
+      <rdf:type rdf:resource="#Brand" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <representedBy rdf:resource="#SalesRepresentative_NSop" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A122">
+      <rdf:first rdf:resource="#Place" />
+      <rdf:rest rdf:nodeID="A156" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Mouse_RazerMamba">
+      <isNamed rdf:resource="#ThingName_razerMambaMouse" />
+      <DPI rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2000</DPI>
+      <rdf:type rdf:resource="#Mouse" />
+      <hasForBrand rdf:resource="#Brand_Razer" />
+      <cost rdf:resource="#Cost_razer-mamba" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Capacity">
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of maximum people</rdfs:comment>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:nodeID="A63" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#InputType">
+      <rdfs:range rdf:nodeID="A113" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#MasterOfCeremony_BChamack">
+      <engagedIn rdf:resource="#LanParty_WCG2009" />
+      <rdf:type rdf:resource="#MasterOfCeremony" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <hasForHumanName rdf:resource="#HumanName_BChamack" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Lecturer">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">During the important Lan-Party, you always can find some lecturers who try to convince the visitors that computer games aren't that bad ;)</rdfs:comment>
+      <rdfs:subClassOf rdf:resource="#Staff" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_Nvidia">
+      <rdf:type rdf:resource="#Website" />
+      <hasURL rdf:resource="#URL_Nvidia" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A157">
+      <rdf:rest rdf:nodeID="A141" />
+      <rdf:first rdf:resource="#Media" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Admin">
+      <rdfs:subClassOf rdf:resource="#Staff" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A158">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Place" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hostLan">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:domain rdf:resource="#Place" />
+      <owl:inverseOf rdf:resource="#isLocatedIn" />
+      <rdfs:range rdf:resource="#LanParty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Rule">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      <rdfs:domain rdf:resource="#Game" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A159">
+      <rdf:first rdf:resource="#Competition" />
+      <rdf:rest rdf:nodeID="A158" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#isSponsorOf">
+      <rdfs:range rdf:nodeID="A116" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#MaterialEquipment">
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+      <rdfs:subClassOf rdf:nodeID="A90" />
+      <rdfs:subClassOf rdf:nodeID="A160" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Nickname">
+      <rdfs:domain rdf:resource="#HumanName" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A61">
+      <rdf:first rdf:resource="#Team" />
+      <rdf:rest rdf:nodeID="A42" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A77">
+      <rdf:first rdf:resource="#Media" />
+      <rdf:rest rdf:nodeID="A39" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A70">
+      <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+      <owl:onProperty rdf:resource="#hasTeam" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#URL_WCG">
+      <rdf:type rdf:resource="#URL" />
+      <URLValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.wcg.com</URLValue>
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_TGuerinaud">
+      <rdf:type rdf:resource="#HumanName" />
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thibaut</FirstName>
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsuKa</Nickname>
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guerinaud</LastName>
+   </rdf:Description>
+   <rdf:Description rdf:about="#MasterOfCeremony">
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In the case we have a Competition which is a Lan-Party, there is a Master of ceremony who entertains the public.</rdfs:comment>
+      <rdfs:subClassOf rdf:resource="#Staff" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#isSponsorizedby">
+      <rdfs:domain rdf:nodeID="A59" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:range rdf:resource="#Brand" />
+      <owl:inverseOf rdf:resource="#sponsorize" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A137">
+      <rdf:first rdf:resource="#Competition" />
+      <rdf:rest rdf:nodeID="A157" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A160">
+      <owl:onProperty rdf:resource="#hasForBrand" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#CPU">
+      <rdfs:subClassOf rdf:resource="#ComputationEquipment" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A130">
+      <rdf:rest rdf:nodeID="A14" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A44">
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+      <owl:onProperty rdf:resource="#isNamed" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A152">
+      <rdf:first rdf:resource="#Team" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website_GameOne">
+      <rdf:type rdf:resource="#Website" />
+      <hasURL rdf:resource="#URL_GameOne" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Spectator">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A97">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</rdf:first>
+      <rdf:rest rdf:nodeID="A134" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Lucifron">
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</Nationality>
+      <hasTeam rdf:resource="#Team_MeetYourMakersWar3" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-10-24</InTheTeamSince>
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">18</Age>
+      <HasTeammate rdf:resource="#Player_Lyn" />
+      <hasForHumanName rdf:resource="#HumanName_Lucifron" />
+      <playTheGame rdf:resource="#GameSolo_Warcraft3" />
+      <rdf:type rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Place_WCG">
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chinese</Nationality>
+      <hostLan rdf:resource="#LanParty_WCG2009" />
+      <hasPlayerCapacity rdf:resource="#Capacity_Totat_WCG2009" />
+      <rdf:type rdf:resource="#Place" />
+      <City rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chengdu</City>
+   </rdf:Description>
+   <rdf:Description rdf:about="#LastName">
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+      <rdfs:domain rdf:resource="#HumanName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#isLocatedIn">
+      <rdfs:domain rdf:resource="#LanParty" />
+      <rdfs:range rdf:resource="#Place" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <owl:inverseOf rdf:resource="#hostLan" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A142">
+      <rdf:rest rdf:nodeID="A161" />
+      <rdf:first rdf:resource="#Team" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Website">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:nodeID="A162" />
+      <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasWon">
+      <rdfs:domain rdf:nodeID="A163" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:range rdf:nodeID="A164" />
+      <owl:inverseOf rdf:resource="#WInner" />
+   </rdf:Description>
+   <rdf:Description rdf:about="">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology" />
+      <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">My e-sport ontology, designed for the semantic technologies course at University of Stavanger.</rdfs:comment>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A162">
+      <owl:onProperty rdf:resource="#hasURL" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A41">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German</rdf:first>
+      <rdf:rest rdf:nodeID="A155" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#LanParty_WCG2009">
+      <hasGame rdf:resource="#GameMulti_CounterStrike" />
+      <isNamed rdf:resource="#ThingName_WCG2009" />
+      <hasSpectator rdf:resource="#OnlineSpectator_RLievre" />
+      <hasWebsite rdf:resource="#Website_WCG" />
+      <isFollowedBy rdf:resource="#OnlineSpectator_RLievre" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International</Nationality>
+      <Date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-11-12T00:00:00</Date>
+      <isFollowedBy rdf:resource="#InRealSpectator_JPRiviere" />
+      <isFollowedBy rdf:resource="#SpecializedWebsite_Esportsfrance" />
+      <isFollowedBy rdf:resource="#TelevisionChannel_GameOne" />
+      <rdf:type rdf:resource="#LanParty" />
+      <hasTournament rdf:resource="#Tournament_WCG_CS" />
+      <Description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The olympic games of the e-sports</Description>
+      <hasSpectator rdf:resource="#InRealSpectator_JPRiviere" />
+      <isLocatedIn rdf:resource="#Place_WCG" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#CapacityNumber">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty" />
+      <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int" />
+      <rdfs:domain rdf:resource="#Capacity" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Evolution">
+      <HasTeammate rdf:resource="#Player_Ben" />
+      <HasTeammate rdf:resource="#Player_Goodfornothing" />
+      <HasTeammate rdf:resource="#Player_Perez" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-09-12</InTheTeamSince>
+      <rdf:type rdf:resource="#Player" />
+      <playTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</Nationality>
+      <hasTeam rdf:resource="#Team_Turmoil_CS" />
+      <isPaid rdf:resource="#Team_Turmoil_CS" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</Age>
+      <HasTeammate rdf:resource="#Player_ImpulsivE" />
+      <hasForHumanName rdf:resource="#HumanName_SCavallero" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A138">
+      <rdf:rest rdf:nodeID="A36" />
+      <rdf:first rdf:resource="#Media" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#TelevisionChannel">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#Media" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A51">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Competition" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasPlayerCapacity">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+      <rdfs:subPropertyOf rdf:resource="#hasSpectatorCapacity" />
+      <rdfs:range rdf:resource="#Capacity" />
+      <rdfs:domain rdf:nodeID="A57" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#GPU_GeForce_GTX_295">
+      <cost rdf:resource="#Cost_GeForceGTX295" />
+      <hasForBrand rdf:resource="#Brand_Nvidia" />
+      <rdf:type rdf:resource="#GPU" />
+      <isNamed rdf:resource="#ThingName_GeForce_GTX_295" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Geno">
+      <hasForHumanName rdf:resource="#HumanName_GNtep" />
+      <HasTeammate rdf:resource="#Player_Yoshoow" />
+      <hasTeam rdf:resource="#Team_Millenium_CS" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-04-01</InTheTeamSince>
+      <playTheGame rdf:resource="#GameMulti_CounterStrike" />
+      <HasTeammate rdf:resource="#Player_Majer" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <isPaid rdf:resource="#Team_Millenium_CS" />
+      <HasTeammate rdf:resource="#Player_Xia" />
+      <HasTeammate rdf:resource="#Player_Ozstrik3r" />
+      <rdf:type rdf:resource="#Player" />
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">21</Age>
+   </rdf:Description>
+   <rdf:Description rdf:about="#TelevisionChannel_GameOne">
+      <isNamed rdf:resource="#ThingName_GameOne" />
+      <engagedIn rdf:resource="#LanParty_WCG2009" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</Nationality>
+      <hasWebsite rdf:resource="#Website_GameOne" />
+      <Follow rdf:resource="#Team_Millenium_CS" />
+      <Follow rdf:resource="#LanParty_WCG2009" />
+      <rdf:type rdf:resource="#TelevisionChannel" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Player_Lyn">
+      <Age rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</Age>
+      <hasTeam rdf:resource="#Team_SKGamingWarcraft" />
+      <InTheTeamSince rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-11-13</InTheTeamSince>
+      <engagedIn rdf:resource="#CompetitionOnline_Battle.net_Season6" />
+      <hasWon rdf:resource="#Match_LucifroNVsLyn1" />
+      <playTheGame rdf:resource="#GameSolo_Warcraft3" />
+      <HasTeammate rdf:resource="#Player_Lucifron" />
+      <hasForHumanName rdf:resource="#HumanName_JPark" />
+      <rdf:type rdf:resource="#Player" />
+      <Nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corean</Nationality>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A123">
+      <owl:unionOf rdf:nodeID="A26" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A165">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pound</rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#InputOutput">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#MaterialEquipment" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A7">
+      <owl:unionOf rdf:nodeID="A159" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Acer">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acer</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A144">
+      <rdf:first rdf:resource="#Team" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A105">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</rdf:first>
+      <rdf:rest rdf:nodeID="A166" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasPlayer">
+      <rdfs:domain rdf:resource="#Match" />
+      <rdfs:range rdf:nodeID="A60" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A13">
+      <rdf:rest rdf:nodeID="A151" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A20">
+      <owl:unionOf rdf:nodeID="A98" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#HumanName_BChamack">
+      <Nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ShowMan</Nickname>
+      <FirstName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bjorn</FirstName>
+      <LastName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chamack</LastName>
+      <rdf:type rdf:resource="#HumanName" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A150">
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+      <rdf:first rdf:resource="#Brand" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A110">
+      <owl:unionOf rdf:nodeID="A132" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A166">
+      <rdf:rest rdf:nodeID="A165" />
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dollar</rdf:first>
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_SpecCostFranceChinaWCG2009">
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</Currency>
+      <rdf:type rdf:resource="#Money" />
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">800</MoneyValue>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A161">
+      <rdf:rest rdf:nodeID="A69" />
+      <rdf:first rdf:resource="#Player" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A163">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A112" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A148">
+      <rdf:first rdf:resource="#Team" />
+      <rdf:rest rdf:nodeID="A146" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#hasForPlayer">
+      <owl:inverseOf rdf:resource="#playTheGame" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A154">
+      <owl:onProperty rdf:resource="#fromCompetition" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction" />
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A145">
+      <rdf:first rdf:resource="#Place" />
+      <rdf:rest rdf:nodeID="A149" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A136">
+      <owl:unionOf rdf:nodeID="A147" />
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A156">
+      <rdf:first rdf:resource="#Tournament" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A164">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <owl:unionOf rdf:nodeID="A67" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A92">
+      <rdf:rest rdf:nodeID="A143" />
+      <rdf:first rdf:resource="#Match" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A135">
+      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</rdf:first>
+      <rdf:rest rdf:nodeID="A126" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Tournament_Battle.net_Season_6_War3">
+      <isFromCompetition rdf:resource="#CompetitionOnline_Battle.net_Season6" />
+      <rdf:type rdf:resource="#Tournament" />
+      <onTheGame rdf:resource="#GameSolo_Warcraft3" />
+      <cashPrize rdf:resource="#Cost_CashPrizeBattleNetSeason6" />
+      <hasPlayerCapacity rdf:resource="#Capacity_Battle.net_Season_6" />
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A102">
+      <rdf:first rdf:resource="#Website" />
+      <rdf:rest rdf:nodeID="A153" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#Cost_Dualshock2">
+      <MoneyValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</MoneyValue>
+      <rdf:type rdf:resource="#Money" />
+      <Currency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Euro</Currency>
+   </rdf:Description>
+   <rdf:Description rdf:nodeID="A119">
+      <rdf:first rdf:resource="#Match" />
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#GameMulti">
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
+      <rdfs:subClassOf rdf:resource="#Game" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_razerTarantula">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">razer-tarantula</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+   <rdf:Description rdf:about="#ThingName_Turmoil">
+      <simpleName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turmoil</simpleName>
+      <rdf:type rdf:resource="#ThingName" />
+   </rdf:Description>
+</rdf:RDF>
+<!-- Created with Protege (with OWL Plugin 3.4.1, Build 536) http://protege.stanford.edu -->
