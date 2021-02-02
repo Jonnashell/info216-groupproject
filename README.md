@@ -13,7 +13,7 @@ Start med 1 spill, opprett følgende:
 - Hero --> Info about heroes (?)  
 
 
-1. Finne ut prosjektstur - Hva skal vi jobbe med først?
+1. Finne ut prosjektstruktur - Hva skal vi jobbe med først?
 2. Skrive ned en modul for å laste ned alt av data
 3. Forstå ontologien
 4. Vente 1-2 uker med å opprette BlazeGraph
