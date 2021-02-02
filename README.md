@@ -6,11 +6,11 @@ Group project in Knowledge Graphs (INFO216)
 
 Start med 1 spill, opprett følgende:
 
-Tournament --> Brackets (team vs. team / match history)  
+- Tournament --> Brackets (team vs. team / match history)
     - Kul idé: Vis alle characters en person har spilt, samt alle spillere en person har spilt mot, osv. (generelt mye stats)  
-Team --> Rooster  
-Map --> Info about map, release date, etc.  
-Hero --> Info about heroes (?)  
+- Team --> Rooster  
+- Map --> Info about map, release date, etc.  
+- Hero --> Info about heroes (?)  
 
 
 1. Finne ut prosjektstur - Hva skal vi jobbe med først?
