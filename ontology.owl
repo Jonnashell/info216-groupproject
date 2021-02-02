@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.owl-ontologies.com/Ontology1257867994.owl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:swrlb="http://www.w3.org/2003/11/swrlb#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#" xml:base="http://www.owl-ontologies.com/Ontology1257867994.owl">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://www.owl-ontologies.com/Ontology1257867994.owl#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+         xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+         xml:base="http://www.owl-ontologies.com/Ontology1257867994.owl">
    <rdf:Description rdf:nodeID="A0">
       <rdf:first rdf:resource="#Competition" />
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil" />
