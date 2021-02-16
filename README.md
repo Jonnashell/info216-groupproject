@@ -8,7 +8,7 @@ Start med 1 spill, opprett følgende:
 
 - Tournament --> Brackets (team vs. team / match history)
     - Kul idé: Vis alle characters en person har spilt, samt alle spillere en person har spilt mot, osv. (generelt mye stats)  
-- Team --> Rooster  
+- Team --> Roster  
 - Map --> Info about map, release date, etc.  
 - Hero --> Info about heroes (?)  
 
@@ -18,7 +18,7 @@ Start med 1 spill, opprett følgende:
 3. Forstå ontologien
 4. Vente 1-2 uker med å opprette BlazeGraph
 5. Last opp ting til BlazeGraph
-    6. Utfør SPARQL update for å fjerne alle entiteter som har type spiller, type lag, osv. og legge inn manuelt på nytt
+6. Utfør SPARQL update for å fjerne alle entiteter som har type spiller, type lag, osv. og legge inn manuelt på nytt
 
 
 Ferdig produkt:
