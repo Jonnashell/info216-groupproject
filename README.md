@@ -1,8 +1,11 @@
-# info216-groupproject
-Group project in Knowledge Graphs (INFO216)
+# INFO216: Group Project - Spring 2021
+## <i>A Knowledge Graph for professional E-Sports</i>
+
+This repository contains code and other resources for a group project in the course [INFO216](https://www.uib.no/emne/INFO216): Knowledge Graphs at the University of Bergen.
+The project group consists of three UiB students: [Jonatan Berg Romundgard](https://github.com/Jonnashell), [Ole Einar Markeset](https://www.linkedin.com/in/ole-einar-m-6ab735120/) and [Sebastian Einar Røkholt](https://github.com/SebastianRokholt). <br>
 
 
-## TO DO
+### TO DO
 
 Start med 1 spill, opprett følgende:
 
