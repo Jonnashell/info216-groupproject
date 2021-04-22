@@ -52,7 +52,7 @@ for team, team_data in team_results.items():
         if has_name is not None:
             # team_entity, FOAF.name, team
             team_entity = URIRef(annotation['URI'])
-            g.add((team_entity, FOAF.name, Literal(team)))
+            g.add((team_entity, FOAF.name, Literal(team_data['Has name'])))
         elif has_region is not None:
             # team_entity, dbp_o:region, region
             region = URIRef(annotation['URI'])
