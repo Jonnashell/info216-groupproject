@@ -91,13 +91,13 @@ for team, team_data in team_results.items():
             # what to do with types
     #
     ### DATASET STUFF (veldig temp) ###
-    df = dfs.loc[dfs['team'] == team]
-    df = df.drop_duplicates(subset=['start_time','match_id','stage','map_type','map_name','player','team'])
+    #df = dfs.loc[dfs['team'] == team]
+    #df = df.drop_duplicates(subset=['start_time','match_id','stage','map_type','map_name','player','team'])
 
     # loop over rows
-    for index, row in df.iterrows():    
-        # team, has id, id
-        pass
+    # for index, row in df.iterrows():    
+    #     # team, has id, id
+    #     pass
 
 # Add player triples to graph
 # for player, player_data in player_results.items():
@@ -118,30 +118,30 @@ print(g.serialize(format='ttl').decode('utf-8'))
 
 
 # Add team triples to graph
-for team, team_data in team_results.items():
-    ### DBpedia ###
-    # try to get resource from DBpedia first
-    whitelist = ['Has name', 'Has region', 'Has location', 'Has sponsor']
-    resources = [team_data[x][0][0] if x == 'Has sponsor' else team_data[x] for x in whitelist if x in team_data.keys()]
+# for team, team_data in team_results.items():
+#     ### DBpedia ###
+#     # try to get resource from DBpedia first
+#     whitelist = ['Has name', 'Has region', 'Has location', 'Has sponsor']
+#     resources = [team_data[x][0][0] if x == 'Has sponsor' else team_data[x] for x in whitelist if x in team_data.keys()]
     
-    # if we already queried the resource, don't do it again
-    queried_resources.update(resources)
-    text = ','.join(resources)
-    #
-    annotations = spotlight.annotate(SERVER, text)
-    #
-    team = team.replace(' ', '_')
-    for annotation in annotations:
-        #
-        for prop in whitelist:
-            # if team_data[prop] exists
-            if team_data.get(prop):
-                resource_name = re.fullmatch(annotation['surfaceForm'],team_data[prop])
-                # if we found a resource in DBpedia for this resource, and the name property name is 'Has name'
-                if resource_name is not None and prop == 'Has name':
-                    team_entity = URIRef(annotation['URI'])
-                    g.add((team_entity, FOAF.name, Literal(team_data['Has name'])))
-                # if we found a resource in DBpedia for this resource, do some stuff
-                elif resource_name is not None:
-                    resource_uri = URIRef(annotation['URI'])
-                    g.add((team_entity, dbp_o.term(prop), resource_uri))
+#     # if we already queried the resource, don't do it again
+#     queried_resources.update(resources)
+#     text = ','.join(resources)
+#     #
+#     annotations = spotlight.annotate(SERVER, text)
+#     #
+#     team = team.replace(' ', '_')
+#     for annotation in annotations:
+#         #
+#         for prop in whitelist:
+#             # if team_data[prop] exists
+#             if team_data.get(prop):
+#                 resource_name = re.fullmatch(annotation['surfaceForm'],team_data[prop])
+#                 # if we found a resource in DBpedia for this resource, and the name property name is 'Has name'
+#                 if resource_name is not None and prop == 'Has name':
+#                     team_entity = URIRef(annotation['URI'])
+#                     g.add((team_entity, FOAF.name, Literal(team_data['Has name'])))
+#                 # if we found a resource in DBpedia for this resource, do some stuff
+#                 elif resource_name is not None:
+#                     resource_uri = URIRef(annotation['URI'])
+#                     g.add((team_entity, dbp_o.term(prop), resource_uri))
