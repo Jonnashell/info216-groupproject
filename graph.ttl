@@ -1,0 +1,83 @@
+@prefix DBpedia: <http://dbpedia.org/ontology/> .
+@prefix FOAF: <http://xmlns.com/foaf/0.1/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+
+dbp:Atlanta_Reign DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Atlanta Reign" .
+
+dbp:Boston_Uprising DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Boston Uprising" .
+
+dbp:Chengdu_Hunters DBpedia:region dbp:China ;
+    FOAF:name "Chengdu Hunters" .
+
+dbp:Dallas_Fuel DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Dallas Fuel" .
+
+dbp:Florida_Mayhem DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Florida Mayhem" .
+
+dbp:Guangzhou_Charge DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:China,
+        dbp:North_America ;
+    dbp:sponsor dbp:H-E-B ;
+    FOAF:name "Guangzhou Charge" .
+
+dbp:Hangzhou_Spark DBpedia:region dbp:China ;
+    FOAF:name "Hangzhou Spark" .
+
+dbp:London_Spitfire DBpedia:location dbp:United_Kingdom ;
+    DBpedia:region dbp:Europe ;
+    dbp:sponsor dbp:Microsoft ;
+    FOAF:name "London Spitfire" .
+
+dbp:Los_Angeles_Gladiators DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Los Angeles Gladiators" .
+
+dbp:Los_Angeles_Valiant DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:China ;
+    FOAF:name "Los Angeles Valiant" .
+
+dbp:New_York_Excelsior DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:Korea ;
+    dbp:sponsor dbp:T-Mobile ;
+    FOAF:name "New York Excelsior" .
+
+dbp:Paris_Eternal DBpedia:location dbp:France ;
+    DBpedia:region dbp:Europe ;
+    FOAF:name "Paris Eternal" .
+
+dbp:Philadelphia_Fusion DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:Korea ;
+    dbp:sponsor dbp:CommScope ;
+    FOAF:name "Philadelphia Fusion" .
+
+dbp:San_Francisco_Shock DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    dbp:sponsor dbp:NetApp ;
+    FOAF:name "San Francisco Shock" .
+
+dbp:Seoul_Dynasty DBpedia:location dbp:South_Korea ;
+    DBpedia:region dbp:Korea ;
+    FOAF:name "Seoul Dynasty" .
+
+dbp:Shanghai_Dragons DBpedia:region dbp:China ;
+    FOAF:name "Shanghai Dragons" .
+
+dbp:Toronto_Defiant DBpedia:location dbp:Canada ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Toronto Defiant" .
+
+dbp:Vancouver_Titans DBpedia:location dbp:Canada ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Vancouver Titans" .
+
+dbp:Washington_Justice DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Washington Justice" .
+

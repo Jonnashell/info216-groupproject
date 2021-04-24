@@ -15,6 +15,7 @@ from math import ceil
 
 # Check if we already gathered data from API in the last X hours
 hours_trigger = 12
+use_cache = False
 
 try:
     f_name = pathlib.Path('player_results.json') # 'team_results.json'
@@ -24,12 +25,7 @@ try:
     if time_diff < hours_trigger:
         use_cache = True
 except FileNotFoundError:
-    use_cache = False
     print("file 'team_results.json' does not exist. Retrieving data from Liquipedia API")
-
-
-
-
 
 
 
@@ -100,11 +96,13 @@ if use_cache == False:
     # collect entity lists
     player_list = []
     team_list = []
+    all_dfs = []
     # loop over .csv files
     phs_dir = os.getcwd() + r'\phs_data'
     for sub_dir in os.listdir(phs_dir):
         full_path = os.path.join(phs_dir, sub_dir)
         dfs = [pd.read_csv(os.path.join(full_path, x)) for x in os.listdir(full_path)]
+        all_dfs.append(dfs)
         # players
         players = [x.get('player_name').unique() if 'player_name' in x.columns else x.get('player').unique() for x in dfs]
         for player in np.unique([y for x in players for y in x]):

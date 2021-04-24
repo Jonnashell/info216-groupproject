@@ -1,4 +1,6 @@
 import rdflib
+import os
+import pandas as pd
 import re
 import spotlight
 from rdflib import Graph, Namespace, URIRef, Literal, BNode
@@ -28,7 +30,31 @@ g.bind("dbp", dbp)
 g.bind("Schema", schema)
 g.bind("DBpedia", dbp_o)
 
-# Add team triples to graph
+
+# import datasets to one big df
+all_dfs = []
+phs_dir = os.getcwd() + r'\phs_data'
+for sub_dir in os.listdir(phs_dir):
+    full_path = os.path.join(phs_dir, sub_dir)
+    # get new dfs
+    df = pd.concat([pd.read_csv(os.path.join(full_path, x)) for x in os.listdir(full_path)])
+    #
+    # if dataset is 2020 # if 'esports_match_id' in df.columns:
+    if sub_dir == 'phs_2020':
+        df.rename(columns={'esports_match_id': 'match_id', 'tournament_title': 'stage',
+                           'team_name': 'team', 'player_name': 'player',
+                           'hero_name': 'hero'}, inplace=True)
+    # add df_new to df
+    all_dfs.append(df)
+
+dfs = pd.concat(all_dfs)
+
+
+# dfs.loc[df['team'] == team]
+
+# list of already queried DBpedia resources
+queried_resources = set()
+
 for team, team_data in team_results.items():
     # try to get resource from DBpedia first
     whitelist = ['Has name', 'Has region', 'Has location', 'Has sponsor']
@@ -67,6 +93,14 @@ for team, team_data in team_results.items():
             g.add((team_entity, dbp.term('sponsor'), sponsor))
             # what to do with types
     #
+    ### DATASET STUFF (veldig temp) ###
+    df = dfs.loc[dfs['team'] == team]
+    df = df.drop_duplicates(subset=['start_time','match_id','stage','map_type','map_name','player','team'])
+
+    # loop over rows
+    for index, row in df.iterrows():    
+        # team, has id, id
+        pass
 
 # Add player triples to graph
 # for player, player_data in player_results.items():
@@ -77,14 +111,40 @@ for team, team_data in team_results.items():
 #     for annotation in annotations:
 #         pass
 
+g.serialize(destination='graph.ttl',format='ttl')
 print(g.serialize(format='ttl').decode('utf-8'))
 
-## SPØR OM TYPES
-# https://www.dbpedia-spotlight.org/api
-# text: atlanta reign,North America,United States,SecretLab
-
-# simple event model ontology
-# hasActors, hasActorType
 
 
-## Spør om OWL (subClasses, osv.)
+
+##### TEST STUFF
+
+
+# Add team triples to graph
+for team, team_data in team_results.items():
+    ### DBpedia ###
+    # try to get resource from DBpedia first
+    whitelist = ['Has name', 'Has region', 'Has location', 'Has sponsor']
+    resources = [team_data[x][0][0] if x == 'Has sponsor' else team_data[x] for x in whitelist if x in team_data.keys()]
+    
+    # if we already queried the resource, don't do it again
+    queried_resources.update(resources)
+    text = ','.join(resources)
+    #
+    annotations = spotlight.annotate(SERVER, text)
+    #
+    team = team.replace(' ', '_')
+    for annotation in annotations:
+        #
+        for prop in whitelist:
+            # if team_data[prop] exists
+            if team_data.get(prop):
+                resource_name = re.fullmatch(annotation['surfaceForm'],team_data[prop])
+                # if we found a resource in DBpedia for this resource, and the name property name is 'Has name'
+                if resource_name is not None and prop == 'Has name':
+                    team_entity = URIRef(annotation['URI'])
+                    g.add((team_entity, FOAF.name, Literal(team_data['Has name'])))
+                # if we found a resource in DBpedia for this resource, do some stuff
+                elif resource_name is not None:
+                    resource_uri = URIRef(annotation['URI'])
+                    g.add((team_entity, dbp_o.term(prop), resource_uri))
