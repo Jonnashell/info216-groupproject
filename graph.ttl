@@ -1,25 +1,1984 @@
 @prefix DBpedia: <http://dbpedia.org/ontology/> .
 @prefix FOAF: <http://xmlns.com/foaf/0.1/> .
 @prefix dbp: <http://dbpedia.org/resource/> .
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dbp:Atlanta_Reign DBpedia:location dbp:United_States ;
-    DBpedia:region dbp:North_America ;
-    FOAF:name "Atlanta Reign" .
+ex:ANS a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "ANS"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock ;
+    ex:role ex:DPS ;
+    FOAF:name "Lee Seon-chang"^^xsd:string .
 
-dbp:Boston_Uprising DBpedia:location dbp:United_States ;
-    DBpedia:region dbp:North_America ;
-    FOAF:name "Boston Uprising" .
+ex:ATing a ex:Player ;
+    DBpedia:country dbp:Taiwan ;
+    ex:playerID "ATing"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters ;
+    ex:role ex:Tank ;
+    FOAF:name "Chen Shao-Hua"^^xsd:string .
+
+ex:Ado a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Ado"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark,
+        dbp:Shanghai_Dragons,
+        dbp:Washington_Justice ;
+    ex:role ex:DPS ;
+    FOAF:name "Chon Gi-hyeon"^^xsd:string .
+
+ex:Adora a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Adora"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark ;
+    ex:role ex:DPS ;
+    FOAF:name "Kang Jae-hwan"^^xsd:string .
+
+ex:Agilities a ex:Player ;
+    DBpedia:country dbp:Canada ;
+    ex:playerID "Agilities"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant,
+        dbp:Toronto_Defiant ;
+    ex:role ex:DPS ;
+    FOAF:name "Brady Girardi"^^xsd:string .
+
+ex:Aid a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Aid"^^xsd:string ;
+    ex:playsFor dbp:Toronto_Defiant ;
+    ex:role ex:Coach ;
+    FOAF:name "Go Jae-yoon"^^xsd:string .
+
+ex:AimGod a ex:Player ;
+    ex:playerID "AimGod"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising,
+        dbp:Washington_Justice .
+
+ex:Alarm a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Alarm"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion ;
+    ex:role ex:Support ;
+    FOAF:name "Kim Kyung-bo"^^xsd:string .
+
+ex:Altering a ex:Player ;
+    ex:playerID "Altering"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:Although a ex:Player ;
+    ex:playerID "Although"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire .
+
+ex:Anamo a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Anamo"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior ;
+    ex:role ex:Support ;
+    FOAF:name "Jung Tae-sung"^^xsd:string .
+
+ex:Apply a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Apply"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem,
+        dbp:Los_Angeles_Valiant ;
+    ex:role ex:DPS ;
+    FOAF:name "Damon Conti"^^xsd:string .
+
+ex:ArHaN a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "ArHaN"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws ;
+    ex:role ex:Coach ;
+    FOAF:name "Jeong Won-hyeop"^^xsd:string .
+
+ex:ArK a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "ArK"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior,
+        dbp:Washington_Justice ;
+    ex:role ex:Support ;
+    FOAF:name "Hong Yeon-joon"^^xsd:string .
+
+ex:Architect a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Architect"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark,
+        dbp:San_Francisco_Shock ;
+    ex:role ex:DPS ;
+    FOAF:name "Park Min-ho"^^xsd:string .
+
+ex:Asher a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Asher"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators,
+        dbp:Toronto_Defiant ;
+    ex:role ex:DPS ;
+    FOAF:name "Choi Joon-seong"^^xsd:string .
+
+ex:BEBE a ex:Player ;
+    ex:playerID "BEBE"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark .
+
+ex:BERNAR a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "BERNAR"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:Tank ;
+    FOAF:name "Shin Se-won"^^xsd:string .
+
+ex:BUMPER a ex:Player ;
+    ex:playerID "BUMPER"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans .
+
+ex:Babel a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Babel"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:DPS ;
+    FOAF:name "Park Sang-jun"^^xsd:string .
+
+ex:Baconjack a ex:Player ;
+    DBpedia:country dbp:Taiwan ;
+    ex:playerID "Baconjack"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters ;
+    ex:role ex:DPS ;
+    FOAF:name "Lo Tzu-Heng"^^xsd:string .
+
+ex:Bani a ex:Player ;
+    DBpedia:country dbp:Canada ;
+    ex:playerID "Bani"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws ;
+    ex:role ex:Coach ;
+    FOAF:name "Chris Benell"^^xsd:string .
+
+ex:Bazzi a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Bazzi"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark ;
+    ex:role ex:DPS ;
+    FOAF:name "Park Jun-ki"^^xsd:string .
+
+ex:Bdosin a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Bdosin"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire,
+        dbp:Seoul_Dynasty ;
+    ex:role ex:Support ;
+    FOAF:name "Choi Seung-tae"^^xsd:string .
+
+ex:Beast a ex:Player ;
+    ex:playerID "Beast"^^xsd:string ;
+    ex:playsFor dbp:Toronto_Defiant .
+
+ex:BenBest a ex:Player ;
+    DBpedia:country dbp:France ;
+    ex:playerID "BenBest"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal ;
+    ex:role ex:Tank ;
+    FOAF:name "Benjamin Dieulafait"^^xsd:string .
+
+ex:BiaNcA a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "BiaNcA"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior ;
+    ex:role ex:Tank ;
+    FOAF:name "Kim Dong-wook"^^xsd:string .
+
+ex:BigG00se a ex:Player ;
+    DBpedia:country dbp:Finland ;
+    ex:playerID "BigG00se"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators ;
+    ex:role ex:Support ;
+    FOAF:name "Benjamin Isohanni"^^xsd:string .
+
+ex:Birdring a ex:Player ;
+    ex:playerID "Birdring"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire,
+        dbp:Los_Angeles_Gladiators .
+
+ex:Bischu a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Bischu"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge,
+        dbp:Los_Angeles_Gladiators ;
+    ex:role ex:Tank ;
+    FOAF:name "Hyung-seok \"Aaron\" Kim"^^xsd:string .
+
+ex:Boink a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Boink"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws ;
+    ex:role ex:Support ;
+    FOAF:name "Daniel Pence"^^xsd:string .
+
+ex:Boombox a ex:Player ;
+    DBpedia:country dbp:United_Kingdom ;
+    ex:playerID "Boombox"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion ;
+    ex:role ex:Support ;
+    FOAF:name "Isaac Charles"^^xsd:string .
+
+ex:Bunny a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Bunny"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant,
+        dbp:Seoul_Dynasty ;
+    ex:role ex:DPS ;
+    FOAF:name "Chae Joon-hyuk"^^xsd:string .
+
+ex:CWoosH a ex:Player ;
+    DBpedia:country dbp:Sweden ;
+    ex:playerID "CWoosH"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem ;
+    ex:role ex:Coach ;
+    FOAF:name "Johan Klingestedt"^^xsd:string .
+
+ex:Carcar a ex:Player ;
+    ex:playerID "Carcar"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans .
+
+ex:Chara a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Chara"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge ;
+    ex:role ex:Coach ;
+    FOAF:name "Kim Jung-yeon"^^xsd:string .
+
+ex:ChipSa a ex:Player ;
+    DBpedia:country dbp:United_Kingdom ;
+    ex:playerID "ChipSa"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion ;
+    ex:role ex:DPS ;
+    FOAF:name "Philip Graham"^^xsd:string .
+
+ex:Chipshajen a ex:Player ;
+    ex:playerID "Chipshajen"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel .
+
+ex:Choihyobin a ex:Player ;
+    ex:playerID "Choihyobin"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock .
+
+ex:Clestyn a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Clestyn"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:Tank ;
+    FOAF:name "Cho Gun-hee"^^xsd:string .
+
+ex:Clockwork a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Clockwork"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws ;
+    ex:role ex:Coach ;
+    FOAF:name "Matthew Dias"^^xsd:string .
+
+ex:Closer a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Closer"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel,
+        dbp:London_Spitfire ;
+    ex:role ex:Support ;
+    FOAF:name "Jung Won-sik"^^xsd:string .
+
+ex:CoMa a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "CoMa"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons ;
+    ex:role ex:Support ;
+    FOAF:name "Son Kyung-woo"^^xsd:string .
+
+ex:ColdesT a ex:Player ;
+    ex:playerID "ColdesT"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark .
+
+ex:ColourHex a ex:Player ;
+    ex:playerID "ColourHex"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising .
+
+ex:Corey a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Corey"^^xsd:string ;
+    ex:playsFor dbp:Washington_Justice ;
+    ex:role ex:DPS ;
+    FOAF:name "Corey Nigra"^^xsd:string .
+
+ex:Cr0ng a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Cr0ng"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge ;
+    ex:role ex:Tank ;
+    FOAF:name "Nam Ki-cheol"^^xsd:string .
+
+ex:Creative a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Creative"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty ;
+    ex:role ex:Support ;
+    FOAF:name "Kim Young-wan"^^xsd:string .
+
+ex:Crimzo a ex:Player ;
+    DBpedia:country dbp:Canada ;
+    ex:playerID "Crimzo"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel ;
+    ex:role ex:Support ;
+    FOAF:name "William Hernandez"^^xsd:string .
+
+ex:Custa a ex:Player ;
+    DBpedia:country dbp:Australia ;
+    ex:playerID "Custa"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel,
+        dbp:Los_Angeles_Valiant ;
+    ex:role ex:Support ;
+    FOAF:name "Scott Kennedy"^^xsd:string .
+
+ex:DDing a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "DDing"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons ;
+    ex:role ex:DPS ;
+    FOAF:name "Yang Jin-hyeok"^^xsd:string .
+
+ex:DPI a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "DPI"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem ;
+    ex:role ex:Tank ;
+    FOAF:name "Choi Yong-jun"^^xsd:string .
+
+ex:DREAMER a ex:Player ;
+    ex:playerID "DREAMER"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant .
+
+ex:Daco a ex:Player ;
+    ex:playerID "Daco"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign .
+
+ex:Daemin a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Daemin"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons ;
+    ex:role ex:Coach ;
+    FOAF:name "Kim Dae-min"^^xsd:string .
+
+ex:Dalton a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Dalton"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans ;
+    ex:role ex:DPS ;
+    FOAF:name "Dalton Bennyhoff"^^xsd:string .
+
+ex:Danteh a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Danteh"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws,
+        dbp:San_Francisco_Shock ;
+    ex:role ex:DPS ;
+    FOAF:name "Dante Cruz"^^xsd:string .
+
+ex:DayFly a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "DayFly"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion ;
+    ex:role ex:Support ;
+    FOAF:name "Park Jeong-hwan"^^xsd:string .
+
+ex:Decay a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Decay"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel,
+        dbp:Los_Angeles_Gladiators,
+        dbp:Washington_Justice ;
+    ex:role ex:DPS ;
+    FOAF:name "Jang Gui-un"^^xsd:string .
+
+ex:Diya a ex:Player ;
+    ex:playerID "Diya"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:Dogman a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Dogman"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:Support ;
+    FOAF:name "Dusttin Bowerman"^^xsd:string .
+
+ex:Doha a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Doha"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel ;
+    ex:role ex:DPS ;
+    FOAF:name "Kim Dong-Ha"^^xsd:string .
+
+ex:DreamKazper a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "DreamKazper"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising ;
+    ex:role ex:DPS ;
+    FOAF:name "Jonathan Sanchez"^^xsd:string .
+
+ex:EFFECT a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "EFFECT"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel ;
+    ex:role ex:DPS ;
+    FOAF:name "Hwang Hyeon"^^xsd:string .
+
+ex:ELLIVOTE a ex:Player ;
+    DBpedia:country dbp:Sweden ;
+    ex:playerID "ELLIVOTE"^^xsd:string ;
+    ex:playsFor dbp:Washington_Justice ;
+    ex:role ex:Tank ;
+    FOAF:name "Elliot Vaneryd"^^xsd:string .
+
+ex:Edison a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Edison"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:DPS ;
+    FOAF:name "Kim Tae-hoon"^^xsd:string .
+
+ex:Eileen a ex:Player ;
+    ex:playerID "Eileen"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge .
+
+ex:Elk a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Elk"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion ;
+    ex:role ex:Support ;
+    FOAF:name "Elijah Hudson Gallagher"^^xsd:string .
+
+ex:Elsa a ex:Player ;
+    ex:playerID "Elsa"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:Envy a ex:Player ;
+    ex:playerID "Envy"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant,
+        dbp:Shanghai_Dragons,
+        dbp:Toronto_Defiant .
+
+ex:Erster a ex:Player ;
+    ex:playerID "Erster"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign .
+
+ex:FCTFCTN a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "FCTFCTN"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws,
+        dbp:Los_Angeles_Valiant ;
+    ex:role ex:Coach ;
+    FOAF:name "Russell Campbell"^^xsd:string .
+
+ex:FDGod a ex:Player ;
+    ex:playerID "FDGod"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal .
+
+ex:FEARLESS a ex:Player ;
+    ex:playerID "FEARLESS"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:Fahzix a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Fahzix"^^xsd:string ;
+    ex:playsFor dbp:Washington_Justice ;
+    ex:role ex:Support ;
+    FOAF:name "Riley Taylor"^^xsd:string .
+
+ex:Fate a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Fate"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem,
+        dbp:Los_Angeles_Valiant ;
+    ex:role ex:Tank ;
+    FOAF:name "Koo Pan-seung"^^xsd:string .
+
+ex:Fielder a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Fielder"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal ;
+    ex:role ex:Support ;
+    FOAF:name "Kwon Joon"^^xsd:string .
+
+ex:Finnsi a ex:Player ;
+    DBpedia:country dbp:Iceland ;
+    ex:playerID "Finnsi"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal ;
+    ex:role ex:Tank ;
+    FOAF:name "Finnbjörn Jónasson"^^xsd:string .
+
+ex:Fire a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Fire"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:Support ;
+    FOAF:name "Anthony King"^^xsd:string .
+
+ex:Fissure a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Fissure"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire,
+        dbp:Los_Angeles_Gladiators,
+        dbp:Seoul_Dynasty,
+        dbp:Vancouver_Titans ;
+    ex:role ex:Tank ;
+    FOAF:name "Baek Chan-hyung"^^xsd:string .
+
+ex:Fits a ex:Player ;
+    ex:playerID "Fits"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty .
+
+ex:Fiveking a ex:Player ;
+    ex:playerID "Fiveking"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:Fl0w3R a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Fl0w3R"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior ;
+    ex:role ex:DPS ;
+    FOAF:name "Hwang Yeon-oh"^^xsd:string .
+
+ex:Fleta a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Fleta"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty,
+        dbp:Shanghai_Dragons ;
+    ex:role ex:DPS ;
+    FOAF:name "Kim Byung-sun"^^xsd:string .
+
+ex:Freefeel a ex:Player ;
+    ex:playerID "Freefeel"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:FunnyAstro a ex:Player ;
+    DBpedia:country dbp:United_Kingdom ;
+    ex:playerID "FunnyAstro"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign,
+        dbp:Philadelphia_Fusion ;
+    ex:role ex:Support ;
+    FOAF:name "Daniel Hathaway"^^xsd:string .
+
+ex:Fury a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Fury"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire,
+        dbp:Philadelphia_Fusion ;
+    ex:role ex:Tank ;
+    FOAF:name "Kim Jun-ho"^^xsd:string .
+
+ex:Fusions a ex:Player ;
+    DBpedia:country dbp:United_Kingdom ;
+    ex:playerID "Fusions"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising ;
+    ex:role ex:Tank ;
+    FOAF:name "Cameron Bosworth"^^xsd:string .
+
+ex:Fuze a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Fuze"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:Support ;
+    FOAF:name "Kim Tae-hoon"^^xsd:string .
+
+ex:GARGOYLE a ex:Player ;
+    ex:playerID "GARGOYLE"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem .
+
+ex:GARRY a ex:Player ;
+    ex:playerID "GARRY"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:Gambler a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Gambler"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty ;
+    ex:role ex:Support ;
+    FOAF:name "Heo Jin-woo"^^xsd:string .
+
+ex:Gamsu a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Gamsu"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising,
+        dbp:Dallas_Fuel,
+        dbp:Shanghai_Dragons ;
+    ex:role ex:Tank ;
+    FOAF:name "Noh Young-jin"^^xsd:string .
+
+ex:GangNamJin a ex:Player ;
+    ex:playerID "GangNamJin"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem .
+
+ex:Gator a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Gator"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:Tank ;
+    FOAF:name "Blake Scott"^^xsd:string .
+
+ex:Geguri a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Geguri"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons ;
+    ex:role ex:Tank ;
+    FOAF:name "Kim Se-yeon"^^xsd:string .
+
+ex:Gesture a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Gesture"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire,
+        dbp:Seoul_Dynasty ;
+    ex:role ex:Tank ;
+    FOAF:name "Hong Jae-hee"^^xsd:string .
+
+ex:GiG a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "GiG"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant ;
+    ex:role ex:Tank ;
+    FOAF:name "Rick Salazar"^^xsd:string .
+
+ex:Gido a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Gido"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty,
+        dbp:Washington_Justice ;
+    ex:role ex:Support ;
+    FOAF:name "Moon Gi-do"^^xsd:string .
+
+ex:Glister a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Glister"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:DPS ;
+    FOAF:name "Lim Gil-seong"^^xsd:string .
+
+ex:Gods a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Gods"^^xsd:string ;
+    ex:playsFor dbp:Toronto_Defiant ;
+    ex:role ex:Coach ;
+    FOAF:name "Daniel Graeser"^^xsd:string .
+
+ex:GodsB a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "GodsB"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark ;
+    ex:role ex:DPS ;
+    FOAF:name "Kim Kyeong-bo"^^xsd:string .
+
+ex:Greyy a ex:Player ;
+    DBpedia:country dbp:Portugal ;
+    ex:playerID "Greyy"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal ;
+    ex:role ex:Support ;
+    FOAF:name "Luís Perestrelo"^^xsd:string .
+
+ex:Guard a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Guard"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:Coach ;
+    FOAF:name "Lee Hee-dong"^^xsd:string .
+
+ex:GuardiaN a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "GuardiaN"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons ;
+    ex:role ex:Tank ;
+    FOAF:name "Cho Joon-hwan"^^xsd:string .
+
+ex:Guxue a ex:Player ;
+    ex:playerID "Guxue"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark .
+
+ex:HOTBA a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "HOTBA"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge,
+        dbp:New_York_Excelsior,
+        dbp:Philadelphia_Fusion ;
+    ex:role ex:Tank ;
+    FOAF:name "Choi Hong-joon"^^xsd:string .
+
+ex:HaGoPeun a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "HaGoPeun"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem,
+        dbp:London_Spitfire ;
+    ex:role ex:Support ;
+    FOAF:name "Jo Hyeon-woo"^^xsd:string .
+
+ex:Haksal a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Haksal"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior,
+        dbp:Vancouver_Titans ;
+    ex:role ex:DPS ;
+    FOAF:name "Kim Hyo-jong"^^xsd:string .
+
+ex:Halo a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Halo"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising ;
+    ex:role ex:Support ;
+    FOAF:name "Kobe Hamand"^^xsd:string .
+
+ex:Hanbin a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Hanbin"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal ;
+    ex:role ex:Tank ;
+    FOAF:name "Choi Han-been"^^xsd:string .
+
+ex:Happy a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Happy"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge ;
+    ex:role ex:DPS ;
+    FOAF:name "Lee Jung-woo"^^xsd:string .
+
+ex:HarryHook a ex:Player ;
+    DBpedia:country dbp:Spain ;
+    ex:playerID "HarryHook"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel ;
+    ex:role ex:Support ;
+    FOAF:name "Jonathan Tejedor Rua"^^xsd:string .
+
+ex:Hawk a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Hawk"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:Tank ;
+    FOAF:name "Xander Domecq"^^xsd:string .
+
+ex:Heesu a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Heesu"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion ;
+    ex:role ex:DPS ;
+    FOAF:name "Jeong Hee-su"^^xsd:string .
+
+ex:Highly a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Highly"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire,
+        dbp:Seoul_Dynasty ;
+    ex:role ex:Support ;
+    FOAF:name "Lee Sung-hyeok"^^xsd:string .
+
+ex:Hooreg a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Hooreg"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire,
+        dbp:Vancouver_Titans ;
+    ex:role ex:Coach ;
+    FOAF:name "Lee Dong-eun"^^xsd:string .
+
+ex:HyP a ex:Player ;
+    DBpedia:country dbp:France ;
+    ex:playerID "HyP"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal ;
+    ex:role ex:Support ;
+    FOAF:name "Damien Souville"^^xsd:string .
+
+ex:Hydration a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Hydration"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws,
+        dbp:Los_Angeles_Gladiators ;
+    ex:role ex:Tank ;
+    FOAF:name "João Pedro Goes Telles"^^xsd:string .
+
+ex:Hyeonu a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Hyeonu"^^xsd:string ;
+    ex:playsFor dbp:Washington_Justice ;
+    ex:role ex:Support ;
+    FOAF:name "Cho Hyeon-woo"^^xsd:string .
+
+ex:ILLICIT a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "ILLICIT"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty ;
+    ex:role ex:DPS ;
+    FOAF:name "Park Je-min"^^xsd:string .
+
+ex:IZaYaKI a ex:Player ;
+    ex:playerID "IZaYaKI"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant,
+        dbp:Shanghai_Dragons .
+
+ex:JIQIREN a ex:Player ;
+    ex:playerID "JIQIREN"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:JJANU a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "JJANU"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans,
+        dbp:Washington_Justice ;
+    ex:role ex:Tank ;
+    FOAF:name "Choi Hyeon-Woo"^^xsd:string .
+
+ex:JJonak a ex:Player ;
+    ex:playerID "JJonak"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior .
+
+ex:Jake a ex:Player ;
+    ex:playerID "Jake"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws .
+
+ex:Janus a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Janus"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior,
+        dbp:Washington_Justice ;
+    ex:role ex:Tank ;
+    FOAF:name "Song Jun-hwa"^^xsd:string .
+
+ex:Jaru a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Jaru"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators ;
+    ex:role ex:DPS ;
+    FOAF:name "Jason White"^^xsd:string .
+
+ex:Jecse a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Jecse"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws,
+        dbp:Seoul_Dynasty ;
+    ex:role ex:Support ;
+    FOAF:name "Lee Seung-soo"^^xsd:string .
+
+ex:Jerry a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Jerry"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising ;
+    ex:role ex:DPS ;
+    FOAF:name "Min Tae-hee"^^xsd:string .
+
+ex:Jihun a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Jihun"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:Tank ;
+    FOAF:name "Kim Ji-hun"^^xsd:string .
+
+ex:JinMu a ex:Player ;
+    ex:playerID "JinMu"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:Jmac a ex:Player ;
+    ex:playerID "Jmac"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire .
+
+ex:KSAA a ex:Player ;
+    DBpedia:country dbp:Saudi_Arabia ;
+    ex:playerID "KSAA"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans ;
+    ex:role ex:Tank ;
+    FOAF:name "Alhumaidi Alruwaili"^^xsd:string .
+
+ex:KSF a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "KSF"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant ;
+    ex:role ex:DPS ;
+    FOAF:name "Kyle Frandanisa"^^xsd:string .
+
+ex:KSP a ex:Player ;
+    ex:playerID "KSP"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant .
+
+ex:Kalios a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Kalios"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising ;
+    ex:role ex:Tank ;
+    FOAF:name "Shin Woo-yeol"^^xsd:string .
+
+ex:Karayan a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Karayan"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem ;
+    ex:role ex:Tank ;
+    FOAF:name "Choi San-ha"^^xsd:string .
+
+ex:KariV a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "KariV"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant,
+        dbp:Toronto_Defiant ;
+    ex:role ex:Support ;
+    FOAF:name "Park Young-seo"^^xsd:string .
+
+ex:Kellex a ex:Player ;
+    DBpedia:country dbp:Denmark ;
+    ex:playerID "Kellex"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising,
+        dbp:Toronto_Defiant ;
+    ex:role ex:Support ;
+    FOAF:name "Kristian Keller"^^xsd:string .
+
+ex:Kodak a ex:Player ;
+    DBpedia:country dbp:Germany ;
+    ex:playerID "Kodak"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:Coach ;
+    FOAF:name "Steven Rosenberger"^^xsd:string .
+
+ex:Krillin a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Krillin"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:Support ;
+    FOAF:name "Jeong Young-hoon"^^xsd:string .
+
+ex:Kris a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Kris"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem ;
+    ex:role ex:Support ;
+    FOAF:name "Choe Jun-soo"^^xsd:string .
+
+ex:Kruise a ex:Player ;
+    DBpedia:country dbp:United_Kingdom ;
+    ex:playerID "Kruise"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal,
+        dbp:Toronto_Defiant ;
+    ex:role ex:Support ;
+    FOAF:name "Harrison Pond"^^xsd:string .
+
+ex:Krystal a ex:Player ;
+    ex:playerID "Krystal"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark .
+
+ex:KuKi a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "KuKi"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant,
+        dbp:Seoul_Dynasty ;
+    ex:role ex:Coach ;
+    FOAF:name "Kim Dae-kuk"^^xsd:string .
+
+ex:Kyb a ex:Player ;
+    DBpedia:country dbp:United_Kingdom ;
+    ex:playerID "Kyb"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge ;
+    ex:role ex:DPS ;
+    FOAF:name "Finley Adisi"^^xsd:string .
+
+ex:Kyo a ex:Player ;
+    DBpedia:country dbp:Brazil ;
+    ex:playerID "Kyo"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters ;
+    ex:role ex:Tank ;
+    FOAF:name "Brunno Cunha"^^xsd:string .
+
+ex:LIP a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "LIP"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons ;
+    ex:role ex:DPS ;
+    FOAF:name "Lee Jae-won"^^xsd:string .
+
+ex:Lastro a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Lastro"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant ;
+    ex:role ex:Support ;
+    FOAF:name "Mun Jung-won"^^xsd:string .
+
+ex:Leave a ex:Player ;
+    ex:playerID "Leave"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:LeeJaegon a ex:Player ;
+    ex:playerID "LeeJaegon"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:Lengsa a ex:Player ;
+    ex:playerID "Lengsa"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:LhCloudy a ex:Player ;
+    DBpedia:country dbp:Finland ;
+    ex:playerID "LhCloudy"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators,
+        dbp:Paris_Eternal ;
+    ex:role ex:Tank ;
+    FOAF:name "Roni Tiihonen"^^xsd:string .
+
+ex:LiNkzr a ex:Player ;
+    DBpedia:country dbp:Finland ;
+    ex:playerID "LiNkzr"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws ;
+    ex:role ex:DPS ;
+    FOAF:name "Jiri Masalin"^^xsd:string .
+
+ex:Libero a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Libero"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior ;
+    ex:role ex:DPS ;
+    FOAF:name "Kim Hae-seong"^^xsd:string .
+
+ex:Logix a ex:Player ;
+    DBpedia:country dbp:Belgium ;
+    ex:playerID "Logix"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem,
+        dbp:Toronto_Defiant ;
+    ex:role ex:DPS ;
+    FOAF:name "Andreas Berghmans"^^xsd:string .
+
+ex:Lr1s a ex:Player ;
+    ex:playerID "Lr1s"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign .
+
+ex:Luffy a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Luffy"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons ;
+    ex:role ex:Support ;
+    FOAF:name "Yang Seong-hyeon"^^xsd:string .
+
+ex:M1ka a ex:Player ;
+    ex:playerID "M1ka"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark .
+
+ex:MG a ex:Player ;
+    ex:playerID "MG"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:Mandu a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Mandu"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior ;
+    ex:role ex:Support ;
+    FOAF:name "Kim Chan-hee"^^xsd:string .
+
+ex:Mangachu a ex:Player ;
+    DBpedia:country dbp:Canada ;
+    ex:playerID "Mangachu"^^xsd:string ;
+    ex:playsFor dbp:Toronto_Defiant ;
+    ex:role ex:DPS ;
+    FOAF:name "Liam Campbell"^^xsd:string .
+
+ex:Manneten a ex:Player ;
+    DBpedia:country dbp:Sweden ;
+    ex:playerID "Manneten"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem ;
+    ex:role ex:Tank ;
+    FOAF:name "Tim Bylund"^^xsd:string .
+
+ex:Mano a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Mano"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior ;
+    ex:role ex:Tank ;
+    FOAF:name "Kim Dong-gyu"^^xsd:string .
+
+ex:Marve1 a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Marve1"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty ;
+    ex:role ex:Tank ;
+    FOAF:name "Hwang Min-seo"^^xsd:string .
+
+ex:Masaa a ex:Player ;
+    DBpedia:country dbp:Finland ;
+    ex:playerID "Masaa"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:Support ;
+    FOAF:name "Petja Kantanen"^^xsd:string .
+
+ex:Mcgravy a ex:Player ;
+    ex:playerID "Mcgravy"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem,
+        dbp:Los_Angeles_Valiant .
+
+ex:MekO a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "MekO"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws,
+        dbp:New_York_Excelsior ;
+    ex:role ex:Tank ;
+    FOAF:name "Kim Tae-hong"^^xsd:string .
+
+ex:Michelle a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Michelle"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty ;
+    ex:role ex:Tank ;
+    FOAF:name "Choi Min-hyuk"^^xsd:string .
+
+ex:Mickie a ex:Player ;
+    DBpedia:country dbp:Thailand ;
+    ex:playerID "Mickie"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel ;
+    ex:role ex:Streamer ;
+    FOAF:name "Pongphop Rattanasangchod"^^xsd:string .
+
+ex:Miro a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Miro"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty ;
+    ex:role ex:Coach ;
+    FOAF:name "Gong Jin-hyuk"^^xsd:string .
+
+ex:MirroR a ex:Player ;
+    DBpedia:country dbp:Vietnam ;
+    ex:playerID "MirroR"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators ;
+    ex:role ex:DPS ;
+    FOAF:name "Gia Huy \"Chris\" Trịnh"^^xsd:string .
+
+ex:Mistakes a ex:Player ;
+    DBpedia:country dbp:Russia ;
+    ex:playerID "Mistakes"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising ;
+    ex:role ex:Support ;
+    FOAF:name "Stanislav Danilov"^^xsd:string .
+
+ex:Molly a ex:Player ;
+    ex:playerID "Molly"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:Mouffin a ex:Player ;
+    ex:playerID "Mouffin"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising .
+
+ex:Muma a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Muma"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws ;
+    ex:role ex:Tank ;
+    FOAF:name "Austin Wilmot"^^xsd:string .
+
+ex:Munchkin a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Munchkin"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising,
+        dbp:Seoul_Dynasty ;
+    ex:role ex:DPS ;
+    FOAF:name "Byeon Sang-beom"^^xsd:string .
+
+ex:Myunb0ng a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Myunb0ng"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising ;
+    ex:role ex:Support ;
+    FOAF:name "Seo Sang-min"^^xsd:string .
+
+ex:NLaaeR a ex:Player ;
+    DBpedia:country dbp:Russia ;
+    ex:playerID "NLaaeR"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:DPS ;
+    FOAF:name "Ilya Koppalov"^^xsd:string .
+
+ex:NUS a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "NUS"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:Support ;
+    FOAF:name "Kim Jong-seok"^^xsd:string .
+
+ex:Neko a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Neko"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising,
+        dbp:Toronto_Defiant ;
+    ex:role ex:Coach ;
+    FOAF:name "Park Se-hyeon"^^xsd:string .
+
+ex:Nenne a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Nenne"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior ;
+    ex:role ex:DPS ;
+    FOAF:name "Jeong Yeon-kwan"^^xsd:string .
+
+ex:Nevix a ex:Player ;
+    DBpedia:country dbp:Sweden ;
+    ex:playerID "Nevix"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock,
+        dbp:Toronto_Defiant ;
+    ex:role ex:Tank ;
+    FOAF:name "Andreas Karlsson"^^xsd:string .
+
+ex:NiCOgdh a ex:Player ;
+    DBpedia:country dbp:France ;
+    ex:playerID "NiCOgdh"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal ;
+    ex:role ex:DPS ;
+    FOAF:name "Nicolas Moret"^^xsd:string .
+
+ex:NoSmite a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "NoSmite"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark,
+        dbp:Paris_Eternal ;
+    ex:role ex:Tank ;
+    FOAF:name "Jeong Da-un"^^xsd:string .
+
+ex:Nomy a ex:Player ;
+    ex:playerID "Nomy"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock .
+
+ex:NotE a ex:Player ;
+    DBpedia:country dbp:Canada ;
+    ex:playerID "NotE"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising,
+        dbp:Dallas_Fuel ;
+    ex:role ex:Tank ;
+    FOAF:name "Lucas Meissner"^^xsd:string .
+
+ex:Numlocked a ex:Player ;
+    DBpedia:country dbp:United_Kingdom ;
+    ex:playerID "Numlocked"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant ;
+    ex:role ex:Tank ;
+    FOAF:name "Seb Barton"^^xsd:string .
+
+ex:OGE a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "OGE"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel,
+        dbp:Los_Angeles_Gladiators ;
+    ex:role ex:Tank ;
+    FOAF:name "Son Min-seok"^^xsd:string .
+
+ex:Onigod a ex:Player ;
+    DBpedia:country dbp:Norway ;
+    ex:playerID "Onigod"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel ;
+    ex:role ex:DPS ;
+    FOAF:name "Stefan Fiskerstrand"^^xsd:string .
+
+ex:Onlywish a ex:Player ;
+    ex:playerID "Onlywish"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge .
+
+ex:Paintbrush a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Paintbrush"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel,
+        dbp:Los_Angeles_Gladiators ;
+    ex:role ex:Support ;
+    FOAF:name "Nolan Edwards"^^xsd:string .
+
+ex:Persia a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Persia"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising ;
+    ex:role ex:Support ;
+    FOAF:name "Yang Zi-on"^^xsd:string .
+
+ex:Pine a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Pine"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior ;
+    ex:role ex:DPS ;
+    FOAF:name "Kim Do-hyeon"^^xsd:string .
+
+ex:Poko a ex:Player ;
+    DBpedia:country dbp:France ;
+    ex:playerID "Poko"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion ;
+    ex:role ex:Tank ;
+    FOAF:name "Gael Gouzerch"^^xsd:string .
+
+ex:Pokpo a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Pokpo"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:Tank ;
+    FOAF:name "Park Hyun-jun"^^xsd:string .
+
+ex:Profit a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Profit"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire,
+        dbp:Seoul_Dynasty ;
+    ex:role ex:DPS ;
+    FOAF:name "Park Joon-yeong"^^xsd:string .
+
+ex:QoQ a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "QoQ"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark ;
+    ex:role ex:Tank ;
+    FOAF:name "Yu Sung-jun"^^xsd:string .
+
+ex:QuaterMain a ex:Player ;
+    ex:playerID "QuaterMain"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire .
+
+ex:RaiN a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "RaiN"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem,
+        dbp:Los_Angeles_Valiant ;
+    ex:role ex:Support ;
+    FOAF:name "Park Jae-ho"^^xsd:string .
+
+ex:Rapel a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Rapel"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws,
+        dbp:Vancouver_Titans ;
+    ex:role ex:Support ;
+    FOAF:name "Kim Jun-keun"^^xsd:string .
+
+ex:Rascal a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Rascal"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel,
+        dbp:London_Spitfire,
+        dbp:San_Francisco_Shock ;
+    ex:role ex:DPS ;
+    FOAF:name "Kim Dong-jun"^^xsd:string .
+
+ex:Rawkus a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Rawkus"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws ;
+    ex:role ex:Support ;
+    FOAF:name "Shane Flaherty"^^xsd:string .
+
+ex:Revenge a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Revenge"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark ;
+    ex:role ex:Support ;
+    FOAF:name "An Hyeong-geun"^^xsd:string .
+
+ex:Ria a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Ria"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark ;
+    ex:role ex:Tank ;
+    FOAF:name "Park Seong-Wook"^^xsd:string .
+
+ex:Rio a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Rio"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge ;
+    ex:role ex:Tank ;
+    FOAF:name "Oh Seung-pyo"^^xsd:string .
+
+ex:Ripa a ex:Player ;
+    DBpedia:country dbp:Finland ;
+    ex:playerID "Ripa"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators ;
+    ex:role ex:Support ;
+    FOAF:name "Riku Toivanen"^^xsd:string .
+
+ex:Rise a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Rise"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge ;
+    ex:role ex:Support ;
+    FOAF:name "Lee Won-jae"^^xsd:string .
+
+ex:RoKy a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "RoKy"^^xsd:string ;
+    ex:playsFor dbp:Toronto_Defiant ;
+    ex:role ex:Support ;
+    FOAF:name "Park Joo-seong"^^xsd:string .
+
+ex:Roolf a ex:Player ;
+    DBpedia:country dbp:Canada ;
+    ex:playerID "Roolf"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans ;
+    ex:role ex:Support ;
+    FOAF:name "Randal Stark"^^xsd:string .
+
+ex:Roshan a ex:Player ;
+    ex:playerID "Roshan"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:SADO a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "SADO"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion ;
+    ex:role ex:Tank ;
+    FOAF:name "Kim Su-min"^^xsd:string .
+
+ex:SAEBYEOLBE a ex:Player ;
+    ex:playerID "SAEBYEOLBE"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior .
+
+ex:SASIN a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "SASIN"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark ;
+    ex:role ex:Tank ;
+    FOAF:name "Song Sang-hyun"^^xsd:string .
+
+ex:SLIME a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "SLIME"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty,
+        dbp:Vancouver_Titans ;
+    ex:role ex:Support ;
+    FOAF:name "Kim Sung-jun"^^xsd:string .
+
+ex:SNT a ex:Player ;
+    ex:playerID "SNT"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem .
+
+ex:SP9RK1E a ex:Player ;
+    ex:playerID "SP9RK1E"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal .
+
+ex:SPACE a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "SPACE"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators,
+        dbp:Los_Angeles_Valiant ;
+    ex:role ex:Tank ;
+    FOAF:name "Indy Halpern"^^xsd:string .
+
+ex:STRIKER a ex:Player ;
+    ex:playerID "STRIKER"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising,
+        dbp:San_Francisco_Shock .
+
+ex:SWoN a ex:Player ;
+    ex:playerID "SWoN"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem .
+
+ex:SanGuiNar a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "SanGuiNar"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:Support ;
+    FOAF:name "Lim Gyu-min"^^xsd:string .
+
+ex:Sansam a ex:Player ;
+    ex:playerID "Sansam"^^xsd:string ;
+    ex:playsFor dbp:Washington_Justice .
+
+ex:Saucy a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Saucy"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:DPS ;
+    FOAF:name "Garrett Roland"^^xsd:string .
+
+ex:Schwi a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Schwi"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:DPS ;
+    FOAF:name "Lee Dong-Jae"^^xsd:string .
+
+ex:Seagull a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Seagull"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel ;
+    ex:role ex:Flex ;
+    FOAF:name "Brandon Larned"^^xsd:string .
+
+ex:SeoMinSoo a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "SeoMinSoo"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans ;
+    ex:role ex:DPS ;
+    FOAF:name "Seo Min-soo"^^xsd:string .
+
+ex:ShRedLock a ex:Player ;
+    DBpedia:country dbp:Canada ;
+    ex:playerID "ShRedLock"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans ;
+    ex:role ex:Tank ;
+    FOAF:name "Abtin Shirvani"^^xsd:string .
+
+ex:ShaDowBurn a ex:Player ;
+    DBpedia:country dbp:Russia ;
+    ex:playerID "ShaDowBurn"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal,
+        dbp:Philadelphia_Fusion ;
+    ex:role ex:DPS ;
+    FOAF:name "George Gushcha"^^xsd:string .
+
+ex:SharP a ex:Player ;
+    DBpedia:country dbp:Sweden ;
+    ex:playerID "SharP"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign ;
+    ex:role ex:DPS ;
+    FOAF:name "Hugo Sahlberg"^^xsd:string .
+
+ex:Shax a ex:Player ;
+    DBpedia:country dbp:Denmark ;
+    ex:playerID "Shax"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant ;
+    ex:role ex:DPS ;
+    FOAF:name "Johannes Nielsen"^^xsd:string .
+
+ex:Shaz a ex:Player ;
+    DBpedia:country dbp:Finland ;
+    ex:playerID "Shaz"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators ;
+    ex:role ex:Support ;
+    FOAF:name "Jonas Suovaara"^^xsd:string .
+
+ex:Sky a ex:Player ;
+    ex:playerID "Sky"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:Snow a ex:Player ;
+    ex:playerID "Snow"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising .
+
+ex:SoOn a ex:Player ;
+    DBpedia:country dbp:France ;
+    ex:playerID "SoOn"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant,
+        dbp:Paris_Eternal ;
+    ex:role ex:DPS ;
+    FOAF:name "Terence Tarlier"^^xsd:string .
+
+ex:Spree a ex:Player ;
+    ex:playerID "Spree"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws .
+
+ex:Stand1 a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Stand1"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons ;
+    ex:role ex:Tank ;
+    FOAF:name "Seo Ji-won"^^xsd:string .
+
+ex:Stellar a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Stellar"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising,
+        dbp:Toronto_Defiant ;
+    ex:role ex:DPS ;
+    FOAF:name "Lee Do-hyung"^^xsd:string .
+
+ex:Stitch a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Stitch"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans,
+        dbp:Washington_Justice ;
+    ex:role ex:DPS ;
+    FOAF:name "Lee Chung-hee"^^xsd:string .
+
+ex:Stratus a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Stratus"^^xsd:string ;
+    ex:playsFor dbp:Washington_Justice ;
+    ex:role ex:DPS ;
+    FOAF:name "Ethan Yankel"^^xsd:string .
+
+ex:Surefour a ex:Player ;
+    DBpedia:country dbp:Canada ;
+    ex:playerID "Surefour"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators,
+        dbp:Toronto_Defiant ;
+    ex:role ex:DPS ;
+    FOAF:name "Lane Roberts"^^xsd:string .
+
+ex:Swimmer a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "Swimmer"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising ;
+    ex:role ex:Support ;
+    FOAF:name "Gabriel Levy"^^xsd:string .
+
+ex:Taimou a ex:Player ;
+    DBpedia:country dbp:Finland ;
+    ex:playerID "Taimou"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel ;
+    ex:role ex:DPS ;
+    FOAF:name "Timo Kettunen"^^xsd:string .
+
+ex:TiZi a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "TiZi"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans ;
+    ex:role ex:Tank ;
+    FOAF:name "Hwang Jang-hyeon"^^xsd:string .
+
+ex:ToYou a ex:Player ;
+    ex:playerID "ToYou"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty .
+
+ex:Trill a ex:Player ;
+    DBpedia:country dbp:Australia ;
+    ex:playerID "Trill"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel ;
+    ex:role ex:Tank ;
+    FOAF:name "Ashley Powell"^^xsd:string .
+
+ex:Tsuna a ex:Player ;
+    DBpedia:country dbp:France ;
+    ex:playerID "Tsuna"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans ;
+    ex:role ex:DPS ;
+    FOAF:name "Samir Ikram"^^xsd:string .
+
+ex:Ttuba a ex:Player ;
+    ex:playerID "Ttuba"^^xsd:string ;
+    ex:playsFor dbp:Washington_Justice .
+
+ex:TviQ a ex:Player ;
+    DBpedia:country dbp:Sweden ;
+    ex:playerID "TviQ"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem ;
+    ex:role ex:DPS ;
+    FOAF:name "Kevin Lindström"^^xsd:string .
+
+ex:Twilight a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Twilight"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock,
+        dbp:Vancouver_Titans ;
+    ex:role ex:Support ;
+    FOAF:name "Lee Joo-seok"^^xsd:string .
+
+ex:Undead a ex:Player ;
+    ex:playerID "Undead"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:Verbo a ex:Player ;
+    DBpedia:country dbp:Canada ;
+    ex:playerID "Verbo"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Valiant ;
+    ex:role ex:Support ;
+    FOAF:name "Stefano Disalvo"^^xsd:string .
+
+ex:Viol2t a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Viol2t"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock ;
+    ex:role ex:Support ;
+    FOAF:name "Park Min-ki"^^xsd:string .
+
+ex:Void a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Void"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators,
+        dbp:Shanghai_Dragons ;
+    ex:role ex:Tank ;
+    FOAF:name "Kang Jun-woo"^^xsd:string .
+
+ex:Wekeed a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Wekeed"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty ;
+    ex:role ex:Coach ;
+    FOAF:name "Choi Seok-woo"^^xsd:string .
+
+ex:WhoRu a ex:Player ;
+    ex:playerID "WhoRu"^^xsd:string ;
+    ex:playsFor dbp:New_York_Excelsior .
+
+ex:WooHyaL a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "WooHyaL"^^xsd:string ;
+    ex:playsFor dbp:London_Spitfire ;
+    ex:role ex:Tank ;
+    FOAF:name "Sung Seung-hyun"^^xsd:string .
+
+ex:Xushu a ex:Player ;
+    ex:playerID "Xushu"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:Xzi a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Xzi"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal ;
+    ex:role ex:DPS ;
+    FOAF:name "Jung Ki-hyo"^^xsd:string .
+
+ex:YOUNGJIN a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "YOUNGJIN"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons ;
+    ex:role ex:DPS ;
+    FOAF:name "Jin Young-Jin"^^xsd:string .
+
+ex:Yaki a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Yaki"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem ;
+    ex:role ex:DPS ;
+    FOAF:name "Kim Jun-ki"^^xsd:string .
+
+ex:Yakpung a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:playerID "Yakpung"^^xsd:string ;
+    ex:playsFor dbp:Toronto_Defiant ;
+    ex:role ex:Tank ;
+    FOAF:name "Jo Gyeong-mu"^^xsd:string .
+
+ex:YangXiaoLong a ex:Player ;
+    ex:playerID "YangXiaoLong"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:Yveltal a ex:Player ;
+    ex:playerID "Yveltal"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:ZUNBA a ex:Player ;
+    ex:playerID "ZUNBA"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty .
+
+ex:ZachaREEE a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:playerID "ZachaREEE"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel ;
+    ex:role ex:DPS ;
+    FOAF:name "Zachary Lombardo"^^xsd:string .
+
+ex:Zebbosai a ex:Player ;
+    DBpedia:country dbp:Sweden ;
+    ex:playerID "Zebbosai"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem ;
+    ex:role ex:Support ;
+    FOAF:name "Sebastian Olsson"^^xsd:string .
+
+ex:Zuppeh a ex:Player ;
+    DBpedia:country dbp:Finland ;
+    ex:playerID "Zuppeh"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem ;
+    ex:role ex:Support ;
+    FOAF:name "Aleksi Kuntsi"^^xsd:string .
+
+ex:aKm a ex:Player ;
+    ex:playerID "aKm"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel .
+
+ex:alemao a ex:Player ;
+    ex:playerID "alemao"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising .
+
+ex:ameng a ex:Player ;
+    ex:playerID "ameng"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:axxiom a ex:Player ;
+    ex:playerID "axxiom"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising .
+
+ex:babybay a ex:Player ;
+    ex:playerID "babybay"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign,
+        dbp:San_Francisco_Shock .
+
+ex:blase a ex:Player ;
+    ex:playerID "blase"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws .
+
+ex:blasé a ex:Player ;
+    ex:playerID "blasé"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising .
+
+ex:bqb a ex:Player ;
+    ex:playerID "bqb"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem .
+
+ex:brussen a ex:Player ;
+    ex:playerID "brussen"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising .
+
+ex:byrem a ex:Player ;
+    ex:playerID "byrem"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem .
+
+ex:carpe a ex:Player ;
+    ex:playerID "carpe"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion .
+
+ex:cocco a ex:Player ;
+    ex:playerID "cocco"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel .
+
+ex:coolmatt a ex:Player ;
+    ex:playerID "coolmatt"^^xsd:string ;
+    ex:playsFor dbp:Houston_Outlaws .
+
+ex:dafran a ex:Player ;
+    ex:playerID "dafran"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign .
+
+ex:danye a ex:Player ;
+    ex:playerID "danye"^^xsd:string ;
+    ex:playsFor dbp:Paris_Eternal .
+
+ex:dhaK a ex:Player ;
+    ex:playerID "dhaK"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock .
+
+ex:diem a ex:Player ;
+    ex:playerID "diem"^^xsd:string ;
+    ex:playsFor dbp:Shanghai_Dragons .
+
+ex:eqo a ex:Player ;
+    ex:playerID "eqo"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion .
+
+ex:fragi a ex:Player ;
+    ex:playerID "fragi"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge,
+        dbp:Philadelphia_Fusion .
+
+ex:frd a ex:Player ;
+    ex:playerID "frd"^^xsd:string ;
+    ex:playsFor dbp:Atlanta_Reign .
+
+ex:iDK a ex:Player ;
+    ex:playerID "iDK"^^xsd:string ;
+    ex:playsFor dbp:Hangzhou_Spark .
+
+ex:iRemiix a ex:Player ;
+    ex:playerID "iRemiix"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators .
+
+ex:iddqd a ex:Player ;
+    ex:playerID "iddqd"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock .
+
+ex:im37 a ex:Player ;
+    ex:playerID "im37"^^xsd:string ;
+    ex:playsFor dbp:Toronto_Defiant .
+
+ex:ivy a ex:Player ;
+    ex:playerID "ivy"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion,
+        dbp:Toronto_Defiant .
+
+ex:kevster a ex:Player ;
+    ex:playerID "kevster"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators .
+
+ex:lateyoung a ex:Player ;
+    ex:playerID "lateyoung"^^xsd:string ;
+    ex:playsFor dbp:Chengdu_Hunters .
+
+ex:mikeyy a ex:Player ;
+    ex:playerID "mikeyy"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising .
+
+ex:moth a ex:Player ;
+    ex:playerID "moth"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock .
+
+ex:neptuNo a ex:Player ;
+    ex:playerID "neptuNo"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge,
+        dbp:Philadelphia_Fusion .
+
+ex:nero a ex:Player ;
+    ex:playerID "nero"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge .
+
+ex:numlocked a ex:Player ;
+    ex:playerID "numlocked"^^xsd:string ;
+    ex:playsFor dbp:Toronto_Defiant .
+
+ex:punk a ex:Player ;
+    ex:playerID "punk"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising .
+
+ex:rCk a ex:Player ;
+    ex:playerID "rCk"^^xsd:string ;
+    ex:playsFor dbp:Boston_Uprising,
+        dbp:Dallas_Fuel .
+
+ex:rOar a ex:Player ;
+    ex:playerID "rOar"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators,
+        dbp:Washington_Justice .
+
+ex:ryujehong a ex:Player ;
+    ex:playerID "ryujehong"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty,
+        dbp:Vancouver_Titans .
+
+ex:sHockWave a ex:Player ;
+    ex:playerID "sHockWave"^^xsd:string ;
+    ex:playsFor dbp:Vancouver_Titans .
+
+ex:sayaplayer a ex:Player ;
+    ex:playerID "sayaplayer"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem .
+
+ex:sharyk a ex:Player ;
+    ex:playerID "sharyk"^^xsd:string ;
+    ex:playsFor dbp:Toronto_Defiant .
+
+ex:shu a ex:Player ;
+    ex:playerID "shu"^^xsd:string ;
+    ex:playsFor dbp:Guangzhou_Charge .
+
+ex:silkthread a ex:Player ;
+    ex:playerID "silkthread"^^xsd:string ;
+    ex:playsFor dbp:Los_Angeles_Gladiators,
+        dbp:Los_Angeles_Valiant .
+
+ex:sinatraa a ex:Player ;
+    ex:playerID "sinatraa"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock .
+
+ex:sleepy a ex:Player ;
+    ex:playerID "sleepy"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock,
+        dbp:Washington_Justice .
+
+ex:smurf a ex:Player ;
+    ex:playerID "smurf"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock .
+
+ex:snillo a ex:Player ;
+    ex:playerID "snillo"^^xsd:string ;
+    ex:playsFor dbp:Philadelphia_Fusion .
+
+ex:super a ex:Player ;
+    ex:playerID "super"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock .
+
+ex:ta1yo a ex:Player ;
+    ex:playerID "ta1yo"^^xsd:string ;
+    ex:playsFor dbp:San_Francisco_Shock .
+
+ex:tobi a ex:Player ;
+    ex:playerID "tobi"^^xsd:string ;
+    ex:playsFor dbp:Seoul_Dynasty .
+
+ex:uNKOE a ex:Player ;
+    ex:playerID "uNKOE"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel,
+        dbp:Los_Angeles_Valiant .
+
+ex:xQc a ex:Player ;
+    ex:playerID "xQc"^^xsd:string ;
+    ex:playsFor dbp:Dallas_Fuel .
+
+ex:xepheR a ex:Player ;
+    ex:playerID "xepheR"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem,
+        dbp:Seoul_Dynasty .
+
+ex:zYKK a ex:Player ;
+    ex:playerID "zYKK"^^xsd:string ;
+    ex:playsFor dbp:Toronto_Defiant .
+
+ex:zappis a ex:Player ;
+    ex:playerID "zappis"^^xsd:string ;
+    ex:playsFor dbp:Florida_Mayhem .
 
 dbp:Chengdu_Hunters DBpedia:region dbp:China ;
     FOAF:name "Chengdu Hunters" .
-
-dbp:Dallas_Fuel DBpedia:location dbp:United_States ;
-    DBpedia:region dbp:North_America ;
-    FOAF:name "Dallas Fuel" .
-
-dbp:Florida_Mayhem DBpedia:location dbp:United_States ;
-    DBpedia:region dbp:North_America ;
-    FOAF:name "Florida Mayhem" .
 
 dbp:Guangzhou_Charge DBpedia:location dbp:United_States ;
     DBpedia:region dbp:China,
@@ -30,19 +1989,6 @@ dbp:Guangzhou_Charge DBpedia:location dbp:United_States ;
 dbp:Hangzhou_Spark DBpedia:region dbp:China ;
     FOAF:name "Hangzhou Spark" .
 
-dbp:London_Spitfire DBpedia:location dbp:United_Kingdom ;
-    DBpedia:region dbp:Europe ;
-    dbp:sponsor dbp:Microsoft ;
-    FOAF:name "London Spitfire" .
-
-dbp:Los_Angeles_Gladiators DBpedia:location dbp:United_States ;
-    DBpedia:region dbp:North_America ;
-    FOAF:name "Los Angeles Gladiators" .
-
-dbp:Los_Angeles_Valiant DBpedia:location dbp:United_States ;
-    DBpedia:region dbp:China ;
-    FOAF:name "Los Angeles Valiant" .
-
 dbp:New_York_Excelsior DBpedia:location dbp:United_States ;
     DBpedia:region dbp:Korea ;
     dbp:sponsor dbp:T-Mobile ;
@@ -51,6 +1997,14 @@ dbp:New_York_Excelsior DBpedia:location dbp:United_States ;
 dbp:Paris_Eternal DBpedia:location dbp:France ;
     DBpedia:region dbp:Europe ;
     FOAF:name "Paris Eternal" .
+
+dbp:Washington_Justice DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Washington Justice" .
+
+dbp:Atlanta_Reign DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Atlanta Reign" .
 
 dbp:Philadelphia_Fusion DBpedia:location dbp:United_States ;
     DBpedia:region dbp:Korea ;
@@ -62,22 +2016,43 @@ dbp:San_Francisco_Shock DBpedia:location dbp:United_States ;
     dbp:sponsor dbp:NetApp ;
     FOAF:name "San Francisco Shock" .
 
-dbp:Seoul_Dynasty DBpedia:location dbp:South_Korea ;
-    DBpedia:region dbp:Korea ;
-    FOAF:name "Seoul Dynasty" .
+dbp:Vancouver_Titans DBpedia:location dbp:Canada ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Vancouver Titans" .
 
-dbp:Shanghai_Dragons DBpedia:region dbp:China ;
-    FOAF:name "Shanghai Dragons" .
+dbp:Los_Angeles_Gladiators DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Los Angeles Gladiators" .
 
 dbp:Toronto_Defiant DBpedia:location dbp:Canada ;
     DBpedia:region dbp:North_America ;
     FOAF:name "Toronto Defiant" .
 
-dbp:Vancouver_Titans DBpedia:location dbp:Canada ;
+dbp:Dallas_Fuel DBpedia:location dbp:United_States ;
     DBpedia:region dbp:North_America ;
-    FOAF:name "Vancouver Titans" .
+    FOAF:name "Dallas Fuel" .
 
-dbp:Washington_Justice DBpedia:location dbp:United_States ;
+dbp:Florida_Mayhem DBpedia:location dbp:United_States ;
     DBpedia:region dbp:North_America ;
-    FOAF:name "Washington Justice" .
+    FOAF:name "Florida Mayhem" .
+
+dbp:Los_Angeles_Valiant DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:China ;
+    FOAF:name "Los Angeles Valiant" .
+
+dbp:Seoul_Dynasty DBpedia:location dbp:South_Korea ;
+    DBpedia:region dbp:Korea ;
+    FOAF:name "Seoul Dynasty" .
+
+dbp:London_Spitfire DBpedia:location dbp:United_Kingdom ;
+    DBpedia:region dbp:Europe ;
+    dbp:sponsor dbp:Microsoft ;
+    FOAF:name "London Spitfire" .
+
+dbp:Boston_Uprising DBpedia:location dbp:United_States ;
+    DBpedia:region dbp:North_America ;
+    FOAF:name "Boston Uprising" .
+
+dbp:Shanghai_Dragons DBpedia:region dbp:China ;
+    FOAF:name "Shanghai Dragons" .
 

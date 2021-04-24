@@ -64,13 +64,13 @@ for team, team_data in team_results.items():
     for annotation in annotations:
         # see which of the team_data values it matched
         if team_data.get('Has name'):
-            has_name = re.fullmatch(annotation['surfaceForm'],team_data['Has name'])
+            has_name = re.fullmatch(annotation['surfaceForm'], team_data['Has name'])
         if team_data.get('Has region'):
-            has_region = re.fullmatch(annotation['surfaceForm'],team_data['Has region'])
+            has_region = re.fullmatch(annotation['surfaceForm'], team_data['Has region'])
         if team_data.get('Has location'):
-            has_location = re.fullmatch(annotation['surfaceForm'],team_data['Has location'])
+            has_location = re.fullmatch(annotation['surfaceForm'], team_data['Has location'])
         if team_data.get('Has sponsor'):
-            has_sponsor = re.fullmatch(annotation['surfaceForm'],team_data['Has sponsor'][0][0])
+            has_sponsor = re.fullmatch(annotation['surfaceForm'], team_data['Has sponsor'][0][0])
         #
         if has_name is not None:
             # team_entity, FOAF.name, team
@@ -99,19 +99,37 @@ for team, team_data in team_results.items():
     #     # team, has id, id
     #     pass
 
-# Add player triples to graph
-# for player, player_data in player_results.items():
-#     # try to get resource from DBpedia first
-#     #text = ''
-#     annotations = spotlight.annotate(SERVER, text)
+# Add player triples to graph (veldig veldig temp, kun basic info)
+player_data = dfs[['player', 'team']].drop_duplicates()
+for row in zip(player_data['player'], player_data['team']):
+    # player_entity = URIRef(f"https://liquipedia.net/overwatch/{row[0]}") # placeholder URI?
+    player_entity = ex.term(row[0])
+    g.add((player_entity, ex.playerID, Literal(row[0], datatype=XSD.string)))
+    g.add((player_entity, RDF.type, ex.Player))
+    g.add((player_entity, ex.playsFor,  dbp.term(row[1].replace(' ', "_"))))
 
-#     for annotation in annotations:
-#         pass
+    # Get player role from Liquipedia data
+    try:
+        player_role = player_results[row[0]]['Has role']
+        g.add((player_entity, ex.role, ex.term(player_role)))
+    except KeyError:
+        continue
 
-g.serialize(destination='graph.ttl',format='ttl')
-print(g.serialize(format='ttl').decode('utf-8'))
+    # Get player name from Liquipedia data
+    try:
+        player_name = player_results[row[0]]['Has name']
+        g.add((player_entity, FOAF.name, Literal(player_name, datatype=XSD.string)))
+    except KeyError:
+        g.add((player_entity, FOAF.name, ex.term('Unknown')))
 
-
+    # Get player nationality from Liquipedia data
+    try:
+        player_nationality = player_results[row[0]]['Has nationality']
+        country_annotation = spotlight.annotate(SERVER, player_nationality)
+        country_URIref = URIRef(country_annotation[0]['URI'])
+        g.add((player_entity, dbp_o.term('country'), country_URIref))
+    except KeyError:
+        continue
 
 
 ##### TEST STUFF
@@ -145,3 +163,8 @@ print(g.serialize(format='ttl').decode('utf-8'))
 #                 elif resource_name is not None:
 #                     resource_uri = URIRef(annotation['URI'])
 #                     g.add((team_entity, dbp_o.term(prop), resource_uri))
+
+
+# Print the graph to terminal
+g.serialize(destination='graph.ttl', format='ttl')
+print(g.serialize(format='ttl').decode('utf-8'))
