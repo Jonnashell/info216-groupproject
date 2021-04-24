@@ -39,7 +39,7 @@ for sub_dir in os.listdir(phs_dir):
     # get new dfs
     df = pd.concat([pd.read_csv(os.path.join(full_path, x)) for x in os.listdir(full_path)])
     #
-    # if dataset is 2020 # if 'esports_match_id' in df.columns:
+    # if dataset is 2020
     if sub_dir == 'phs_2020':
         df.rename(columns={'esports_match_id': 'match_id', 'tournament_title': 'stage',
                            'team_name': 'team', 'player_name': 'player',
@@ -48,9 +48,6 @@ for sub_dir in os.listdir(phs_dir):
     all_dfs.append(df)
 
 dfs = pd.concat(all_dfs)
-
-
-# dfs.loc[df['team'] == team]
 
 # list of already queried DBpedia resources
 queried_resources = set()
