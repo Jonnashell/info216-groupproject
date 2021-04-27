@@ -74,7 +74,7 @@ def get_dbpedia_resources(resources):
     try:
         response = spotlight.annotate(server, text)
         # add this response to the global variable all_resources
-        [all_resources.update({x['surfaceForm']: response}) for x in response]
+        [all_resources.update({x['surfaceForm']: x}) for x in response]
         return response
     except Exception as e:
         print('REEEE', e)
