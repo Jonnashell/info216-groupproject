@@ -80,15 +80,25 @@ def get_dbpedia_resources(resources):
         print('REEEE', e)
 
 
-def connect_dbpedia_resources(response, team_data, types):
+def connect_dbpedia_resources(team_data, types):
     '''
     Connect the resources gathered from DBpedia's API with the resources from our dataset.
     '''
-    if response is None:
+    global all_resources
+
+    # make sure all_resources is not empty
+    if all_resources == {}:
         return None
-    # check if the queried resource string == the value of the resource in team_data
-    result = {t: r for r in response for t in types if r['surfaceForm'] == team_data[t]}
-    # MANUALLY add exceptions like 'Has sponsor'
+
+    # MANUALLY define blacklist
+    blacklist = ['Has sponsor']
+
+    # get all values in team_data on keys defined in types
+    values = dict(zip(types, map(team_data.get, types)))
+    # get response from DBpedia that matches the key/value pairs of team_data
+    result = {k: all_resources[v] for k,v in values.items() if k not in blacklist and v in all_resources}
+
+    # MANUALLY add exceptions defined in blacklist below
     if 'Has sponsor' in types:
         sponsors = [x[0] for x in team_data['Has sponsor']]
         sponsors = [r for r in response if r['surfaceForm'] in sponsors]
@@ -97,22 +107,22 @@ def connect_dbpedia_resources(response, team_data, types):
             result.update(sponsor_dict)
     return result
 
-
+# Add team triples to graph
 for team, team_data in team_results.items():
-    # try to get resource from DBpedia first
-    whitelist = ['Has name', 'Has region', 'Has location']
+    team_name = team.replace(' ', '_')
     # add all resources to one list for later query
     try:
         sponsors = [x[0] for x in team_data['Has sponsor']]
+        types = ['Has name', 'Has region', 'Has location', 'Has sponsor']
     except KeyError:
         sponsors = []
-    resources = [team_data[x] for x in whitelist if x in team_data.keys()] + sponsors
+        types = ['Has name', 'Has region', 'Has location']
+    # get resources
+    resources = [team_data[x] for x in ['Has name', 'Has region', 'Has location'] if x in team_data.keys()] + sponsors
     # query resources
     response = get_dbpedia_resources(resources)
     # connect resources with team_data
-    resources = connect_dbpedia_resources(response, team_data, whitelist)
-    # 
-    team = team.replace(' ', '_')
+    resources = connect_dbpedia_resources(team_data, types)
 
     ### DATASET STUFF (veldig temp) ###
     #df = dfs.loc[dfs['team'] == team]
@@ -124,36 +134,36 @@ for team, team_data in team_results.items():
     #     pass
 
 # Add player triples to graph (veldig veldig temp, kun basic info)
-player_data = dfs[['player', 'team']].drop_duplicates()
-for row in zip(player_data['player'], player_data['team']):
-    # player_entity = URIRef(f"https://liquipedia.net/overwatch/{row[0]}") # placeholder URI?
-    player_entity = ex.term(row[0])
-    g.add((player_entity, ex.playerID, Literal(row[0], datatype=XSD.string)))
-    g.add((player_entity, RDF.type, ex.Player))
-    g.add((player_entity, ex.playsFor,  dbp.term(row[1].replace(' ', "_"))))
+# player_data = dfs[['player', 'team']].drop_duplicates()
+# for row in zip(player_data['player'], player_data['team']):
+#     # player_entity = URIRef(f"https://liquipedia.net/overwatch/{row[0]}") # placeholder URI?
+#     player_entity = ex.term(row[0])
+#     g.add((player_entity, ex.playerID, Literal(row[0], datatype=XSD.string)))
+#     g.add((player_entity, RDF.type, ex.Player))
+#     g.add((player_entity, ex.playsFor,  dbp.term(row[1].replace(' ', "_"))))
 
-    # Get player role from Liquipedia data
-    try:
-        player_role = player_results[row[0]]['Has role']
-        g.add((player_entity, ex.role, ex.term(player_role)))
-    except KeyError:
-        continue
+#     # Get player role from Liquipedia data
+#     try:
+#         player_role = player_results[row[0]]['Has role']
+#         g.add((player_entity, ex.role, ex.term(player_role)))
+#     except KeyError:
+#         continue
 
-    # Get player name from Liquipedia data
-    try:
-        player_name = player_results[row[0]]['Has name']
-        g.add((player_entity, FOAF.name, Literal(player_name, datatype=XSD.string)))
-    except KeyError:
-        g.add((player_entity, FOAF.name, ex.term('Unknown')))
+#     # Get player name from Liquipedia data
+#     try:
+#         player_name = player_results[row[0]]['Has name']
+#         g.add((player_entity, FOAF.name, Literal(player_name, datatype=XSD.string)))
+#     except KeyError:
+#         g.add((player_entity, FOAF.name, ex.term('Unknown')))
 
-    # Get player nationality from Liquipedia data
-    try:
-        player_nationality = player_results[row[0]]['Has nationality']
-        country_annotation = spotlight.annotate(SERVER, player_nationality)
-        country_URIref = URIRef(country_annotation[0]['URI'])
-        g.add((player_entity, dbp_o.term('country'), country_URIref))
-    except KeyError:
-        continue
+#     # Get player nationality from Liquipedia data
+#     try:
+#         player_nationality = player_results[row[0]]['Has nationality']
+#         country_annotation = spotlight.annotate(SERVER, player_nationality)
+#         country_URIref = URIRef(country_annotation[0]['URI'])
+#         g.add((player_entity, dbp_o.term('country'), country_URIref))
+#     except KeyError:
+#         continue
 
 
 # Print the graph to terminal
