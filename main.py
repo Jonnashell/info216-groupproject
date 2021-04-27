@@ -3,9 +3,10 @@ import os
 import pandas as pd
 import re
 import spotlight
+import owlrl
 from rdflib import Graph, Namespace, URIRef, Literal, BNode
 from rdflib.collection import Collection
-from rdflib.namespace import RDF, RDFS, XSD, FOAF
+from rdflib.namespace import RDF, RDFS, XSD, FOAF, OWL
 from get_liquipedia_data import team_results, player_results, map_results
 
 # Note: importing team_results, and player_results may takes a bit of time.
@@ -53,7 +54,70 @@ g.bind('dbp', dbp)
 g.bind('Schema', schema)
 g.bind('DBpedia', dbp_o)
 g.bind('Wikidata', wd)
+g.bind('owl', OWL)
 
+# Classes and Class Properties. Kan legges inn i egen ontologi-fil kanskje??
+# RDFS Player-related class properties
+g.add((ex.Player, RDF.type, OWL.Class))
+g.add((ex.Player, RDFS.subClassOf, FOAF.Person))
+g.add((FOAF.name, RDFS.domain, ex.Player))
+g.add((FOAF.name, RDF.type, OWL.DatatypeProperty))
+g.add((FOAF.Person, RDFS.subClassOf, dbp.Agent))
+g.add((ex.PlayerID, RDF.type, OWL.DatatypeProperty))
+g.add((ex.PlayerID, RDFS.domain, ex.Player))
+g.add((ex.PlayerID, RDFS.range, RDFS.Literal))
+g.add((ex.playsFor, RDFS.domain, ex.Player))
+g.add((ex.playsFor, RDFS.range, dbp.SportsTeam))
+g.add((ex.playedAgainst, RDFS.subClassOf, FOAF.knows))
+g.add((ex.playedAgainst, RDF.type, OWL.ReflexiveProperty))
+g.add((ex.playedAgainst, RDF.type, OWL.SymmetricProperty))
+g.add((ex.playedAgainst, RDFS.domain, ex.Player))
+g.add((ex.playedAgainst, RDFS.range, ex.Player))
+
+# RDFS Team-related class properties
+g.add((dbp.Organisation, RDFS.subClassOf, dbp.Agent))
+g.add((dbp.SportsTeam, RDFS.subClassOf, dbp.Organisation))
+g.add((dbp.SportsTeam, OWL.sameAs, schema.SportsTeam))
+g.add((FOAF.name, RDFS.domain, schema.SportsTeam))
+
+# RDFS Match-related class properties
+g.add((ex.Match, RDF.type, OWL.Class))
+g.add((ex.matchID, RDF.type, OWL.DatatypeProperty))
+g.add((ex.matchID, RDFS.domain, ex.Match))
+g.add((ex.matchID, RDFS.range, RDFS.Literal))
+g.add((ex.matchMap, RDFS.domain, ex.Match))
+g.add((ex.matchMap, RDFS.range, ex.Map))
+g.add((ex.matchWinner, RDFS.domain, ex.Match))
+g.add((ex.matchWinner, RDFS.range, dbp.SportsTeam))
+g.add((ex.matchLoser, RDFS.domain, ex.Match))
+g.add((ex.matchLoser, RDFS.range, dbp.SportsTeam))
+g.add((ex.matchTeamOne, RDFS.domain, ex.Match))
+g.add((ex.matchTeamOne, RDFS.range, dbp.SportsTeam))
+g.add((ex.matchTeamTwo, RDFS.domain, ex.Match))
+g.add((ex.matchTeamTwo, RDFS.range, dbp.SportsTeam))
+g.add((ex.matchStartTime, RDFS.domain, ex.Match))
+
+# RDFS Map-related class properties
+g.add((ex.Map, RDF.type, OWL.Class))
+g.add((ex.hasLocation, RDFS.domain, ex.Map))
+g.add((ex.hasLocation, RDFS.domain, dbp.SportsTeam))
+g.add((ex.hasLocation, RDFS.range, dbp.Country))
+g.add((FOAF.name, RDFS.domain, ex.Map))
+
+
+# RDFS Tournament-related class properties
+g.add((ex.Tournament, RDF.type, OWL.Class))
+g.add((FOAF.name, RDFS.domain, ex.Tournament))
+g.add((ex.tournamentMatches, RDF.domain, ex.matchID))  # usikker her, trenger å akseptere mange matchID's i array e.l
+
+# Other class properties
+g.add((dbp.Country, OWL.sameAs, schema.Country))
+g.add((dbp.Place, OWL.sameAs, schema.Place))
+
+print("Inital Classes and Class properties added to graph. ")
+
+
+# Spotlight server address
 SERVER = "https://api.dbpedia-spotlight.org/en/annotate"
 
 # global list of already queried DBpedia resources
@@ -62,11 +126,11 @@ all_resources = {}
 
 
 def get_dbpedia_resources(resources):
-    '''
+    """
     Requests DBpedia's API with the spotlight module to gather data about resources
     :param resources: list of resources to query (cannot contain list of lists)
     :return list of dicts: response from DBpedia's API
-    '''
+    """
     global queried_resources
     server = "https://api.dbpedia-spotlight.org/en/annotate"
     # make sure resource is not already queried, to avoid unnecessary API requests
@@ -89,9 +153,9 @@ def get_dbpedia_resources(resources):
 
 
 def connect_dbpedia_resources(team_data, keys):
-    '''
+    """
     Connect the resources gathered from DBpedia's API with the resources from our dataset.
-    '''
+    """
     global all_resources
 
     # make sure all_resources is not empty
@@ -104,15 +168,16 @@ def connect_dbpedia_resources(team_data, keys):
     # get all values in team_data on keys defined in keys
     values = dict(zip(keys, map(team_data.get, keys)))
     # get response from DBpedia that matches the key/value pairs of team_data
-    result = {k: all_resources[v] for k,v in values.items() if k not in blacklist and v in all_resources}
+    result = {k: all_resources[v] for k, v in values.items() if k not in blacklist and v in all_resources}
 
     # MANUALLY add exceptions defined in blacklist below
     if 'Has sponsor' in keys:
         sponsors = [x[0] for x in team_data['Has sponsor'] if x[0] in all_resources]
-        if sponsors != []:
+        if sponsors:
             sponsor_dict = {'Has sponsor': sponsors}
             result.update(sponsor_dict)
     return result
+
 
 # Add team triples to graph
 for team, team_data in team_results.items():
@@ -167,26 +232,27 @@ for team, team_data in team_results.items():
             elif ns == 'DBpedia':
                 g.add((resource_obj, RDF.type, dbp.term(value)))
 
-
-    ### DATASET STUFF (veldig temp) ###
+    # DATASET STUFF (veldig temp)
     # properties needed:
     # 'match_winner', 'map_winner', 'map_loser', 'map_name', 'team_one_name', 'team_two_name'
     # notes:
     # get all rows from map_stats where match_id == match_id from dfs
     df = dfs.loc[dfs['team'] == team]
-    df = df.drop_duplicates(subset=['start_time','match_id','stage','map_type','map_name','player','team'])
+    df = df.drop_duplicates(subset=['start_time', 'match_id', 'stage', 'map_type', 'map_name', 'player', 'team'])
 
-    loop over rows
+    # loop over rows
     for index, row in df.iterrows():    
         # team, has id, id
         pass
 
-# # Add player triples to graph (veldig veldig temp, kun basic info)
+print("Team triples added to graph.")
+
+# Add player triples to graph (veldig veldig temp, kun basic info)
 player_data = dfs[['player', 'team']].drop_duplicates()
 for row in zip(player_data['player'], player_data['team']):
     # player_entity = URIRef(f"https://liquipedia.net/overwatch/{row[0]}") # placeholder URI?
     player_entity = ex.term(row[0])
-    g.add((player_entity, ex.playerID, Literal(row[0], datatype=XSD.string)))
+    g.add((player_entity, ex.PlayerID, Literal(row[0], datatype=XSD.string)))
     g.add((player_entity, RDF.type, ex.Player))
     g.add((player_entity, ex.playsFor,  dbp.term(row[1].replace(' ', "_"))))
 
@@ -212,6 +278,15 @@ for row in zip(player_data['player'], player_data['team']):
         g.add((player_entity, dbp_o.term('country'), country_URIref))
     except KeyError:
         continue
+
+print("Player triples added to graph.")
+
+
+# Dette føkker opp WebVowl, aner ikke hvorfor. Kan ha noe med at den oppretter 5000 tripler...
+# Add inferred triples to the graph
+# owl = owlrl.CombinedClosure.RDFS_OWLRL_Semantics(g, False, False, False)
+# owl.closure()
+# owl.flush_stored_triples()
 
 
 # Print the graph to terminal

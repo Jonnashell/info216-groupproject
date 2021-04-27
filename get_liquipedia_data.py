@@ -9,7 +9,7 @@ import time
 from datetime import datetime
 from math import ceil
 
-## IMPORTANT: 
+# IMPORTANT:
 # API Terms of use: https://liquipedia.net/api-terms-of-use
 # - Rate limit all HTTP requests to no more than 1 request per 2 seconds.
 
@@ -30,15 +30,14 @@ except FileNotFoundError:
     print("file 'team_results.json' does not exist. Retrieving data from Liquipedia API")
 
 
-
-if use_cache == False:
+if not use_cache:
     def get_entity_data(entity_list, printouts, sort_property):
-        '''
+        """
         :param entity_list: list of all unique entities you want to query in Liquipedia API
         :param printouts: properties the API shall return for each entity
         :param sort_property: property used for sorting entities
         :return: dictionary, key: name of entity, value: dictionary of properties and values of entities
-        '''
+        """
         # distinct between team and player lookup_properties
         base_uri = 'https://liquipedia.net/overwatch/api.php?'
         # Limit the amount of entities queried to 15 at a time. More than this is not possible in the API.
@@ -60,7 +59,7 @@ if use_cache == False:
                 'action': 'ask',
                 'query': '[[{}::{}]]|{}|sort={}'.format(lookup_property, query, printouts, sort_property),
                 'format': 'json'
-                #'api_version': 3
+                # 'api_version': 3
             }
             headers = {
                 'User-Agent': 'UniversityOfBergen-INFO216-Group1',
@@ -115,8 +114,8 @@ if use_cache == False:
         # if dataset is 2020
         if sub_dir == 'phs_2020':
             df.rename(columns={'esports_match_id': 'match_id', 'tournament_title': 'stage',
-                            'team_name': 'team', 'player_name': 'player',
-                            'hero_name': 'hero'}, inplace=True)
+                               'team_name': 'team', 'player_name': 'player',
+                               'hero_name': 'hero'}, inplace=True)
         # add df_new to df
         all_dfs.append(df)
     dfs = pd.concat(all_dfs)
