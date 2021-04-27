@@ -24,6 +24,8 @@ try:
     time_diff = (datetime.now() - m_time).total_seconds() / 60 / 60
     if time_diff < hours_trigger:
         use_cache = True
+    else:
+        print('Cache is outdated (at least {} hours old). Retrieving data from Liquipedia API'.format(hours_trigger))
 except FileNotFoundError:
     print("file 'team_results.json' does not exist. Retrieving data from Liquipedia API")
 
@@ -37,7 +39,7 @@ if use_cache == False:
         :param sort_property: property used for sorting entities
         :return: dictionary, key: name of entity, value: dictionary of properties and values of entities
         '''
-        global df
+        # distinct between team and player lookup_properties
         base_uri = 'https://liquipedia.net/overwatch/api.php?'
         # Limit the amount of entities queried to 15 at a time. More than this is not possible in the API.
         amount = ceil(len(entity_list) / 15) + 1
@@ -46,12 +48,17 @@ if use_cache == False:
         all_requests = []
         for i in range(1, amount):
             entities = entity_list[last:15*i]
-            query = '||'.join(entities)
+            if sort_property == 'Has_id_sort':
+                lookup_property = 'Has_id_sort'
+                query = '||'.join(entities).lower()
+            else:
+                lookup_property = 'Has_id'
+                query = '||'.join(entities)
+
             last = 15*i
-            #
             params = {
                 'action': 'ask',
-                'query': '[[Has_id::{}]]|{}|sort={}'.format(query, printouts, sort_property),
+                'query': '[[{}::{}]]|{}|sort={}'.format(lookup_property, query, printouts, sort_property),
                 'format': 'json'
                 #'api_version': 3
             }
@@ -59,22 +66,21 @@ if use_cache == False:
                 'User-Agent': 'UniversityOfBergen-INFO216-Group1',
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
-            #
+
             try:
                 r = requests.get(base_uri, params=params, headers=headers)
                 all_requests.append(r)
             except:
                 print('failed reee:', query)
-            #
+
             # sleep for 2 seconds to follow the API terms of use
             time.sleep(2)
-        #
-        #
+
         # loop over all entities and retrieve only necessary info
         results = {}
         for request in all_requests:
             for entity, data in request.json()['query']['results'].items():
-                results[entity] = {}
+                results[entity.lower()] = {}
                 for prop, value in data['printouts'].items():
                     if len(value) > 0:
                         value = value[0]
@@ -90,29 +96,34 @@ if use_cache == False:
                                 value = True
                             else:
                                 value = False
-                        results[entity].update({prop: value})
+                        results[entity.lower()].update({prop: value})
         return results
 
-    # collect entity lists
-    player_list = []
-    team_list = []
+    # import datasets to one big df
     all_dfs = []
-    # loop over .csv files
     phs_dir = os.getcwd() + r'\phs_data'
     for sub_dir in os.listdir(phs_dir):
+        # define full path to the sub_dir
         full_path = os.path.join(phs_dir, sub_dir)
-        dfs = [pd.read_csv(os.path.join(full_path, x)) for x in os.listdir(full_path)]
-        all_dfs.append(dfs)
-        # players
-        players = [x.get('player_name').unique() if 'player_name' in x.columns else x.get('player').unique() for x in dfs]
-        for player in np.unique([y for x in players for y in x]):
-            if player not in player_list:
-                player_list.append(player)
-        # teams
-        teams = [x.get('team_name').unique() if 'team_name' in x.columns else x.get('team').unique() for x in dfs]
-        for team in np.unique([y for x in teams for y in x]):
-            if team not in team_list:
-                team_list.append(team)
+        # if sub_dir is not a directory, it's the map stats dataset
+        if os.path.isfile(full_path):
+            map_stats = pd.read_csv(full_path)
+            continue
+        # get new dfs
+        df = pd.concat([pd.read_csv(os.path.join(full_path, x)) for x in os.listdir(full_path)])
+        #
+        # if dataset is 2020
+        if sub_dir == 'phs_2020':
+            df.rename(columns={'esports_match_id': 'match_id', 'tournament_title': 'stage',
+                            'team_name': 'team', 'player_name': 'player',
+                            'hero_name': 'hero'}, inplace=True)
+        # add df_new to df
+        all_dfs.append(df)
+    dfs = pd.concat(all_dfs)
+
+    # collect entity lists
+    player_list = list(dfs.player.unique())
+    team_list = list(dfs.team.unique())
 
     # players
     printouts = '?Has name|?Has birth day|?Has age|?Has nationality|?Has ids|?Has role|?Modification date'
