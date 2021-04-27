@@ -1,1 +1,301 @@
+@prefix FOAF: <http://xmlns.com/foaf/0.1/> .
+@prefix Schema: <https://schema.org/> .
+@prefix Wikidata: <http://www.wikidata.org/entity/> .
+@prefix dbp: <http://dbpedia.org/resource/> .
+@prefix ex: <http://example.org/> .
+
+dbp:Atlanta_Reign a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:North_America ;
+    FOAF:name "atlanta reign" .
+
+dbp:Boston_Uprising a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:North_America ;
+    FOAF:name "boston uprising" .
+
+dbp:Chengdu_Hunters a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:China ;
+    ex:hasRegion dbp:China ;
+    FOAF:name "chengdu hunters" .
+
+dbp:Dallas_Fuel a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:North_America ;
+    FOAF:name "dallas fuel" .
+
+dbp:Florida_Mayhem a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:North_America ;
+    FOAF:name "florida mayhem" .
+
+dbp:Guangzhou_Charge a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:China ;
+    ex:hasRegion dbp:China ;
+    FOAF:name "guangzhou charge" .
+
+dbp:Hangzhou_Spark a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:China ;
+    ex:hasRegion dbp:China ;
+    FOAF:name "hangzhou spark" .
+
+dbp:London_Spitfire a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_Kingdom ;
+    ex:hasRegion dbp:Europe ;
+    FOAF:name "london spitfire" .
+
+dbp:Los_Angeles_Gladiators a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:North_America ;
+    FOAF:name "los angeles gladiators" .
+
+dbp:Los_Angeles_Valiant a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:China ;
+    FOAF:name "los angeles valiant" .
+
+dbp:New_York_Excelsior a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:South_Korea ;
+    FOAF:name "new york excelsior" .
+
+dbp:Paris_Eternal a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:France ;
+    ex:hasRegion dbp:Europe ;
+    FOAF:name "paris eternal" .
+
+dbp:Philadelphia_Fusion a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:South_Korea ;
+    FOAF:name "philadelphia fusion" .
+
+dbp:San_Francisco_Shock a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:North_America ;
+    FOAF:name "san francisco shock" .
+
+dbp:Seoul_Dynasty a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:South_Korea ;
+    ex:hasRegion dbp:South_Korea ;
+    FOAF:name "seoul dynasty" .
+
+dbp:Shanghai_Dragons a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:China ;
+    ex:hasRegion dbp:China ;
+    FOAF:name "shanghai dragons" .
+
+dbp:Toronto_Defiant a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:Canada ;
+    ex:hasRegion dbp:North_America ;
+    FOAF:name "toronto defiant" .
+
+dbp:Vancouver_Titans a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:Canada ;
+    ex:hasRegion dbp:North_America ;
+    FOAF:name "vancouver titans" .
+
+dbp:Washington_Justice a dbp:Agent,
+        dbp:Organisation,
+        dbp:SportsTeam,
+        Wikidata:Q12973014,
+        Wikidata:Q24229398,
+        Wikidata:Q43229,
+        Schema:Organization,
+        Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:North_America ;
+    FOAF:name "washington justice" .
+
+ex:houston_outlaws a Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:hasRegion dbp:North_America ;
+    FOAF:name "houston outlaws" .
+
+dbp:France a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place .
+
+dbp:United_Kingdom a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place .
+
+dbp:Canada a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place .
+
+dbp:Europe a dbp:Continent,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Schema:Continent,
+        Schema:Place .
+
+dbp:South_Korea a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place .
+
+dbp:China a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place .
+
+dbp:North_America a dbp:Continent,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Schema:Continent,
+        Schema:Place .
+
+dbp:United_States a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place .
 
