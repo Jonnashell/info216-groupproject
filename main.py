@@ -4,6 +4,7 @@ import pandas as pd
 import re
 import spotlight
 import owlrl
+from datetime import datetime
 from rdflib import Graph, Namespace, URIRef, Literal, BNode
 from rdflib.collection import Collection
 from rdflib.namespace import RDF, RDFS, XSD, FOAF, OWL
@@ -181,6 +182,7 @@ def connect_dbpedia_resources(team_data, keys):
 
 # Add team triples to graph
 for team, team_data in team_results.items():
+    team = team.title()
     team_name = team.replace(' ', '_')
     # add all resources to one list for later query
     try:
@@ -192,7 +194,7 @@ for team, team_data in team_results.items():
 
     # get resources
     resources = [team_data[x] for x in ['Has name', 'Has region', 'Has location'] if x in team_data.keys()] + sponsors
-    # query resources (no putput is returned, but global variable 'all_resources' is updated)
+    # query resources (no output is returned, but global variable 'all_resources' is updated)
     get_dbpedia_resources(resources)
     # connect resources with team_data
     resources = connect_dbpedia_resources(team_data, keys)
@@ -231,53 +233,71 @@ for team, team_data in team_results.items():
                 g.add((resource_obj, RDF.type, schema.term(value)))
             elif ns == 'DBpedia':
                 g.add((resource_obj, RDF.type, dbp.term(value)))
-
-    # DATASET STUFF (veldig temp)
-    # properties needed:
-    # 'match_winner', 'map_winner', 'map_loser', 'map_name', 'team_one_name', 'team_two_name'
-    # notes:
-    # get all rows from map_stats where match_id == match_id from dfs
-    df = dfs.loc[dfs['team'] == team]
-    df = df.drop_duplicates(subset=['start_time', 'match_id', 'stage', 'map_type', 'map_name', 'player', 'team'])
-
-    # loop over rows
-    for index, row in df.iterrows():    
-        # team, has id, id
-        pass
+    
+    # get all unique games a team has played
+    team_games_df = dfs[dfs.team == team][['match_id', 'team']].drop_duplicates()
+    # add all games a team has played to a collection with a blank node
+    b = BNode()
+    team_games = [ex.term(str(match)) for match in team_games_df['match_id'].to_list()]
+    Collection(g, b, team_games)
+    # add blank node to team_entity's played matches
+    g.add((team_entity, ex.playedMatches, b))
 
 print("Team triples added to graph.")
 
+# query player names and nationality in DBpedia
+nationalities = set([x['Has nationality'] for x in player_results.values()])
+names = dfs['player'].unique()
+
+get_dbpedia_resources(nationalities)
+get_dbpedia_resources(names)
+
 # Add player triples to graph
-player_data = dfs[['player', 'team']].drop_duplicates()
-for row in zip(player_data['player'], player_data['team']):
-    # player_entity = URIRef(f"https://liquipedia.net/overwatch/{row[0]}") # placeholder URI?
-    player_entity = ex.term(row[0])
-    g.add((player_entity, ex.PlayerID, Literal(row[0], datatype=XSD.string)))
+for player, player_data in player_results.items():
+
+    # define player_entity
+    try:
+        player_entity = URIRef(all_resources[player]['URI'])
+    except KeyError:
+        # this means player does not exist in DBpedia
+        player_entity = ex.term(player.replace(' ', '_'))
+
+    # define nationality
+    try:
+        player_nationality = URIRef(all_resources[player_data['Has nationality']]['URI'])
+    except KeyError:
+        # this means the nationality does not exist in DBpedia
+        player_nationality = ex.term(player_data['Has nationality'].replace(' ', '_'))
+    
+    # Add birthday to graph
+    try:
+        birthday = '/'.join(player_data['Has birth day'].split('/')[1:4])
+        birthday = datetime.strptime(birthday, '%Y/%m/%d')
+        g.add((player_entity, ex.birthday, Literal(birthday, datatype=XSD.date)))
+    except KeyError:
+        # this means there is no data on the player's birthday in DBpedia
+        pass
+
+    # Add age to graph
+    try:
+        g.add((player_entity, FOAF.age, Literal(player_data['Has age'], datatype=XSD.integer)))
+    except KeyError:
+        # this means there is no data on the player's age in DBpedia
+        pass
+    
+    # Add role to graph
+    try:
+        g.add((player_entity, ex.role, ex.term(player_data['Has role'].replace(' ', '_'))))
+    except KeyError:
+        # this means there is no data on the player's main role in DBpedia
+        pass
+
+    # Add type, id, name, and nationality to graph
     g.add((player_entity, RDF.type, ex.Player))
-    g.add((player_entity, ex.playsFor,  dbp.term(row[1].replace(' ', "_"))))
+    g.add((player_entity, ex.PlayerID, Literal(player, datatype=XSD.string)))
+    g.add((player_entity, FOAF.name, Literal(player_data['Has name'].replace(' ', '_'), datatype=XSD.string)))
+    g.add((player_entity, dbp_o.term('country'), player_nationality))
 
-    # Get player role from Liquipedia data
-    try:
-        player_role = player_results[row[0]]['Has role']
-        g.add((player_entity, ex.role, ex.term(player_role)))
-    except KeyError:
-        continue
-
-    # Get player name from Liquipedia data
-    try:
-        player_name = player_results[row[0]]['Has name']
-        g.add((player_entity, FOAF.name, Literal(player_name, datatype=XSD.string)))
-    except KeyError:
-        g.add((player_entity, FOAF.name, ex.term('Unknown')))
-
-    # Get player nationality from Liquipedia data
-    try:
-        player_nationality = player_results[row[0]]['Has nationality']
-        country_annotation = spotlight.annotate(SERVER, player_nationality)
-        country_URIref = URIRef(country_annotation[0]['URI'])
-        g.add((player_entity, dbp_o.term('country'), country_URIref))
-    except KeyError:
-        continue
 
 print("Player triples added to graph.")
 
