@@ -14,7 +14,7 @@ from math import ceil
 # - Rate limit all HTTP requests to no more than 1 request per 2 seconds.
 
 # Check if we already gathered data from API in the last X hours
-hours_trigger = 12
+hours_trigger = 36
 use_cache = False
 
 try:
