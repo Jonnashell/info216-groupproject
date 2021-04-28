@@ -108,7 +108,7 @@ g.add((FOAF.name, RDFS.domain, ex.Map))
 # RDFS Tournament-related class properties
 g.add((ex.Tournament, RDF.type, OWL.Class))
 g.add((FOAF.name, RDFS.domain, ex.Tournament))
-g.add((ex.tournamentMatches, RDF.domain, ex.matchID))  # usikker her, trenger å akseptere mange matchID's i array e.l
+g.add((ex.tournamentMatches, RDFS.domain, ex.matchID))  # usikker her, trenger å akseptere mange matchID's i array e.l
 
 # Other class properties
 g.add((dbp.Country, OWL.sameAs, schema.Country))
