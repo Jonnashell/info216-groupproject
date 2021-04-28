@@ -104,7 +104,6 @@ g.add((ex.hasLocation, RDFS.domain, dbp.SportsTeam))
 g.add((ex.hasLocation, RDFS.range, dbp.Country))
 g.add((FOAF.name, RDFS.domain, ex.Map))
 
-
 # RDFS Tournament-related class properties
 g.add((ex.Tournament, RDF.type, OWL.Class))
 g.add((FOAF.name, RDFS.domain, ex.Tournament))
@@ -247,7 +246,7 @@ for team, team_data in team_results.items():
 
 print("Team triples added to graph.")
 
-# Add player triples to graph (veldig veldig temp, kun basic info)
+# Add player triples to graph
 player_data = dfs[['player', 'team']].drop_duplicates()
 for row in zip(player_data['player'], player_data['team']):
     # player_entity = URIRef(f"https://liquipedia.net/overwatch/{row[0]}") # placeholder URI?
@@ -282,7 +281,48 @@ for row in zip(player_data['player'], player_data['team']):
 print("Player triples added to graph.")
 
 
-# Dette føkker opp WebVowl, aner ikke hvorfor. Kan ha noe med at den oppretter 5000 tripler...
+# Creating a new dataframe with Overwatch League match data from Statslab
+match_df = pd.read_csv(r'phs_data\match_map_stats.csv')
+match_df = match_df[["round_start_time", "match_id", "map_name", "team_one_name",
+                     "team_two_name", "match_winner"]]
+match_df["match_start_date"] = match_df['round_start_time'].str.extract(r'(^\d{4}-\d{2}-\d{2})')
+match_df.drop('round_start_time', axis=1, inplace=True)
+match_df["tournament"] = "Overwatch League " + match_df['match_start_date'].str.extract(r'(^\d{4})')
+match_df.drop_duplicates(subset=["match_id"], keep="first", ignore_index=True, inplace=True)
+
+# Adding match, tournament and map triples to graph
+for (index, match_id, map_name, team_one_name, team_two_name, match_winner, match_start_time, tournament) in match_df.itertuples():
+
+    # Create a term for the Match instance subject
+    match_entity = ex.term(str(match_id))
+
+    # Remove spaces from terms
+    team_one_name = team_one_name.replace(' ', '_')
+    team_two_name = team_two_name.replace(' ', '_')
+    match_winner = match_winner.replace(' ', '_')
+    map_name = map_name.replace(' ', '_')
+    map_name = map_name.replace("'", "")
+
+    # Add
+    g.add((match_entity, RDF.type, ex.Match))
+    g.add((match_entity, ex.matchID, Literal(match_id, datatype=XSD.string)))
+
+    if (ex.term(map_name), RDF.type, ex.Map) not in g:
+        map_entity = ex.term(map_name)
+        g.add((map_entity, RDF.type, ex.Map))
+        g.add((map_entity, FOAF.name, Literal(map_name, datatype=XSD.string)))
+
+    g.add((match_entity, ex.matchMap, ex.term(map_name)))
+    g.add((match_entity, ex.matchTeamOne, ex.term(team_one_name)))
+    g.add((match_entity, ex.matchTeamTwo, ex.term(team_two_name)))
+    g.add((match_entity, ex.matchWinner, ex.term(match_winner)))
+    g.add((match_entity, ex.matchStartTime, Literal(match_start_time, datatype=XSD.string)))
+
+print("Match, tournament and map triples added to graph")
+
+
+# Noen inferred triples fucker opp shitten til WebVowl, aner ikke hvorfor.
+# Kan ha noe med at den oppretter sånn 5000 tripler tho...
 # Add inferred triples to the graph
 # owl = owlrl.CombinedClosure.RDFS_OWLRL_Semantics(g, False, False, False)
 # owl.closure()
