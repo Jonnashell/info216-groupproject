@@ -7136,6 +7136,22 @@ ex:37256 a ex:Match ;
     ex:matchTeamTwo ex:Shanghai_Dragons ;
     ex:matchWinner ex:Shanghai_Dragons .
 
+ex:Overwatch_League_2018 a ex:Tournament ;
+    ex:tournamentMatches ex: ;
+    FOAF:name "Overwatch League 2018"^^xsd:string .
+
+ex:Overwatch_League_2019 a ex:Tournament ;
+    ex:tournamentMatches ex: ;
+    FOAF:name "Overwatch League 2019"^^xsd:string .
+
+ex:Overwatch_League_2020 a ex:Tournament ;
+    ex:tournamentMatches ex: ;
+    FOAF:name "Overwatch League 2020"^^xsd:string .
+
+ex:Overwatch_League_2021 a ex:Tournament ;
+    ex:tournamentMatches ex: ;
+    FOAF:name "Overwatch League 2021"^^xsd:string .
+
 ex:PlayerID a owl:DatatypeProperty ;
     rdfs:domain ex:Player ;
     rdfs:range rdfs:Literal .
@@ -9399,7 +9415,60 @@ FOAF:name a owl:DatatypeProperty ;
         ex:Tournament,
         Schema:SportsTeam .
 
-ex:Tournament a owl:Class .
+dbp:Africa a dbp:Continent,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Schema:Continent,
+        Schema:Place ;
+    FOAF:name "Africa"^^xsd:string .
+
+dbp:Egypt a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place ;
+    FOAF:name "Egypt"^^xsd:string .
+
+dbp:Greece a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place ;
+    FOAF:name "Greece"^^xsd:string .
+
+dbp:Iraq a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place ;
+    FOAF:name "Iraq"^^xsd:string .
+
+dbp:London a dbp:City,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        dbp:Settlement,
+        Wikidata:Q486972,
+        Wikidata:Q515,
+        Schema:City,
+        Schema:Place ;
+    FOAF:name "London"^^xsd:string .
+
+dbp:Nepal a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place ;
+    FOAF:name "Nepal"^^xsd:string .
 
 ex:matchID a owl:DatatypeProperty ;
     rdfs:domain ex:Match ;
@@ -9414,15 +9483,60 @@ dbp:Europe a dbp:Continent,
         Schema:Continent,
         Schema:Place .
 
+dbp:Germany a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place ;
+    FOAF:name "Germany"^^xsd:string .
+
+dbp:Japan a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place ;
+    FOAF:name "Japan"^^xsd:string .
+
+dbp:Mexico a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place ;
+    FOAF:name "Mexico"^^xsd:string .
+
 ex:Route_66 a ex:Map ;
-    FOAF:name "Route_66"^^xsd:string .
+    ex:hasLocation dbp:United_States ;
+    FOAF:name "Route 66"^^xsd:string .
 
 ex:Watchpoint:_Gibraltar a ex:Map ;
-    FOAF:name "Watchpoint:_Gibraltar"^^xsd:string .
+    ex:hasLocation dbp:United_Kingdom ;
+    FOAF:name "Watchpoint: Gibraltar"^^xsd:string .
 
-dbp:Country owl:sameAs Schema:Country .
+dbp:Australia a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place ;
+    FOAF:name "Australia"^^xsd:string .
 
-dbp:Place owl:sameAs Schema:Place .
+dbp:Russia a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place ;
+    FOAF:name "Russia"^^xsd:string .
+
+ex:Tournament a owl:Class .
 
 dbp:United_Kingdom a dbp:Country,
         dbp:Location,
@@ -9430,7 +9544,8 @@ dbp:United_Kingdom a dbp:Country,
         dbp:PopulatedPlace,
         Wikidata:Q6256,
         Schema:Country,
-        Schema:Place .
+        Schema:Place ;
+    FOAF:name "United Kingdom"^^xsd:string .
 
 dbp:China a dbp:Country,
         dbp:Location,
@@ -9438,7 +9553,8 @@ dbp:China a dbp:Country,
         dbp:PopulatedPlace,
         Wikidata:Q6256,
         Schema:Country,
-        Schema:Place .
+        Schema:Place ;
+    FOAF:name "China"^^xsd:string .
 
 dbp:North_America a dbp:Continent,
         dbp:Location,
@@ -9488,7 +9604,10 @@ dbp:Guangzhou_Charge a dbp:Agent,
     FOAF:name "guangzhou charge" .
 
 ex:Numbani a ex:Map ;
+    ex:hasLocation dbp:Africa ;
     FOAF:name "Numbani"^^xsd:string .
+
+dbp:Country owl:sameAs Schema:Country .
 
 dbp:Hangzhou_Spark a dbp:Agent,
         dbp:Organisation,
@@ -9563,7 +9682,10 @@ dbp:Philadelphia_Fusion a dbp:Agent,
     FOAF:name "philadelphia fusion" .
 
 ex:Dorado a ex:Map ;
+    ex:hasLocation dbp:Mexico ;
     FOAF:name "Dorado"^^xsd:string .
+
+dbp:Place owl:sameAs Schema:Place .
 
 dbp:San_Francisco_Shock a dbp:Agent,
         dbp:Organisation,
@@ -9606,6 +9728,7 @@ dbp:Los_Angeles_Gladiators a dbp:Agent,
     FOAF:name "los angeles gladiators" .
 
 ex:Eichenwalde a ex:Map ;
+    ex:hasLocation dbp:Germany ;
     FOAF:name "Eichenwalde"^^xsd:string .
 
 dbp:Toronto_Defiant a dbp:Agent,
@@ -9621,6 +9744,7 @@ dbp:Toronto_Defiant a dbp:Agent,
     FOAF:name "toronto defiant" .
 
 ex:Junkertown a ex:Map ;
+    ex:hasLocation dbp:Australia ;
     FOAF:name "Junkertown"^^xsd:string .
 
 dbp:Dallas_Fuel a dbp:Agent,
@@ -9711,16 +9835,20 @@ dbp:Shanghai_Dragons a dbp:Agent,
     FOAF:name "shanghai dragons" .
 
 ex:Blizzard_World a ex:Map ;
-    FOAF:name "Blizzard_World"^^xsd:string .
+    ex:hasLocation dbp:United_States ;
+    FOAF:name "Blizzard World"^^xsd:string .
 
 ex:Hanamura a ex:Map ;
+    ex:hasLocation dbp:Japan ;
     FOAF:name "Hanamura"^^xsd:string .
 
 ex:Kings_Row a ex:Map ;
-    FOAF:name "Kings_Row"^^xsd:string .
+    ex:hasLocation dbp:London ;
+    FOAF:name "King's Row"^^xsd:string .
 
 ex:Temple_of_Anubis a ex:Map ;
-    FOAF:name "Temple_of_Anubis"^^xsd:string .
+    ex:hasLocation dbp:Egypt ;
+    FOAF:name "Temple of Anubis"^^xsd:string .
 
 dbp:United_States a dbp:Country,
         dbp:Location,
@@ -9728,24 +9856,31 @@ dbp:United_States a dbp:Country,
         dbp:PopulatedPlace,
         Wikidata:Q6256,
         Schema:Country,
-        Schema:Place .
+        Schema:Place ;
+    FOAF:name "United States"^^xsd:string .
 
 ex:Volskaya_Industries a ex:Map ;
-    FOAF:name "Volskaya_Industries"^^xsd:string .
+    ex:hasLocation dbp:Russia ;
+    FOAF:name "Volskaya Industries"^^xsd:string .
 
 ex:Nepal a ex:Map ;
+    ex:hasLocation dbp:Nepal ;
     FOAF:name "Nepal"^^xsd:string .
 
 ex:Oasis a ex:Map ;
+    ex:hasLocation dbp:Iraq ;
     FOAF:name "Oasis"^^xsd:string .
 
 ex:Lijiang_Tower a ex:Map ;
-    FOAF:name "Lijiang_Tower"^^xsd:string .
+    ex:hasLocation dbp:China ;
+    FOAF:name "Lijiang Tower"^^xsd:string .
 
 ex:Ilios a ex:Map ;
+    ex:hasLocation dbp:Greece ;
     FOAF:name "Ilios"^^xsd:string .
 
 ex:Busan a ex:Map ;
+    ex:hasLocation dbp:South_Korea ;
     FOAF:name "Busan"^^xsd:string .
 
 dbp:South_Korea a dbp:Country,
@@ -9754,7 +9889,8 @@ dbp:South_Korea a dbp:Country,
         dbp:PopulatedPlace,
         Wikidata:Q6256,
         Schema:Country,
-        Schema:Place .
+        Schema:Place ;
+    FOAF:name "South Korea"^^xsd:string .
 
 ex:Player a owl:Class ;
     rdfs:subClassOf FOAF:Person .

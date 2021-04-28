@@ -8,6 +8,7 @@ from rdflib import Graph, Namespace, URIRef, Literal, BNode
 from rdflib.collection import Collection
 from rdflib.namespace import RDF, RDFS, XSD, FOAF, OWL
 from get_liquipedia_data import team_results, player_results, map_results
+from numpy import nan
 
 # Note: importing team_results, and player_results may takes a bit of time.
 #       This is due to the API terms of use described in get_liquipedia_data.py
@@ -290,9 +291,14 @@ match_df.drop('round_start_time', axis=1, inplace=True)
 match_df["tournament"] = "Overwatch League " + match_df['match_start_date'].str.extract(r'(^\d{4})')
 match_df.drop_duplicates(subset=["match_id"], keep="first", ignore_index=True, inplace=True)
 
+
+# Query DBPedia Spotlight for map location resources
+all_map_locations = set([map_name['Has location'] for map_name in map_results.values()])
+get_dbpedia_resources([all_map_locations])
+
+
 # Adding match, tournament and map triples to graph
 for (index, match_id, map_name, team_one_name, team_two_name, match_winner, match_start_time, tournament) in match_df.itertuples():
-
     # Create a term for the Match instance subject
     match_entity = ex.term(str(match_id))
 
@@ -300,23 +306,49 @@ for (index, match_id, map_name, team_one_name, team_two_name, match_winner, matc
     team_one_name = team_one_name.replace(' ', '_')
     team_two_name = team_two_name.replace(' ', '_')
     match_winner = match_winner.replace(' ', '_')
-    map_name = map_name.replace(' ', '_')
-    map_name = map_name.replace("'", "")
+    map_entity_name = map_name.replace(' ', '_')
+    map_entity_name = map_entity_name.replace("'", "")
 
-    # Add
+    # Add Match instances with properties to graph
     g.add((match_entity, RDF.type, ex.Match))
     g.add((match_entity, ex.matchID, Literal(match_id, datatype=XSD.string)))
 
-    if (ex.term(map_name), RDF.type, ex.Map) not in g:
-        map_entity = ex.term(map_name)
+    # Adding Map instances with properties to graph
+    if (ex.term(map_entity_name), RDF.type, ex.Map) not in g:
+        map_entity = ex.term(map_entity_name)
+        map_location = map_results[map_name]['Has location']
         g.add((map_entity, RDF.type, ex.Map))
         g.add((map_entity, FOAF.name, Literal(map_name, datatype=XSD.string)))
 
-    g.add((match_entity, ex.matchMap, ex.term(map_name)))
+        # Add map entity location with DBPedia resource
+        map_resource_obj = URIRef(all_resources[map_location]['URI'])
+        g.add((map_entity, ex.hasLocation, map_resource_obj))
+
+        # Add types to DBPedia map resource object
+        g.add((map_resource_obj, FOAF.name, Literal(map_location, datatype=XSD.string)))
+        for namespace, value in [t.split(':') for t in all_resources[map_location]['types'].split(',')]:
+            if namespace == 'Wikidata':
+                g.add((map_resource_obj, RDF.type, wd.term(value)))
+            elif namespace == 'Schema':
+                g.add((map_resource_obj, RDF.type, schema.term(value)))
+            elif namespace == 'DBpedia':
+                g.add((map_resource_obj, RDF.type, dbp.term(value)))
+
+    # Add more Match instance properties
+    g.add((match_entity, ex.matchMap, ex.term(map_entity_name)))
     g.add((match_entity, ex.matchTeamOne, ex.term(team_one_name)))
     g.add((match_entity, ex.matchTeamTwo, ex.term(team_two_name)))
     g.add((match_entity, ex.matchWinner, ex.term(match_winner)))
     g.add((match_entity, ex.matchStartTime, Literal(match_start_time, datatype=XSD.string)))
+
+    # Add Tournament instances with properties to graph
+    if tournament is not nan:
+        tournament_entity_name = tournament.replace(" ", "_")
+        tournament_entity = ex.term(tournament_entity_name)
+        if (tournament_entity, RDF.type, ex.Tournament) not in g:
+            g.add((tournament_entity, RDF.type, ex.Tournament))
+            g.add((tournament_entity, FOAF.name, Literal(tournament, datatype=XSD.string)))
+        g.add((tournament_entity, ex.tournamentMatches, ex.term(match_id)))
 
 print("Match, tournament and map triples added to graph")
 
