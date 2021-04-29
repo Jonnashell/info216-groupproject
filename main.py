@@ -71,7 +71,6 @@ g.add((ex.PlayerID, RDFS.range, RDFS.Literal))
 g.add((ex.playsFor, RDFS.domain, ex.Player))
 g.add((ex.playsFor, RDFS.range, dbp.SportsTeam))
 g.add((ex.playedAgainst, RDFS.subClassOf, FOAF.knows))
-g.add((ex.playedAgainst, RDF.type, OWL.ReflexiveProperty))
 g.add((ex.playedAgainst, RDF.type, OWL.SymmetricProperty))
 g.add((ex.playedAgainst, RDFS.domain, ex.Player))
 g.add((ex.playedAgainst, RDFS.range, ex.Player))
@@ -318,7 +317,8 @@ get_dbpedia_resources([all_map_locations])
 
 
 # Adding match, tournament and map triples to graph
-for (index, match_id, map_name, team_one_name, team_two_name, match_winner, match_start_time, tournament) in match_df.itertuples():
+for (index, match_id, map_name, team_one_name, team_two_name,
+     match_winner, match_start_time, tournament) in match_df.itertuples():
     # Create a term for the Match instance subject
     match_entity = ex.term(str(match_id))
 

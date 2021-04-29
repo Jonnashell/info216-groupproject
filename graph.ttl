@@ -2481,8 +2481,7 @@ ex:ou_yiliang a ex:Player ;
     FOAF:age 20 ;
     FOAF:name "Ou_Yiliang"^^xsd:string .
 
-ex:playedAgainst a owl:ReflexiveProperty,
-        owl:SymmetricProperty ;
+ex:playedAgainst a owl:SymmetricProperty ;
     rdfs:domain ex:Player ;
     rdfs:range ex:Player ;
     rdfs:subClassOf FOAF:knows .
