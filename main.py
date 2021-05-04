@@ -82,9 +82,9 @@ g.add((dbp.Organisation, RDFS.subClassOf, dbp.Agent))
 g.add((dbp.SportsTeam, RDFS.subClassOf, dbp.Organisation))
 g.add((dbp.SportsTeam, OWL.sameAs, schema.SportsTeam))
 g.add((FOAF.name, RDFS.domain, schema.SportsTeam))
-g.add((ex.playedAgainst, RDFS.domain, ex.SportsTeam))
-g.add((ex.playedAgainst, RDFS.range, ex.SportsTeam))
-g.add((ex.playedMatches, RDFS.domain, ex.SportsTeam))
+g.add((ex.playedAgainst, RDFS.domain, dbp.SportsTeam))
+g.add((ex.playedAgainst, RDFS.range, dbp.SportsTeam))
+g.add((ex.playedMatches, RDFS.domain, dbp.SportsTeam))
 
 # RDFS Match-related class properties
 g.add((ex.Match, RDF.type, OWL.Class))
