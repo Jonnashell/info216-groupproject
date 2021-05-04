@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/graph.ttl" beforeDir="false" afterPath="$PROJECT_DIR$/graph.ttl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_results.json" beforeDir="false" afterPath="$PROJECT_DIR$/player_results.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/team_results.json" beforeDir="false" afterPath="$PROJECT_DIR$/team_results.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +30,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LING123labs" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -112,6 +114,8 @@
       <workItem from="1619011767765" duration="11001000" />
       <workItem from="1619272391437" duration="10385000" />
       <workItem from="1619547441382" duration="40507000" />
+      <workItem from="1619703183878" duration="830000" />
+      <workItem from="1620136803814" duration="15672000" />
     </task>
     <servers />
   </component>
@@ -138,26 +142,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1619272388099" />
-    <state width="1877" height="278" key="GridCell.Tab.0.bottom" timestamp="1619630923576">
+    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict" timestamp="1620138209711">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1619630923576" />
-    <state width="1877" height="278" key="GridCell.Tab.0.center" timestamp="1619630923576">
+    <state x="0" y="0" key="FileDocumentManager.FileCacheConflict/0.0.1920.1040@0.0.1920.1040" timestamp="1620138209711" />
+    <state width="1877" height="296" key="GridCell.Tab.0.bottom" timestamp="1620167419669">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1619630923576" />
-    <state width="1877" height="278" key="GridCell.Tab.0.left" timestamp="1619630923576">
+    <state width="1877" height="296" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1620167419669" />
+    <state width="1877" height="296" key="GridCell.Tab.0.center" timestamp="1620167419667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1619630923576" />
-    <state width="1877" height="278" key="GridCell.Tab.0.right" timestamp="1619630923576">
+    <state width="1877" height="296" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1620167419667" />
+    <state width="1877" height="296" key="GridCell.Tab.0.left" timestamp="1620167419666">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1619630923576" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1619603052863">
+    <state width="1877" height="296" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1620167419666" />
+    <state width="1877" height="296" key="GridCell.Tab.0.right" timestamp="1620167419668">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1619603052863" />
+    <state width="1877" height="296" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1620167419668" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1620142138385">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1620142138385" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1619556654869">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -165,6 +173,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/info216_groupproject$get_liquipedia_data.coverage" NAME="get_liquipedia_data Coverage Results" MODIFIED="1619626386116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/info216_groupproject$main.coverage" NAME="main Coverage Results" MODIFIED="1619630923567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/info216_groupproject$main.coverage" NAME="main Coverage Results" MODIFIED="1620167419655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -74,12 +74,17 @@ g.add((ex.playedAgainst, RDFS.subClassOf, FOAF.knows))
 g.add((ex.playedAgainst, RDF.type, OWL.SymmetricProperty))
 g.add((ex.playedAgainst, RDFS.domain, ex.Player))
 g.add((ex.playedAgainst, RDFS.range, ex.Player))
+g.add((ex.playedMatches, RDFS.domain, ex.Player))
+g.add((ex.playedMatches, RDFS.range, ex.Match))
 
 # RDFS Team-related class properties
 g.add((dbp.Organisation, RDFS.subClassOf, dbp.Agent))
 g.add((dbp.SportsTeam, RDFS.subClassOf, dbp.Organisation))
 g.add((dbp.SportsTeam, OWL.sameAs, schema.SportsTeam))
 g.add((FOAF.name, RDFS.domain, schema.SportsTeam))
+g.add((ex.playedAgainst, RDFS.domain, ex.SportsTeam))
+g.add((ex.playedAgainst, RDFS.range, ex.SportsTeam))
+g.add((ex.playedMatches, RDFS.domain, ex.SportsTeam))
 
 # RDFS Match-related class properties
 g.add((ex.Match, RDF.type, OWL.Class))
@@ -296,6 +301,22 @@ for player, player_data in player_results.items():
     g.add((player_entity, ex.PlayerID, Literal(player, datatype=XSD.string)))
     g.add((player_entity, FOAF.name, Literal(player_data['Has name'].replace(' ', '_'), datatype=XSD.string)))
     g.add((player_entity, dbp_o.term('country'), player_nationality))
+
+    # get all unique games a player has participated in + team name and heroes played
+    player_games_df = dfs[(dfs.player == 'tobi') & (dfs.hero != 'All Heroes')][
+        ['match_id', 'team', 'hero']].drop_duplicates()
+
+    # add all unique games a player has participated in to a blank node
+    player_matches = [ex.term(str(match)) for match in player_games_df['match_id'].unique()]
+    b = BNode()
+    Collection(g, b, player_matches)
+
+    # add the blank node to player_entity's played matches
+    g.add((player_entity, ex.playedMatches, b))
+
+    # Add team to player entity
+
+    # Add hero ratios to player entity
 
 
 print("Player triples added to graph.")
