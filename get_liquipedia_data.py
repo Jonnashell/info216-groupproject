@@ -133,16 +133,16 @@ if not use_cache:
     team_results = get_entity_data(team_list, printouts, 'Has_name')
 
     # output results from API to .json files as cache
-    with open('team_results.json', 'w') as f:
+    with open('team_results.json', 'w', encoding='utf-8') as f:
         json.dump(team_results, f)
-    with open('player_results.json', 'w') as f:
+    with open('player_results.json', 'w', encoding='utf-8') as f:
         json.dump(player_results, f)
 
 
 # Get data from cache
-with open('player_results.json', 'r') as f:
+with open('player_results.json', 'r', encoding='utf-8') as f:
     player_results = json.load(f)
-with open('team_results.json', 'r') as f:
+with open('team_results.json', 'r', encoding='utf-8') as f:
     team_results = json.load(f)
-with open('map_results.json', 'r') as f:
+with open('map_results.json', 'r', encoding='utf-8') as f:
     map_results = json.load(f)
