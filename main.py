@@ -347,6 +347,7 @@ match_df.drop_duplicates(subset=["match_id"], keep="first", ignore_index=True, i
 all_map_locations = set([map_name['Has location'] for map_name in map_results.values()])
 get_dbpedia_resources([all_map_locations])
 
+tournament_matches = {}
 
 # Adding match, tournament and map triples to graph
 for (index, match_id, map_name, team_one_name, team_two_name,
@@ -401,9 +402,18 @@ for (index, match_id, map_name, team_one_name, team_two_name,
         tournament_entity_name = tournament.replace(" ", "_")
         tournament_entity = ex.term(tournament_entity_name)
         if (tournament_entity, RDF.type, ex.Tournament) not in g:
+            tournament_matches[tournament_entity] = []
             g.add((tournament_entity, RDF.type, ex.Tournament))
             g.add((tournament_entity, FOAF.name, Literal(tournament, datatype=XSD.string)))
-        g.add((tournament_entity, ex.tournamentMatches, ex.term(match_id)))
+
+        tounament_matches[tournament_entity].append(match_id)
+
+
+# Add match_ids to tournament entities
+for key, value in tournament_matches.iteritems():
+    pass
+    # g.add((tournament_entity, ex.tournamentMatches, ex.term(match_id)))
+
 
 print("Match, tournament and map triples added to graph")
 
