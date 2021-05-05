@@ -1,3 +1,4 @@
+import timeit
 import rdflib
 import os
 import pandas as pd
@@ -41,11 +42,6 @@ dfs.player = dfs.player.apply(lambda x: x.lower())
 
 # Instantiate graph
 g = Graph()
-g.add(())
-<http://xmlns.com/foaf/0.1/> rdf:type owl:Ontology ;
-                             dc:title "Friend of a Friend (FOAF) vocabulary"@en;
-                             dc:description "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language."@en .
-
 
 # Namespaces
 ex = Namespace('http://example.org/')
@@ -219,6 +215,7 @@ def connect_dbpedia_resources(team_data, keys):
 
 
 # Add team triples to graph
+start = timeit.default_timer()
 for team, team_data in team_results.items():
     team = team.title()
     team_name = team.replace(' ', '_')
@@ -283,12 +280,14 @@ for team, team_data in team_results.items():
     g.add((team_entity, ex.playedMatches, b))
 
 print("Team triples added to graph.")
+stop = timeit.default_timer()
+print('Time: ', stop - start)
 
 # query player nationalities in DBpedia
 nationalities = set([x['Has nationality'] for x in player_results.values()])
-
 get_dbpedia_resources(nationalities)
 
+start = timeit.default_timer()
 # Add player triples to graph
 for player, player_data in player_results.items():
 
@@ -328,7 +327,7 @@ for player, player_data in player_results.items():
     # Add type, id, name, and nationality to graph
     g.add((player_entity, RDF.type, ex.Player))
     g.add((player_entity, ex.PlayerID, Literal(player, datatype=XSD.string)))
-    g.add((player_entity, FOAF.name, Literal(player_data['Has name'].replace(' ', '_'), datatype=XSD.string)))
+    g.add((player_entity, FOAF.name, Literal(player_data['Has name'], datatype=XSD.string)))
     g.add((player_entity, dbp_o.term('country'), player_nationality))
 
     # get all unique games a player has participated in + team name and heroes played
@@ -346,7 +345,7 @@ for player, player_data in player_results.items():
     # Add team to player entity (using existing team_entity in graph)
     try:
         player_team = player_games_df.iloc[-1, 1]  # team most recently played with
-        team_entity = [s for s, p, o in g if p == FOAF.name and o == Literal(player_team)]  # Get team entity from graph
+        team_entity = [s for s in g.subjects(predicate=FOAF.name, object=Literal(player_team))]
         g.add((player_entity, ex.playsFor, team_entity[0]))
     except IndexError:
         print(f"Could not find team for player {player}")
@@ -364,7 +363,8 @@ for player, player_data in player_results.items():
 
 
 print("Player triples added to graph.")
-
+stop = timeit.default_timer()
+print('Time: ', stop - start)
 
 # Creating a new dataframe with Overwatch League match data from Statslab
 match_df = pd.read_csv(r'phs_data\match_map_stats.csv')
@@ -382,11 +382,18 @@ get_dbpedia_resources([all_map_locations])
 
 tournament_matches = {}
 
+start = timeit.default_timer()
 # Adding match, tournament and map triples to graph
 for (index, match_id, map_name, team_one_name, team_two_name,
-     match_winner, match_start_time, tournament) in match_df.itertuples():
+    match_winner, match_start_time, tournament) in match_df.itertuples():
     # Create a term for the Match instance subject
     match_entity = ex.term(str(match_id))
+
+    temp = dfs.drop_duplicates(subset=['player', 'match_id', 'team'])
+    team_one_df = temp[(temp.match_id == match_id) & (temp.team.str.lower() == team_one_name.lower())]
+
+    temp = dfs.drop_duplicates(subset=['player', 'match_id', 'team'])
+    team_two_df = temp[(temp.match_id == match_id) & (temp.team.str.lower() == team_two_name.lower())]
 
     # Remove spaces from terms
     team_one_name = team_one_name.replace(' ', '_')
@@ -398,6 +405,23 @@ for (index, match_id, map_name, team_one_name, team_two_name,
     # Add Match instances with properties to graph
     g.add((match_entity, RDF.type, ex.Match))
     g.add((match_entity, ex.matchID, Literal(match_id, datatype=XSD.string)))
+
+    # Add players pr. team
+    player_entities1 = []
+    for player in team_one_df.player.to_list():
+        _ = [player_entities1.append(s) for s in g.subjects(predicate=ex.PlayerID, object=Literal(player, datatype=XSD.string))]
+
+    b1 = BNode()
+    Collection(g, b1, player_entities1)
+    g.add((match_entity, ex.matchTeamOnePlayers, b1))
+
+    player_entities2 = []
+    for player in team_two_df.player.to_list():
+        _ = [player_entities2.append(s) for s in g.subjects(predicate=ex.PlayerID, object=Literal(player, datatype=XSD.string))]
+
+    b2 = BNode()
+    Collection(g, b2, player_entities2)
+    g.add((match_entity, ex.matchTeamTwoPlayers, b2))
 
     # Adding Map instances with properties to graph
     if (ex.term(map_entity_name), RDF.type, ex.Map) not in g:
@@ -435,21 +459,29 @@ for (index, match_id, map_name, team_one_name, team_two_name,
         tournament_entity_name = tournament.replace(" ", "_")
         tournament_entity = ex.term(tournament_entity_name)
         if (tournament_entity, RDF.type, ex.Tournament) not in g:
-            # tournament_matches[tournament_entity] = []
+            tournament_matches[tournament_entity] = []
+
             g.add((tournament_entity, RDF.type, ex.Tournament))
             g.add((tournament_entity, FOAF.name, Literal(tournament, datatype=XSD.string)))
 
-        # tournament_matches[tournament_entity].append(match_id)
-
+        tournament_matches[tournament_entity].append(match_id)
 
 # Add match_ids to tournament entities
-# for key, value in tournament_matches.iteritems():
-#     pass
-    # g.add((tournament_entity, ex.tournamentMatches, ex.term(match_id)))
+for value in tournament_matches.keys():
+    # add all match_ids for matches played in a tournament to a collection with a blank node
+    b = BNode()
+    t_matches = [ex.term(str(match)) for match in tournament_matches[value]]
+    Collection(g, b, t_matches)
+    # add blank node to team_entity's played matches
+    g.add((value, ex.tournamentMatches, b))
+
+
+
 
 
 print("Match, tournament and map triples added to graph")
-
+stop = timeit.default_timer()
+print('Time: ', stop - start)
 
 # Noen inferred triples fucker opp shitten til WebVowl, aner ikke hvorfor.
 # Kan ha noe med at den oppretter sånn 5000 tripler tho...
@@ -461,4 +493,4 @@ print("Match, tournament and map triples added to graph")
 
 # Print the graph to terminal
 g.serialize(destination='graph.ttl', format='ttl')
-print(g.serialize(format='ttl').decode('utf-8'))
+# print(g.serialize(format='ttl').decode('utf-8'))
