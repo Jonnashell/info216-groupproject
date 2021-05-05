@@ -18,24 +18,6 @@ dbp:ADO_Den_Haag a ex:Player ;
     FOAF:age 21 ;
     FOAF:name "Chon_Gi-hyeon"^^xsd:string .
 
-dbp:AKM a ex:Player ;
-    DBpedia:country dbp:France ;
-    ex:PlayerID "akm"^^xsd:string ;
-    ex:birthday "1995-12-11T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:10279 ex:10285 ex:10290 ex:10298 ex:10303 ex:10313 ex:10314 ex:10325 ex:10333 ex:10339 ex:10347 ex:10351 ex:10358 ex:10368 ex:10371 ex:10375 ex:10588 ex:10593 ex:10449 ex:10455 ex:10471 ex:10481 ex:10486 ex:10623 ex:10629 ex:10547 ex:21126 ex:21271 ex:21272 ex:21282 ex:21245 ex:21226 ex:21267 ex:21270 ex:21297 ex:21286 ex:21325 ex:21345 ex:21314 ex:21371 ex:20314 ex:21336 ex:21318 ex:21326 ex:21402 ex:21386 ex:21320 ex:21405 ex:21425 ex:21418 ex:21502 ex:21457 ex:21512 ex:21485 ) ;
-    ex:role ex:DPS ;
-    FOAF:age 25 ;
-    FOAF:name "Dylan_Bignet"^^xsd:string .
-
-dbp:Acutance a ex:Player ;
-    DBpedia:country dbp:Sweden ;
-    ex:PlayerID "sharp"^^xsd:string ;
-    ex:birthday "2001-12-10T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:31060 ex:32862 ex:34231 ex:35532 ex:35539 ex:35548 ex:35547 ) ;
-    ex:role ex:DPS ;
-    FOAF:age 19 ;
-    FOAF:name "Hugo_Sahlberg"^^xsd:string .
-
 dbp:Anger a ex:Player ;
     DBpedia:country dbp:South_Korea ;
     ex:PlayerID "fury"^^xsd:string ;
@@ -62,15 +44,6 @@ dbp:Architecture a ex:Player ;
     ex:role ex:DPS ;
     FOAF:age 21 ;
     FOAF:name "Park_Min-ho"^^xsd:string .
-
-dbp:Asher a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "asher"^^xsd:string ;
-    ex:birthday "1995-09-12T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:10224 ex:10234 ex:10240 ex:10245 ex:10249 ex:10258 ex:10260 ex:10267 ex:10565 ex:10570 ex:10280 ex:10285 ex:10292 ex:10297 ex:10304 ex:10311 ex:10319 ex:10320 ex:10576 ex:10587 ex:10335 ex:10339 ex:10357 ex:10367 ex:10372 ex:10376 ex:10589 ex:10594 ex:10543 ex:10443 ex:21275 ) ;
-    ex:role ex:DPS ;
-    FOAF:age 25 ;
-    FOAF:name "Choi_Joon-seong"^^xsd:string .
 
 dbp:Association_football a ex:Player ;
     DBpedia:country dbp:South_Korea ;
@@ -113,7 +86,7 @@ dbp:Atomic_mass_unit a ex:Player ;
     FOAF:name "Park_Jun-ki"^^xsd:string .
 
 dbp:Beauty_and_the_Beast a ex:Player ;
-    DBpedia:country dbp:Argentina ;
+    DBpedia:country ex:Argentina ;
     ex:PlayerID "beast"^^xsd:string ;
     ex:birthday "1995-04-25T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:30991 ex:31017 ex:31024 ex:31032 ex:31036 ex:31066 ex:31054 ex:31093 ex:32855 ex:34225 ex:34196 ex:34202 ex:34495 ex:34492 ex:34834 ex:34831 ) ;
@@ -138,24 +111,6 @@ dbp:Bianca_Montgomery a ex:Player ;
     ex:role ex:Tank ;
     FOAF:age 19 ;
     FOAF:name "Kim_Dong-wook"^^xsd:string .
-
-dbp:Black_market a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "illicit"^^xsd:string ;
-    ex:birthday "2001-02-01T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:21348 ex:21317 ex:21355 ex:21327 ex:21329 ex:21453 ex:21433 ex:21389 ex:21436 ex:21426 ex:34194 ex:34622 ex:34842 ex:34821 ex:34806 ex:34793 ) ;
-    ex:role ex:DPS ;
-    FOAF:age 20 ;
-    FOAF:name "Park_Je-min"^^xsd:string .
-
-<http://dbpedia.org/resource/Blasé_(song)> a ex:Player ;
-    DBpedia:country dbp:United_States ;
-    ex:PlayerID "blasé"^^xsd:string ;
-    ex:birthday "1999-02-22T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:21221 ex:21213 ex:21281 ex:21223 ex:21302 ex:21312 ex:21267 ex:20302 ex:21293 ex:21305 ex:21322 ex:21342 ex:21288 ex:21353 ex:21364 ex:21382 ex:21367 ex:21377 ex:21337 ex:21378 ex:21379 ex:21310 ex:21397 ex:21388 ex:21409 ex:21410 ex:21503 ex:21494 ex:21446 ) ;
-    ex:role ex:DPS ;
-    FOAF:age 22 ;
-    FOAF:name "Jeffrey_Tsang"^^xsd:string .
 
 dbp:Boink a ex:Player ;
     DBpedia:country dbp:United_States ;
@@ -186,17 +141,8 @@ dbp:Boston_Uprising a dbp:Agent,
     ex:playedMatches ( ex:13121 ex:13122 ex:13123 ex:10228 ex:10230 ex:10241 ex:10246 ex:10250 ex:10256 ex:10267 ex:10270 ex:10567 ex:10574 ex:10283 ex:10288 ex:10295 ex:10296 ex:10307 ex:10308 ex:10314 ex:10322 ex:10581 ex:10587 ex:10337 ex:10343 ex:10348 ex:10356 ex:10361 ex:10365 ex:10369 ex:10375 ex:10592 ex:10594 ex:10543 ex:10545 ex:10446 ex:10450 ex:10455 ex:10461 ex:10470 ex:10475 ex:10479 ex:10485 ex:10626 ex:10632 ex:21221 ex:21213 ex:21281 ex:21223 ex:21302 ex:21312 ex:21267 ex:20302 ex:21293 ex:21305 ex:21322 ex:21342 ex:21288 ex:21353 ex:21364 ex:21382 ex:21367 ex:21377 ex:21337 ex:21378 ex:21379 ex:21310 ex:21397 ex:21388 ex:21409 ex:21410 ex:21503 ex:21494 ex:21446 ex:30996 ex:31011 ex:31029 ex:31038 ex:31043 ex:31066 ex:31087 ex:32855 ex:32823 ex:34226 ex:34189 ex:34521 ex:34491 ex:34633 ex:34612 ex:34604 ex:34745 ex:34833 ex:34824 ex:34823 ex:34809 ex:34895 ex:34770 ex:34764 ex:35535 ex:35532 ) ;
     FOAF:name "Boston Uprising" .
 
-dbp:Buffer_stop a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "bumper"^^xsd:string ;
-    ex:birthday "1999-08-05T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:21222 ex:21291 ex:21244 ex:21224 ex:21303 ex:21274 ex:21268 ex:20302 ex:20305 ex:20306 ex:21295 ex:21248 ex:21341 ex:21286 ex:21288 ex:21335 ex:21315 ex:20314 ex:20317 ex:20316 ex:21366 ex:21376 ex:21401 ex:21402 ex:21385 ex:21330 ex:21422 ex:20321 ex:20325 ex:21424 ex:21398 ex:21408 ex:21444 ex:21492 ex:21521 ex:21513 ) ;
-    ex:role ex:Tank ;
-    FOAF:age 21 ;
-    FOAF:name "Park_Sang-beom"^^xsd:string .
-
 dbp:Butea_monosperma a ex:Player ;
-    DBpedia:country dbp:Spain_national_football_team ;
+    DBpedia:country ex:Spain ;
     ex:PlayerID "dhak"^^xsd:string ;
     ex:birthday "1989-04-29T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10223 ex:10231 ex:10235 ex:10246 ex:10247 ex:10255 ex:10261 ex:10265 ex:10565 ex:10571 ex:10280 ex:10286 ex:10291 ex:10301 ex:10303 ex:10312 ) ;
@@ -254,7 +200,7 @@ dbp:Chengdu_Hunters a dbp:Agent,
     FOAF:name "Chengdu Hunters" .
 
 dbp:Cocco a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "cocco"^^xsd:string ;
     ex:birthday "1989-10-26T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10229 ex:10238 ex:10243 ex:10255 ex:10256 ex:10262 ex:10269 ex:10564 ex:10570 ex:10371 ex:10375 ex:10588 ex:10593 ) ;
@@ -301,15 +247,6 @@ dbp:Dallas_Fuel a dbp:Agent,
     ex:hasRegion dbp:North_America ;
     ex:playedMatches ( ex:10225 ex:10229 ex:10238 ex:10243 ex:10255 ex:10256 ex:10262 ex:10269 ex:10564 ex:10570 ex:10279 ex:10285 ex:10290 ex:10298 ex:10303 ex:10313 ex:10314 ex:10325 ex:10580 ex:10585 ex:10333 ex:10339 ex:10347 ex:10351 ex:10358 ex:10368 ex:10371 ex:10375 ex:10588 ex:10593 ex:10445 ex:10449 ex:10455 ex:10466 ex:10471 ex:10476 ex:10481 ex:10486 ex:10623 ex:10629 ex:10547 ex:21126 ex:21271 ex:21272 ex:21282 ex:21245 ex:21226 ex:21267 ex:21270 ex:21297 ex:21286 ex:21325 ex:21345 ex:21314 ex:21371 ex:20314 ex:21336 ex:21318 ex:21326 ex:21402 ex:21386 ex:21320 ex:21405 ex:21425 ex:21455 ex:21418 ex:21502 ex:21457 ex:21512 ex:21485 ex:30994 ex:30998 ex:31071 ex:32817 ex:33071 ex:32853 ex:32822 ex:34232 ex:34197 ex:34241 ex:34494 ex:34501 ex:34632 ex:34616 ex:34605 ex:34741 ex:34843 ex:34809 ex:34802 ex:34780 ex:34892 ex:34901 ex:34775 ex:34771 ex:34719 ex:34715 ex:35531 ) ;
     FOAF:name "Dallas Fuel" .
-
-<http://dbpedia.org/resource/Dean_(South_Korean_singer)_discography> a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "dayfly"^^xsd:string ;
-    ex:birthday "1999-01-15T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:13122 ex:13123 ex:10232 ex:10254 ex:10294 ex:10309 ) ;
-    ex:role ex:Support ;
-    FOAF:age 22 ;
-    FOAF:name "Park_Jeong-hwan"^^xsd:string .
 
 dbp:Dehydration a ex:Player ;
     DBpedia:country dbp:United_States ;
@@ -391,15 +328,6 @@ dbp:Fire a ex:Player ;
     ex:role ex:Support ;
     FOAF:age 23 ;
     FOAF:name "Anthony_King"^^xsd:string .
-
-dbp:First_baseman a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "fielder"^^xsd:string ;
-    ex:birthday "2002-01-29T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:34227 ex:34221 ex:34241 ex:34491 ex:34502 ex:34633 ex:34619 ex:34641 ex:34741 ex:34747 ex:34750 ex:34751 ex:34844 ex:34831 ex:34805 ex:34783 ex:34903 ex:34907 ex:34772 ex:34715 ex:35539 ex:35549 ) ;
-    ex:role ex:Support ;
-    FOAF:age 19 ;
-    FOAF:name "Kwon_Joon"^^xsd:string .
 
 dbp:Fissure_vent a ex:Player ;
     DBpedia:country dbp:South_Korea ;
@@ -555,15 +483,6 @@ dbp:Happiness a ex:Player ;
     FOAF:age 21 ;
     FOAF:name "Lee_Jung-woo"^^xsd:string .
 
-dbp:Hearing_aid a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "aid"^^xsd:string ;
-    ex:birthday "1994-04-07T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:21177 ex:21178 ex:21180 ex:20304 ex:21275 ex:21305 ex:21270 ex:21391 ex:21319 ex:21369 ex:21370 ex:21339 ex:21387 ex:21415 ex:21452 ex:21482 ex:21399 ex:21501 ex:21473 ex:21426 ex:21460 ) ;
-    ex:role ex:Coach ;
-    FOAF:age 27 ;
-    FOAF:name "Go_Jae-yoon"^^xsd:string .
-
 dbp:Hedera a ex:Player ;
     DBpedia:country dbp:South_Korea ;
     ex:PlayerID "ivy"^^xsd:string ;
@@ -644,22 +563,13 @@ dbp:Kayaba_Industry a ex:Player ;
     FOAF:name "Finley_Adisi"^^xsd:string .
 
 dbp:Kellex_Corporation a ex:Player ;
-    DBpedia:country dbp:Denmark ;
+    DBpedia:country ex:Denmark ;
     ex:PlayerID "kellex"^^xsd:string ;
     ex:birthday "1999-02-09T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:13121 ex:13122 ex:13123 ex:10228 ex:10230 ex:10241 ex:10246 ex:10250 ex:10256 ex:10267 ex:10270 ex:10567 ex:10574 ex:10283 ex:10288 ex:10295 ex:10296 ex:10307 ex:10308 ex:10314 ex:10322 ex:10581 ex:10587 ex:10337 ex:10343 ex:10348 ex:10356 ex:10361 ex:10365 ex:10369 ex:10375 ex:10592 ex:10594 ex:10543 ex:10545 ex:10446 ex:10450 ex:10455 ex:10461 ex:10470 ex:10475 ex:10479 ex:10485 ex:10626 ex:10632 ex:21221 ex:21213 ex:21281 ex:21223 ex:21302 ex:21312 ex:21267 ex:20302 ex:21293 ex:21305 ex:21322 ex:21342 ex:21288 ex:21353 ex:21364 ex:21377 ex:21337 ex:21379 ex:21310 ex:21397 ex:21388 ex:21409 ex:21410 ex:21503 ex:21494 ex:21446 ex:30991 ex:31017 ex:31024 ex:31032 ex:31036 ex:31066 ex:31054 ex:31093 ex:32855 ) ;
     ex:role ex:Support ;
     FOAF:age 22 ;
     FOAF:name "Kristian_Keller"^^xsd:string .
-
-<http://dbpedia.org/resource/Kodak_(poetry_collection)> a ex:Player ;
-    DBpedia:country dbp:Germany_national_football_team ;
-    ex:PlayerID "kodak"^^xsd:string ;
-    ex:birthday "2000-05-30T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:21241 ex:21261 ex:21178 ex:21292 ex:21218 ex:21293 ex:21276 ex:32862 ex:34492 ex:34504 ) ;
-    ex:role ex:Coach ;
-    FOAF:age 20 ;
-    FOAF:name "Steven_Rosenberger"^^xsd:string .
 
 dbp:Krillin a ex:Player ;
     DBpedia:country dbp:South_Korea ;
@@ -689,7 +599,7 @@ dbp:Kuki_people a ex:Player ;
     FOAF:name "Kim_Dae-kuk"^^xsd:string .
 
 dbp:Kyo_Kusanagi a ex:Player ;
-    DBpedia:country dbp:Brazil ;
+    DBpedia:country ex:Brazil ;
     ex:PlayerID "kyo"^^xsd:string ;
     ex:playedMatches ( ex:30172 ex:21212 ex:21233 ex:21234 ex:21215 ex:21283 ex:21274 ex:21304 ex:21220 ex:21239 ex:21258 ex:21333 ex:21344 ex:21289 ex:21372 ex:21365 ex:21375 ex:21326 ex:21385 ex:21320 ex:21338 ex:21451 ex:21471 ex:21388 ex:21400 ex:21417 ex:21463 ex:21464 ex:21459 ex:32832 ex:32854 ex:33081 ex:32851 ex:32843 ex:34609 ex:34601 ex:34755 ex:34914 ex:34917 ex:35515 ex:35514 ) ;
     ex:role ex:Tank ;
@@ -770,24 +680,6 @@ dbp:MEKO a ex:Player ;
     FOAF:age 18 ;
     FOAF:name "Kim_Chan-hee"^^xsd:string .
 
-<http://dbpedia.org/resource/Mano_(stone)> a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "mano"^^xsd:string ;
-    ex:birthday "1996-04-12T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:13130 ex:13131 ex:10228 ex:10233 ex:10239 ex:10245 ex:10251 ex:10253 ex:10263 ex:10269 ex:10568 ex:10573 ex:10539 ex:10282 ex:10284 ex:10295 ex:10300 ex:10309 ex:10312 ex:10315 ex:10317 ex:10580 ex:10586 ex:10542 ex:10336 ex:10344 ex:10348 ex:10355 ex:10362 ex:10367 ex:10373 ex:10379 ex:10593 ex:10595 ex:10544 ex:10545 ex:10447 ex:10454 ex:10462 ex:10465 ex:10467 ex:10477 ex:10483 ex:10489 ex:10626 ex:10627 ex:10547 ex:10548 ex:30153 ex:30163 ex:30156 ex:30158 ex:21221 ex:21127 ex:21242 ex:21235 ex:21253 ex:21264 ex:21255 ex:20301 ex:21313 ex:21229 ex:21230 ex:21323 ex:21285 ex:21324 ex:21363 ex:20313 ex:20317 ex:21354 ex:21350 ex:21290 ex:21403 ex:21405 ex:21461 ex:21415 ex:20322 ex:21423 ex:21416 ex:21417 ex:21511 ex:21437 ex:21494 ex:21513 ex:30992 ex:30996 ex:31010 ex:31016 ex:31023 ex:31044 ex:32829 ex:32824 ex:34233 ex:34228 ex:34222 ex:34192 ex:34513 ex:34517 ex:34634 ex:34620 ex:34613 ex:34642 ex:34756 ex:34759 ex:34836 ex:34812 ex:34791 ex:34912 ex:34915 ex:34773 ex:34761 ex:35514 ex:35521 ex:35525 ex:35524 ) ;
-    ex:role ex:Tank ;
-    FOAF:age 25 ;
-    FOAF:name "Kim_Dong-gyu"^^xsd:string .
-
-dbp:Michelle_Fowler a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "michelle"^^xsd:string ;
-    ex:birthday "1999-12-21T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:30176 ex:30151 ex:30161 ex:21231 ex:21271 ex:21233 ex:21223 ex:21264 ex:21217 ex:20301 ex:20305 ex:21321 ex:21248 ex:21325 ex:21334 ex:21362 ex:21315 ex:21373 ex:21348 ex:21327 ex:21329 ex:21356 ex:21451 ex:20323 ex:21453 ex:21433 ex:21389 ex:21436 ex:21426 ex:21427 ex:21428 ex:34229 ex:34194 ex:34601 ex:34757 ex:34842 ex:34821 ex:34806 ) ;
-    ex:role ex:Tank ;
-    FOAF:age 21 ;
-    FOAF:name "Choi_Min-hyuk"^^xsd:string .
-
 dbp:Michigan_Dogman a ex:Player ;
     DBpedia:country dbp:United_States ;
     ex:PlayerID "dogman"^^xsd:string ;
@@ -815,15 +707,6 @@ dbp:Moth a ex:Player ;
     FOAF:age 24 ;
     FOAF:name "Grant_Espe"^^xsd:string .
 
-dbp:Mucus a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "slime"^^xsd:string ;
-    ex:birthday "2000-01-12T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:30151 ex:30155 ex:30156 ex:30157 ex:21222 ex:21291 ex:21244 ex:21224 ex:21303 ex:21274 ex:21268 ex:20302 ex:20305 ex:20306 ex:21295 ex:21248 ex:21341 ex:21286 ex:21288 ex:21335 ex:21315 ex:20314 ex:20317 ex:20316 ex:21366 ex:21376 ex:21401 ex:21402 ex:21385 ex:21330 ex:21422 ex:20321 ex:20325 ex:21424 ex:21398 ex:21408 ex:21444 ex:21492 ex:21521 ex:21513 ex:30993 ex:30997 ex:33081 ex:34634 ex:34754 ex:34757 ex:34842 ex:34806 ex:34793 ) ;
-    ex:role ex:Support ;
-    FOAF:age 21 ;
-    FOAF:name "Kim_Sung-jun"^^xsd:string .
-
 dbp:Munchkin a ex:Player ;
     DBpedia:country dbp:South_Korea ;
     ex:PlayerID "munchkin"^^xsd:string ;
@@ -850,19 +733,6 @@ dbp:Nero a ex:Player ;
     ex:role ex:DPS ;
     FOAF:age 19 ;
     FOAF:name "Charlie_Zwarg"^^xsd:string .
-
-dbp:New_York_Excelsior a dbp:Agent,
-        dbp:Organisation,
-        dbp:SportsTeam,
-        Wikidata:Q12973014,
-        Wikidata:Q24229398,
-        Wikidata:Q43229,
-        Schema:Organization,
-        Schema:SportsTeam ;
-    ex:hasLocation dbp:United_States ;
-    ex:hasRegion dbp:South_Korea ;
-    ex:playedMatches ( ex:13130 ex:13131 ex:10228 ex:10233 ex:10239 ex:10245 ex:10251 ex:10253 ex:10263 ex:10269 ex:10568 ex:10573 ex:10539 ex:10282 ex:10284 ex:10295 ex:10300 ex:10309 ex:10312 ex:10315 ex:10317 ex:10580 ex:10586 ex:10542 ex:10336 ex:10344 ex:10348 ex:10355 ex:10362 ex:10367 ex:10373 ex:10379 ex:10593 ex:10595 ex:10544 ex:10545 ex:10447 ex:10454 ex:10462 ex:10465 ex:10467 ex:10477 ex:10483 ex:10489 ex:10626 ex:10627 ex:10547 ex:10548 ex:30153 ex:30163 ex:30156 ex:30158 ex:21221 ex:21127 ex:21242 ex:21235 ex:21253 ex:21264 ex:21255 ex:20301 ex:21313 ex:21229 ex:21230 ex:21323 ex:21285 ex:21324 ex:21363 ex:20313 ex:20317 ex:21354 ex:21350 ex:21290 ex:21403 ex:21405 ex:21461 ex:21415 ex:20322 ex:21423 ex:21416 ex:21417 ex:21511 ex:21437 ex:21494 ex:21513 ex:30992 ex:30996 ex:31010 ex:31016 ex:31023 ex:31044 ex:32829 ex:32824 ex:34233 ex:34228 ex:34222 ex:34192 ex:34513 ex:34517 ex:34634 ex:34620 ex:34613 ex:34642 ex:34756 ex:34759 ex:34836 ex:34812 ex:34791 ex:34912 ex:34915 ex:34773 ex:34761 ex:35514 ex:35521 ex:35525 ex:35524 ) ;
-    FOAF:name "New York Excelsior" .
 
 dbp:Ngo_Dinh_Diem a ex:Player ;
     DBpedia:country dbp:South_Korea ;
@@ -922,15 +792,6 @@ dbp:Paris_Eternal a dbp:Agent,
     ex:playedMatches ( ex:21209 ex:21243 ex:21263 ex:21303 ex:21236 ex:21227 ex:21256 ex:21294 ex:21220 ex:21257 ex:21297 ex:21352 ex:21361 ex:21299 ex:21391 ex:21367 ex:21290 ex:21307 ex:21394 ex:21379 ex:21356 ex:21358 ex:21481 ex:21416 ex:21434 ex:21360 ex:21493 ex:21465 ex:30991 ex:30995 ex:31012 ex:31030 ex:31037 ex:31042 ex:31073 ex:31094 ex:32856 ex:34227 ex:34221 ex:34241 ex:34491 ex:34502 ex:34633 ex:34619 ex:34641 ex:34741 ex:34747 ex:34750 ex:34751 ex:34844 ex:34831 ex:34805 ex:34783 ex:34903 ex:34907 ex:34772 ex:34715 ex:35539 ex:35549 ) ;
     FOAF:name "Paris Eternal" .
 
-dbp:Pheromone a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "alarm"^^xsd:string ;
-    ex:birthday "2001-07-20T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:31002 ex:31006 ex:31010 ex:31017 ex:31029 ex:31042 ex:31059 ex:31094 ex:31064 ex:32828 ex:34227 ex:34197 ex:34503 ex:34507 ex:34625 ex:34612 ex:34626 ex:34748 ex:34752 ex:34751 ex:34808 ex:34804 ex:34802 ex:34778 ex:34904 ex:34907 ex:34906 ex:34769 ex:35536 ex:35540 ex:35541 ex:35543 ex:35510 ex:35554 ) ;
-    ex:role ex:Support ;
-    FOAF:age 19 ;
-    FOAF:name "Kim_Kyung-bo"^^xsd:string .
-
 dbp:Philadelphia_Fusion a dbp:Agent,
         dbp:Organisation,
         dbp:SportsTeam,
@@ -940,7 +801,6 @@ dbp:Philadelphia_Fusion a dbp:Agent,
         Schema:Organization,
         Schema:SportsTeam ;
     ex:hasLocation dbp:United_States ;
-    ex:hasRegion dbp:South_Korea ;
     ex:playedMatches ( ex:13121 ex:13122 ex:13123 ex:13130 ex:13131 ex:13133 ex:13134 ex:10227 ex:10232 ex:10235 ex:10240 ex:10251 ex:10254 ex:10259 ex:10262 ex:10567 ex:10575 ex:10283 ex:10287 ex:10294 ex:10299 ex:10305 ex:10309 ex:10316 ex:10325 ex:10576 ex:10583 ex:10540 ex:10542 ex:10337 ex:10342 ex:10350 ex:10354 ex:10362 ex:10363 ex:10374 ex:10380 ex:10588 ex:10599 ex:10446 ex:10452 ex:10460 ex:10466 ex:10467 ex:10472 ex:10484 ex:10487 ex:10624 ex:10630 ex:30173 ex:21211 ex:21261 ex:21232 ex:21282 ex:21252 ex:21246 ex:21256 ex:20303 ex:20307 ex:21313 ex:21247 ex:21277 ex:21332 ex:21285 ex:21250 ex:21298 ex:21349 ex:21393 ex:21337 ex:21413 ex:21310 ex:21380 ex:21432 ex:21340 ex:21471 ex:21443 ex:21501 ex:21360 ex:21492 ex:21428 ex:31002 ex:31006 ex:31010 ex:31017 ex:31029 ex:31042 ex:31059 ex:31094 ex:31064 ex:32828 ex:34227 ex:34197 ex:34235 ex:34503 ex:34507 ex:34625 ex:34612 ex:34626 ex:34748 ex:34752 ex:34751 ex:34808 ex:34804 ex:34802 ex:34778 ex:34904 ex:34907 ex:34906 ex:34769 ex:35536 ex:35540 ex:35541 ex:35543 ex:35510 ex:35554 ) ;
     FOAF:name "Philadelphia Fusion" .
 
@@ -963,7 +823,7 @@ dbp:Pine a ex:Player ;
     FOAF:name "Gael_Gouzerch"^^xsd:string .
 
 dbp:Punk_rock a ex:Player ;
-    DBpedia:country dbp:Australia ;
+    DBpedia:country ex:Australia ;
     ex:PlayerID "punk"^^xsd:string ;
     ex:birthday "2001-10-22T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:34521 ex:34491 ex:34633 ex:34612 ex:34604 ex:34745 ex:34833 ex:34824 ex:34823 ex:34809 ex:34895 ex:34770 ex:34764 ex:35535 ex:35532 ) ;
@@ -1044,7 +904,7 @@ dbp:Revenge a ex:Player ;
     FOAF:name "Oh_Seung-pyo"^^xsd:string .
 
 dbp:Rio_de_Janeiro a ex:Player ;
-    DBpedia:country dbp:Brazil ;
+    DBpedia:country ex:Brazil ;
     ex:PlayerID "alemao"^^xsd:string ;
     ex:birthday "1995-11-14T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:21221 ex:21382 ex:21367 ex:21378 ) ;
@@ -1061,15 +921,6 @@ dbp:Rio_de_Janeiro a ex:Player ;
     FOAF:age 20 ;
     FOAF:name "Riku_Toivanen"^^xsd:string .
 
-dbp:River_source a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "rise"^^xsd:string ;
-    ex:birthday "2001-04-30T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:21406 ex:21397 ) ;
-    ex:role ex:Support ;
-    FOAF:age 20 ;
-    FOAF:name "Lee_Won-jae"^^xsd:string .
-
 <http://dbpedia.org/resource/Roar_(vocalization)> a ex:Player ;
     DBpedia:country dbp:South_Korea ;
     ex:PlayerID "roar"^^xsd:string ;
@@ -1080,7 +931,7 @@ dbp:River_source a ex:Player ;
     FOAF:name "Gye_Chang-hoon"^^xsd:string .
 
 dbp:Romanian_leu a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "bani"^^xsd:string ;
     ex:birthday "1993-09-28T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10227 ex:10233 ex:10237 ex:10238 ex:10252 ex:10258 ex:10261 ex:10266 ex:10569 ex:10574 ex:10537 ex:10281 ex:10288 ex:10310 ex:10319 ex:10324 ex:10578 ex:10579 ex:10338 ex:10343 ex:10350 ex:10355 ex:10360 ex:10368 ex:10370 ex:10376 ex:10590 ex:10598 ex:10448 ex:10450 ex:10457 ex:10463 ex:10473 ex:10478 ex:10481 ex:10490 ex:10624 ex:10627 ex:21130 ex:21334 ) ;
@@ -1119,7 +970,6 @@ dbp:Seoul_Dynasty a dbp:Agent,
         Schema:Organization,
         Schema:SportsTeam ;
     ex:hasLocation dbp:South_Korea ;
-    ex:hasRegion dbp:South_Korea ;
     ex:playedMatches ( ex:10225 ex:10234 ex:10236 ex:10241 ex:10248 ex:10253 ex:10264 ex:10266 ex:10566 ex:10571 ex:10278 ex:10286 ex:10290 ex:10297 ex:10302 ex:10305 ex:10315 ex:10323 ex:10579 ex:10582 ex:10334 ex:10341 ex:10347 ex:10353 ex:10359 ex:10365 ex:10374 ex:10379 ex:10596 ex:10598 ex:10444 ex:10451 ex:10462 ex:10464 ex:10468 ex:10474 ex:10479 ex:10487 ex:10623 ex:10628 ex:30176 ex:30151 ex:30161 ex:21231 ex:21271 ex:21233 ex:21223 ex:21264 ex:21265 ex:21217 ex:20301 ex:20305 ex:21321 ex:21248 ex:21325 ex:21334 ex:21362 ex:21315 ex:21373 ex:21348 ex:21317 ex:21355 ex:21327 ex:21329 ex:21356 ex:21451 ex:20323 ex:21453 ex:21433 ex:21389 ex:21436 ex:21426 ex:21427 ex:21428 ex:33021 ex:32857 ex:32842 ex:32825 ex:34234 ex:34229 ex:34224 ex:34194 ex:34512 ex:34515 ex:34516 ex:34634 ex:34622 ex:34608 ex:34601 ex:34754 ex:34757 ex:34842 ex:34821 ex:34806 ex:34793 ex:34913 ex:34777 ex:34773 ex:34768 ex:34762 ex:34716 ex:35513 ex:35522 ex:35523 ex:35524 ex:35509 ex:35554 ex:35553 ex:35552 ) ;
     FOAF:name "Seoul Dynasty" .
 
@@ -1146,7 +996,7 @@ dbp:She-Ra a ex:Player ;
     FOAF:name "Kang_Jae-hwan"^^xsd:string .
 
 dbp:Shock_wave a ex:Player ;
-    DBpedia:country dbp:Denmark ;
+    DBpedia:country ex:Denmark ;
     ex:PlayerID "shockwave"^^xsd:string ;
     ex:birthday "2000-07-25T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:34495 ex:34624 ex:34616 ex:34604 ex:34627 ex:34747 ex:34844 ex:34835 ex:34811 ex:34782 ex:34895 ex:34894 ex:34776 ex:34771 ex:34765 ex:34764 ex:34717 ex:35534 ) ;
@@ -1172,17 +1022,8 @@ dbp:Sinatraa a ex:Player ;
     FOAF:age 21 ;
     FOAF:name "Jay_Won"^^xsd:string .
 
-<http://dbpedia.org/resource/Sleepy_(novel)> a ex:Player ;
-    DBpedia:country dbp:United_States ;
-    ex:PlayerID "sleepy"^^xsd:string ;
-    ex:birthday "1998-09-16T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:10223 ex:10231 ex:10235 ex:10246 ex:10247 ex:10255 ex:10261 ex:10265 ex:10565 ex:10571 ex:10280 ex:10286 ex:10291 ex:10301 ex:10303 ex:10312 ex:10321 ex:10324 ex:10577 ex:10581 ex:10335 ex:10341 ex:10346 ex:10352 ex:10358 ex:10363 ex:10373 ex:10378 ex:10590 ex:10591 ex:10443 ex:10451 ex:10458 ex:10463 ex:10471 ex:10475 ex:10484 ex:10489 ex:10622 ex:10631 ex:21126 ex:21128 ex:21287 ex:21346 ex:21364 ex:21318 ex:21384 ex:21368 ex:21404 ex:21431 ex:21380 ex:21406 ex:21409 ) ;
-    ex:role ex:Support ;
-    FOAF:age 22 ;
-    FOAF:name "Nikola_Andrews"^^xsd:string .
-
 <http://dbpedia.org/resource/Spanish_ship_Neptuno_(1795)> a ex:Player ;
-    DBpedia:country dbp:Spain_national_football_team ;
+    DBpedia:country ex:Spain ;
     ex:PlayerID "neptuno"^^xsd:string ;
     ex:birthday "1992-02-12T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:13121 ex:13122 ex:13123 ex:13130 ex:13131 ex:13133 ex:13134 ex:10227 ex:10235 ex:10240 ex:10251 ex:10254 ex:10259 ex:10262 ex:10567 ex:10575 ex:10283 ex:10287 ex:10294 ex:10299 ex:10305 ex:10309 ex:10316 ex:10325 ex:10576 ex:10583 ex:10540 ex:10542 ex:10337 ex:10342 ex:10350 ex:10354 ex:10362 ex:10363 ex:10374 ex:10380 ex:10588 ex:10599 ex:10446 ex:10452 ex:10460 ex:10466 ex:10467 ex:10472 ex:10484 ex:10487 ex:10624 ex:10630 ex:30173 ex:21211 ex:21261 ex:21232 ex:21282 ex:21252 ex:21246 ex:21256 ex:20303 ex:20307 ex:21313 ex:21247 ex:21277 ex:21332 ex:21285 ex:21250 ex:21298 ex:21349 ex:21393 ex:21337 ex:21413 ex:21310 ex:21380 ex:21432 ex:21340 ex:21471 ex:21443 ex:21501 ex:21360 ex:21492 ex:21428 ex:32811 ex:31058 ex:32863 ex:32833 ex:33022 ex:32852 ex:32851 ex:32844 ) ;
@@ -1198,15 +1039,6 @@ dbp:Spiral_galaxy a ex:Player ;
     ex:role ex:Support ;
     FOAF:age 20 ;
     FOAF:name "Kobe_Hamand"^^xsd:string .
-
-dbp:Spree a ex:Player ;
-    DBpedia:country dbp:Belgium_national_football_team ;
-    ex:PlayerID "spree"^^xsd:string ;
-    ex:birthday "1995-06-05T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:10227 ex:10281 ex:10288 ex:10300 ex:10319 ex:10578 ex:10448 ex:10450 ex:10457 ex:10473 ex:10481 ex:10624 ex:10627 ex:21177 ex:21213 ex:21179 ex:21235 ex:21130 ex:21216 ex:21218 ex:21334 ex:21314 ex:21381 ex:21347 ex:21454 ex:21443 ex:21435 ex:21474 ex:21483 ex:21459 ) ;
-    ex:role ex:Tank ;
-    FOAF:age 25 ;
-    FOAF:name "Alexandre_Vanhomwegen"^^xsd:string .
 
 dbp:Stratus_cloud a ex:Player ;
     DBpedia:country dbp:United_States ;
@@ -1315,7 +1147,6 @@ dbp:Toronto_Defiant a dbp:Agent,
         Wikidata:Q43229,
         Schema:Organization,
         Schema:SportsTeam ;
-    ex:hasLocation dbp:Canada ;
     ex:hasRegion dbp:North_America ;
     ex:playedMatches ( ex:21177 ex:21178 ex:21180 ex:21253 ex:21302 ex:21283 ex:21284 ex:20304 ex:21275 ex:21305 ex:21277 ex:21270 ex:21306 ex:21335 ex:21299 ex:21391 ex:21319 ex:21369 ex:21370 ex:21339 ex:21387 ex:21415 ex:21452 ex:21482 ex:21399 ex:21501 ex:21473 ex:21426 ex:21460 ex:30991 ex:31017 ex:31024 ex:31032 ex:31036 ex:31066 ex:31054 ex:31093 ex:32855 ex:34225 ex:34196 ex:34202 ex:34495 ex:34492 ex:34624 ex:34618 ex:34605 ex:34744 ex:34749 ex:34752 ex:34834 ex:34831 ex:34804 ex:34782 ex:34891 ex:34767 ex:34719 ex:35533 ) ;
     FOAF:name "Toronto Defiant" .
@@ -1330,7 +1161,7 @@ dbp:Trident a ex:Player ;
     FOAF:name "Rick_Salazar"^^xsd:string .
 
 dbp:Trill_consonant a ex:Player ;
-    DBpedia:country dbp:Australia ;
+    DBpedia:country ex:Australia ;
     ex:PlayerID "trill"^^xsd:string ;
     ex:birthday "1997-02-16T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:21386 ex:21320 ex:21405 ex:21425 ex:21455 ex:21418 ex:21502 ex:21457 ex:30994 ex:30998 ex:33071 ) ;
@@ -1373,7 +1204,6 @@ dbp:Vancouver_Titans a dbp:Agent,
         Wikidata:Q43229,
         Schema:Organization,
         Schema:SportsTeam ;
-    ex:hasLocation dbp:Canada ;
     ex:hasRegion dbp:North_America ;
     ex:playedMatches ( ex:30151 ex:30155 ex:30156 ex:30157 ex:21222 ex:21291 ex:21244 ex:21224 ex:21303 ex:21274 ex:21268 ex:20302 ex:20305 ex:20306 ex:21295 ex:21248 ex:21341 ex:21286 ex:21288 ex:21335 ex:21315 ex:20314 ex:20317 ex:20316 ex:21366 ex:21376 ex:21401 ex:21402 ex:21385 ex:21330 ex:21422 ex:20321 ex:20325 ex:21424 ex:21398 ex:21408 ex:21444 ex:21492 ex:21521 ex:21513 ex:30993 ex:30997 ex:33022 ex:33081 ex:34211 ex:34195 ex:34191 ex:34235 ex:34495 ex:34624 ex:34616 ex:34604 ex:34627 ex:34747 ex:34844 ex:34835 ex:34811 ex:34782 ex:34895 ex:34894 ex:34776 ex:34771 ex:34765 ex:34764 ex:34717 ex:35534 ) ;
     FOAF:name "Vancouver Titans" .
@@ -1386,15 +1216,6 @@ dbp:Volleyball a ex:Player ;
     ex:role ex:DPS ;
     FOAF:age 21 ;
     FOAF:name "Kim_Hae-seong"^^xsd:string .
-
-dbp:Vowel a ex:Player ;
-    DBpedia:country dbp:South_Korea ;
-    ex:PlayerID "closer"^^xsd:string ;
-    ex:birthday "1998-05-16T00:00:00"^^xsd:date ;
-    ex:playedMatches ( ex:13124 ex:10264 ex:10268 ex:10569 ex:10281 ex:10284 ex:10293 ex:10311 ex:10584 ex:10344 ex:10349 ex:10354 ex:10361 ex:10366 ex:10372 ex:10378 ex:10596 ex:10448 ex:10488 ex:21126 ex:21271 ex:21272 ex:21282 ex:21245 ex:21226 ex:21267 ex:21270 ex:21297 ex:21286 ex:21325 ex:21345 ex:21314 ex:21371 ex:20314 ex:21336 ex:21318 ex:21326 ex:21402 ex:21386 ex:21320 ex:21405 ex:21425 ex:21455 ex:21418 ex:21502 ex:21457 ex:21512 ex:21485 ex:30994 ex:30998 ex:33071 ex:32853 ex:32822 ex:34232 ex:34197 ex:34241 ex:34494 ex:34501 ) ;
-    ex:role ex:Support ;
-    FOAF:age 22 ;
-    FOAF:name "Jung_Won-sik"^^xsd:string .
 
 dbp:Washington_Justice a dbp:Agent,
         dbp:Organisation,
@@ -1410,7 +1231,7 @@ dbp:Washington_Justice a dbp:Agent,
     FOAF:name "Washington Justice" .
 
 dbp:XQc a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "xqc"^^xsd:string ;
     ex:birthday "1995-11-12T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10225 ex:10229 ex:10285 ex:10290 ex:10298 ex:10303 ) ;
@@ -1551,13 +1372,40 @@ ex:PlayerID a owl:DatatypeProperty ;
     rdfs:range rdfs:Literal .
 
 ex:agilities a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "agilities"^^xsd:string ;
     ex:birthday "1999-12-27T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:13127 ex:13128 ex:10223 ex:10229 ex:10239 ex:10244 ex:10249 ex:10257 ex:10259 ex:10270 ex:10566 ex:10572 ex:10278 ex:10289 ex:10318 ex:10322 ex:10583 ex:10586 ex:10334 ex:10340 ex:10346 ex:10351 ex:10357 ex:10366 ex:10370 ex:10377 ex:10592 ex:10599 ex:10544 ex:10444 ex:10453 ex:10456 ex:10461 ex:10469 ex:10477 ex:10482 ex:10490 ex:10629 ex:10546 ex:10548 ex:21251 ex:21242 ex:21180 ex:21224 ex:21225 ex:21246 ex:21216 ex:21238 ex:21296 ex:21249 ex:21287 ex:21345 ex:21362 ex:21372 ex:21374 ex:21375 ex:21411 ex:21328 ex:21330 ex:21309 ex:21421 ex:20324 ex:20327 ex:21481 ex:21389 ex:21455 ex:21456 ex:21503 ex:21419 ex:21515 ex:30991 ex:31017 ex:31024 ex:31032 ex:31036 ex:31066 ex:31054 ex:31093 ex:34225 ex:34196 ex:34202 ex:34605 ex:34744 ex:34749 ex:34752 ex:34834 ex:34831 ex:34804 ex:34782 ex:34891 ex:35533 ) ;
     ex:role ex:DPS ;
     FOAF:age 21 ;
     FOAF:name "Brady_Girardi"^^xsd:string .
+
+ex:aid a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "aid"^^xsd:string ;
+    ex:birthday "1994-04-07T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:21177 ex:21178 ex:21180 ex:20304 ex:21275 ex:21305 ex:21270 ex:21391 ex:21319 ex:21369 ex:21370 ex:21339 ex:21387 ex:21415 ex:21452 ex:21482 ex:21399 ex:21501 ex:21473 ex:21426 ex:21460 ) ;
+    ex:role ex:Coach ;
+    FOAF:age 27 ;
+    FOAF:name "Go_Jae-yoon"^^xsd:string .
+
+ex:akm a ex:Player ;
+    DBpedia:country dbp:France ;
+    ex:PlayerID "akm"^^xsd:string ;
+    ex:birthday "1995-12-11T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:10279 ex:10285 ex:10290 ex:10298 ex:10303 ex:10313 ex:10314 ex:10325 ex:10333 ex:10339 ex:10347 ex:10351 ex:10358 ex:10368 ex:10371 ex:10375 ex:10588 ex:10593 ex:10449 ex:10455 ex:10471 ex:10481 ex:10486 ex:10623 ex:10629 ex:10547 ex:21126 ex:21271 ex:21272 ex:21282 ex:21245 ex:21226 ex:21267 ex:21270 ex:21297 ex:21286 ex:21325 ex:21345 ex:21314 ex:21371 ex:20314 ex:21336 ex:21318 ex:21326 ex:21402 ex:21386 ex:21320 ex:21405 ex:21425 ex:21418 ex:21502 ex:21457 ex:21512 ex:21485 ) ;
+    ex:role ex:DPS ;
+    FOAF:age 25 ;
+    FOAF:name "Dylan_Bignet"^^xsd:string .
+
+ex:alarm a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "alarm"^^xsd:string ;
+    ex:birthday "2001-07-20T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:31002 ex:31006 ex:31010 ex:31017 ex:31029 ex:31042 ex:31059 ex:31094 ex:31064 ex:32828 ex:34227 ex:34197 ex:34503 ex:34507 ex:34625 ex:34612 ex:34626 ex:34748 ex:34752 ex:34751 ex:34808 ex:34804 ex:34802 ex:34778 ex:34904 ex:34907 ex:34906 ex:34769 ex:35536 ex:35540 ex:35541 ex:35543 ex:35510 ex:35554 ) ;
+    ex:role ex:Support ;
+    FOAF:age 19 ;
+    FOAF:name "Kim_Kyung-bo"^^xsd:string .
 
 ex:although a ex:Player ;
     DBpedia:country dbp:South_Korea ;
@@ -1594,6 +1442,15 @@ ex:arhan a ex:Player ;
     ex:role ex:Coach ;
     FOAF:age 25 ;
     FOAF:name "Jeong_Won-hyeop"^^xsd:string .
+
+ex:asher a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "asher"^^xsd:string ;
+    ex:birthday "1995-09-12T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:10224 ex:10234 ex:10240 ex:10245 ex:10249 ex:10258 ex:10260 ex:10267 ex:10565 ex:10570 ex:10280 ex:10285 ex:10292 ex:10297 ex:10304 ex:10311 ex:10319 ex:10320 ex:10576 ex:10587 ex:10335 ex:10339 ex:10357 ex:10367 ex:10372 ex:10376 ex:10589 ex:10594 ex:10543 ex:10443 ex:21275 ) ;
+    ex:role ex:DPS ;
+    FOAF:age 25 ;
+    FOAF:name "Choi_Joon-seong"^^xsd:string .
 
 ex:ating a ex:Player ;
     DBpedia:country dbp:Taiwan ;
@@ -1712,6 +1569,15 @@ ex:bischu a ex:Player ;
     FOAF:age 26 ;
     FOAF:name "Hyung-seok_\"Aaron\"_Kim"^^xsd:string .
 
+ex:blasé a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:PlayerID "blasé"^^xsd:string ;
+    ex:birthday "1999-02-22T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:21221 ex:21213 ex:21281 ex:21223 ex:21302 ex:21312 ex:21267 ex:20302 ex:21293 ex:21305 ex:21322 ex:21342 ex:21288 ex:21353 ex:21364 ex:21382 ex:21367 ex:21377 ex:21337 ex:21378 ex:21379 ex:21310 ex:21397 ex:21388 ex:21409 ex:21410 ex:21503 ex:21494 ex:21446 ) ;
+    ex:role ex:DPS ;
+    FOAF:age 22 ;
+    FOAF:name "Jeffrey_Tsang"^^xsd:string .
+
 ex:bqb a ex:Player ;
     DBpedia:country dbp:South_Korea ;
     ex:PlayerID "bqb"^^xsd:string ;
@@ -1722,13 +1588,22 @@ ex:bqb a ex:Player ;
     FOAF:name "Lee_Sang-bum"^^xsd:string .
 
 ex:brussen a ex:Player ;
-    DBpedia:country dbp:Netherlands_national_football_team ;
+    DBpedia:country ex:Netherlands ;
     ex:PlayerID "brussen"^^xsd:string ;
     ex:birthday "2000-07-18T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:31066 ex:31087 ex:32855 ex:32823 ex:34226 ex:34189 ) ;
     ex:role ex:Tank ;
     FOAF:age 20 ;
     FOAF:name "Thomas_Brussen"^^xsd:string .
+
+ex:bumper a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "bumper"^^xsd:string ;
+    ex:birthday "1999-08-05T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:21222 ex:21291 ex:21244 ex:21224 ex:21303 ex:21274 ex:21268 ex:20302 ex:20305 ex:20306 ex:21295 ex:21248 ex:21341 ex:21286 ex:21288 ex:21335 ex:21315 ex:20314 ex:20317 ex:20316 ex:21366 ex:21376 ex:21401 ex:21402 ex:21385 ex:21330 ex:21422 ex:20321 ex:20325 ex:21424 ex:21398 ex:21408 ex:21444 ex:21492 ex:21521 ex:21513 ) ;
+    ex:role ex:Tank ;
+    FOAF:age 21 ;
+    FOAF:name "Park_Sang-beom"^^xsd:string .
 
 ex:byrem a ex:Player ;
     DBpedia:country dbp:South_Korea ;
@@ -1792,7 +1667,7 @@ ex:chipsa a ex:Player ;
     FOAF:name "Philip_Graham"^^xsd:string .
 
 ex:chipshajen a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "chipshajen"^^xsd:string ;
     ex:birthday "1992-02-28T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10225 ex:10229 ex:10238 ex:10243 ex:10255 ex:10256 ex:10262 ex:10269 ex:10564 ex:10570 ex:10303 ex:10313 ex:10314 ex:10325 ex:10580 ex:10585 ex:10368 ex:10445 ex:10449 ) ;
@@ -1825,8 +1700,17 @@ ex:clockwork a ex:Player ;
     ex:role ex:Coach ;
     FOAF:name "Matthew_Dias"^^xsd:string .
 
+ex:closer a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "closer"^^xsd:string ;
+    ex:birthday "1998-05-16T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:13124 ex:10264 ex:10268 ex:10569 ex:10281 ex:10284 ex:10293 ex:10311 ex:10584 ex:10344 ex:10349 ex:10354 ex:10361 ex:10366 ex:10372 ex:10378 ex:10596 ex:10448 ex:10488 ex:21126 ex:21271 ex:21272 ex:21282 ex:21245 ex:21226 ex:21267 ex:21270 ex:21297 ex:21286 ex:21325 ex:21345 ex:21314 ex:21371 ex:20314 ex:21336 ex:21318 ex:21326 ex:21402 ex:21386 ex:21320 ex:21405 ex:21425 ex:21455 ex:21418 ex:21502 ex:21457 ex:21512 ex:21485 ex:30994 ex:30998 ex:33071 ex:32853 ex:32822 ex:34232 ex:34197 ex:34241 ex:34494 ex:34501 ) ;
+    ex:role ex:Support ;
+    FOAF:age 22 ;
+    FOAF:name "Jung_Won-sik"^^xsd:string .
+
 ex:colourhex a ex:Player ;
-    DBpedia:country <http://dbpedia.org/resource/New_Zealand_women's_national_football_team> ;
+    DBpedia:country ex:New_Zealand ;
     ex:PlayerID "colourhex"^^xsd:string ;
     ex:birthday "1997-11-17T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:21281 ex:21223 ex:21302 ex:21312 ex:21267 ex:20302 ex:21293 ex:21305 ex:21322 ex:21342 ex:21288 ex:21353 ex:21364 ex:21382 ex:21367 ex:21377 ex:21337 ex:21378 ex:21379 ex:21310 ex:21397 ex:21388 ex:21409 ex:21410 ex:21503 ex:21494 ex:21446 ex:30996 ex:31011 ex:31029 ex:31038 ex:31043 ex:31066 ex:31087 ex:32855 ex:32823 ex:34226 ex:34189 ex:34521 ex:34491 ex:34633 ex:34612 ex:34604 ex:34745 ex:34833 ex:34824 ex:34823 ex:34809 ex:34895 ex:34770 ex:34764 ex:35535 ex:35532 ) ;
@@ -1862,7 +1746,7 @@ ex:cr0ng a ex:Player ;
     FOAF:name "Nam_Ki-cheol"^^xsd:string .
 
 ex:crimzo a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "crimzo"^^xsd:string ;
     ex:birthday "1999-10-03T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:30994 ex:30998 ex:31071 ex:32817 ex:33071 ex:32853 ex:32822 ex:34232 ex:34197 ex:34241 ex:34494 ex:34501 ex:34632 ex:34616 ex:34605 ex:34741 ex:34843 ex:34809 ex:34802 ex:34780 ex:34892 ex:34901 ex:34775 ex:34771 ex:34719 ex:34715 ex:35531 ) ;
@@ -1871,7 +1755,7 @@ ex:crimzo a ex:Player ;
     FOAF:name "William_Hernandez"^^xsd:string .
 
 ex:custa a ex:Player ;
-    DBpedia:country dbp:Australia ;
+    DBpedia:country ex:Australia ;
     ex:PlayerID "custa"^^xsd:string ;
     ex:birthday "1993-11-22T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:13127 ex:13128 ex:10225 ex:10229 ex:10238 ex:10255 ex:10256 ex:10279 ex:10285 ex:10290 ex:10298 ex:10314 ex:10325 ex:10580 ex:10585 ex:10334 ex:10340 ex:10346 ex:10351 ex:10357 ex:10366 ex:10370 ex:10377 ex:10592 ex:10599 ex:10544 ex:10444 ex:10453 ex:10456 ex:10461 ex:10469 ex:10477 ex:10482 ex:10490 ex:10622 ex:10629 ex:10546 ex:10548 ex:21242 ex:21180 ex:21238 ex:21296 ex:21249 ex:21287 ex:21345 ex:21362 ex:21372 ex:21374 ex:21375 ex:21411 ex:21328 ex:21330 ex:21309 ex:21421 ex:20324 ex:20327 ex:21481 ex:21389 ex:21455 ex:21456 ex:21503 ex:21419 ex:21515 ) ;
@@ -1880,7 +1764,7 @@ ex:custa a ex:Player ;
     FOAF:name "Scott_Kennedy"^^xsd:string .
 
 ex:cwoosh a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "cwoosh"^^xsd:string ;
     ex:playedMatches ( ex:10226 ex:10230 ex:10236 ex:10242 ex:10252 ex:10257 ex:10260 ex:10265 ex:10568 ex:10575 ex:10282 ex:10287 ex:10293 ex:10296 ex:10310 ex:10313 ex:10318 ex:10320 ex:10577 ex:10582 ex:10336 ex:10342 ex:10447 ex:10625 ex:10632 ) ;
     ex:role ex:Coach ;
@@ -1896,7 +1780,7 @@ ex:daemin a ex:Player ;
     FOAF:name "Kim_Dae-min"^^xsd:string .
 
 ex:dafran a ex:Player ;
-    DBpedia:country dbp:Denmark ;
+    DBpedia:country ex:Denmark ;
     ex:PlayerID "dafran"^^xsd:string ;
     ex:birthday "1993-12-27T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:21241 ex:21261 ex:21178 ex:21263 ex:21292 ex:21304 ex:21218 ex:20303 ) ;
@@ -1919,6 +1803,15 @@ ex:danye a ex:Player ;
     ex:playedMatches ( ex:21294 ex:21220 ex:21257 ex:21297 ex:21352 ex:21361 ex:21299 ex:21391 ex:21367 ex:21290 ex:21307 ex:21394 ex:21379 ex:21356 ) ;
     ex:role ex:DPS ;
     FOAF:name "Karol_Szcześniak"^^xsd:string .
+
+ex:dayfly a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "dayfly"^^xsd:string ;
+    ex:birthday "1999-01-15T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:13122 ex:13123 ex:10232 ex:10254 ex:10294 ex:10309 ) ;
+    ex:role ex:Support ;
+    FOAF:age 22 ;
+    FOAF:name "Park_Jeong-hwan"^^xsd:string .
 
 ex:dding a ex:Player ;
     DBpedia:country dbp:South_Korea ;
@@ -1966,7 +1859,7 @@ ex:elk a ex:Player ;
     FOAF:name "Elijah_Hudson_Gallagher"^^xsd:string .
 
 ex:ellivote a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "ellivote"^^xsd:string ;
     ex:birthday "1999-02-28T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:31002 ex:31005 ex:31012 ex:31018 ex:31038 ex:31044 ex:31054 ex:31059 ex:33071 ex:32862 ex:34232 ex:34211 ) ;
@@ -2016,6 +1909,15 @@ ex:fdgod a ex:Player ;
     ex:role ex:Support ;
     FOAF:age 19 ;
     FOAF:name "Brice_Monsçavoir"^^xsd:string .
+
+ex:fielder a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "fielder"^^xsd:string ;
+    ex:birthday "2002-01-29T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:34227 ex:34221 ex:34241 ex:34491 ex:34502 ex:34633 ex:34619 ex:34641 ex:34741 ex:34747 ex:34750 ex:34751 ex:34844 ex:34831 ex:34805 ex:34783 ex:34903 ex:34907 ex:34772 ex:34715 ex:35539 ex:35549 ) ;
+    ex:role ex:Support ;
+    FOAF:age 19 ;
+    FOAF:name "Kwon_Joon"^^xsd:string .
 
 ex:finnsi a ex:Player ;
     DBpedia:country dbp:Same-sex_marriage_in_Iceland ;
@@ -2144,7 +2046,7 @@ ex:hanbin a ex:Player ;
     FOAF:name "Choi_Han-been"^^xsd:string .
 
 ex:harryhook a ex:Player ;
-    DBpedia:country dbp:Spain_national_football_team ;
+    DBpedia:country ex:Spain ;
     ex:PlayerID "harryhook"^^xsd:string ;
     ex:birthday "1991-08-10T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10225 ex:10229 ex:10243 ex:10262 ex:10269 ex:10564 ex:10570 ex:10279 ex:10285 ex:10290 ex:10298 ex:10303 ex:10313 ex:10333 ex:10339 ex:10347 ex:10351 ex:10358 ex:10368 ex:10371 ex:10375 ex:10588 ex:10593 ex:10445 ex:10449 ex:10455 ex:10466 ex:10471 ex:10476 ex:10481 ex:10486 ex:10623 ex:10629 ex:10547 ex:21320 ex:21405 ex:21418 ex:21502 ex:31071 ex:32817 ) ;
@@ -2247,13 +2149,22 @@ ex:hyp a ex:Player ;
     FOAF:name "Damien_Souville"^^xsd:string .
 
 ex:iddqd a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "iddqd"^^xsd:string ;
     ex:birthday "1991-12-31T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10631 ) ;
     ex:role ex:DPS ;
     FOAF:age 29 ;
     FOAF:name "André_Dahlström"^^xsd:string .
+
+ex:illicit a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "illicit"^^xsd:string ;
+    ex:birthday "2001-02-01T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:21348 ex:21317 ex:21355 ex:21327 ex:21329 ex:21453 ex:21433 ex:21389 ex:21436 ex:21426 ex:34194 ex:34622 ex:34842 ex:34821 ex:34806 ex:34793 ) ;
+    ex:role ex:DPS ;
+    FOAF:age 20 ;
+    FOAF:name "Park_Je-min"^^xsd:string .
 
 ex:im37 a ex:Player ;
     DBpedia:country dbp:South_Korea ;
@@ -2362,13 +2273,22 @@ ex:karayan a ex:Player ;
     FOAF:name "Choi_San-ha"^^xsd:string .
 
 ex:kevster a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "kevster"^^xsd:string ;
     ex:birthday "2001-05-21T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:34617 ex:34603 ex:34743 ex:34835 ex:34808 ex:34805 ex:34779 ex:34891 ex:34904 ex:34775 ex:34770 ex:34763 ex:34718 ex:34713 ex:35533 ex:35536 ex:35546 ) ;
     ex:role ex:DPS ;
     FOAF:age 19 ;
     FOAF:name "Kevin_Persson"^^xsd:string .
+
+ex:kodak a ex:Player ;
+    DBpedia:country ex:Germany ;
+    ex:PlayerID "kodak"^^xsd:string ;
+    ex:birthday "2000-05-30T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:21241 ex:21261 ex:21178 ex:21292 ex:21218 ex:21293 ex:21276 ex:32862 ex:34492 ex:34504 ) ;
+    ex:role ex:Coach ;
+    FOAF:age 20 ;
+    FOAF:name "Steven_Rosenberger"^^xsd:string .
 
 ex:kong_chunting a ex:Player ;
     DBpedia:country dbp:China ;
@@ -2495,7 +2415,7 @@ ex:liu_junjie a ex:Player ;
     FOAF:name "Liu_Junjie"^^xsd:string .
 
 ex:logix a ex:Player ;
-    DBpedia:country dbp:Belgium_national_football_team ;
+    DBpedia:country ex:Belgium ;
     ex:PlayerID "logix"^^xsd:string ;
     ex:birthday "1997-06-11T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10226 ex:10230 ex:10236 ex:10242 ex:10252 ex:10257 ex:10260 ex:10265 ex:10568 ex:10575 ex:10282 ex:10287 ex:10293 ex:10296 ex:10310 ex:10313 ex:10318 ex:10320 ex:10577 ex:10582 ex:10336 ex:10342 ex:10360 ex:10364 ex:10371 ex:10591 ex:10447 ex:10452 ex:10456 ex:10459 ex:10474 ex:10478 ex:10480 ex:10486 ex:10625 ex:10632 ex:21339 ex:21387 ex:21415 ex:21452 ex:21482 ex:21399 ex:21501 ex:21473 ex:21426 ex:21460 ex:30991 ex:31017 ex:31024 ex:31032 ex:31036 ex:31066 ex:31054 ex:31093 ex:32855 ex:34225 ex:34196 ex:34202 ex:34495 ex:34492 ex:34624 ex:34618 ex:34605 ex:34744 ex:34749 ex:34752 ex:34804 ex:34782 ex:34891 ex:34767 ex:34719 ex:35533 ) ;
@@ -2540,7 +2460,7 @@ ex:ma_tianbin a ex:Player ;
     FOAF:name "Ma_Tianbin"^^xsd:string .
 
 ex:mangachu a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "mangachu"^^xsd:string ;
     ex:birthday "1996-06-10T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:21370 ex:21339 ex:21387 ex:21415 ex:21452 ex:21482 ex:21399 ex:21501 ex:21473 ex:21426 ex:21460 ) ;
@@ -2549,13 +2469,22 @@ ex:mangachu a ex:Player ;
     FOAF:name "Liam_Campbell"^^xsd:string .
 
 ex:manneten a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "manneten"^^xsd:string ;
     ex:birthday "1997-06-01T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10226 ex:10230 ex:10236 ex:10242 ex:10252 ex:10257 ex:10260 ex:10265 ex:10568 ex:10575 ex:10282 ex:10287 ex:10293 ex:10296 ex:10310 ex:10313 ex:10318 ex:10320 ex:10577 ex:10582 ex:10336 ex:10342 ex:10349 ex:10356 ex:10360 ex:10364 ex:10371 ex:10377 ex:10589 ex:10591 ex:10447 ex:10452 ex:10456 ex:10459 ex:10474 ex:10478 ex:10480 ex:10486 ) ;
     ex:role ex:Tank ;
     FOAF:age 23 ;
     FOAF:name "Tim_Bylund"^^xsd:string .
+
+ex:mano a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "mano"^^xsd:string ;
+    ex:birthday "1996-04-12T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:13130 ex:13131 ex:10228 ex:10233 ex:10239 ex:10245 ex:10251 ex:10253 ex:10263 ex:10269 ex:10568 ex:10573 ex:10539 ex:10282 ex:10284 ex:10295 ex:10300 ex:10309 ex:10312 ex:10315 ex:10317 ex:10580 ex:10586 ex:10542 ex:10336 ex:10344 ex:10348 ex:10355 ex:10362 ex:10367 ex:10373 ex:10379 ex:10593 ex:10595 ex:10544 ex:10545 ex:10447 ex:10454 ex:10462 ex:10465 ex:10467 ex:10477 ex:10483 ex:10489 ex:10626 ex:10627 ex:10547 ex:10548 ex:30153 ex:30163 ex:30156 ex:30158 ex:21221 ex:21127 ex:21242 ex:21235 ex:21253 ex:21264 ex:21255 ex:20301 ex:21313 ex:21229 ex:21230 ex:21323 ex:21285 ex:21324 ex:21363 ex:20313 ex:20317 ex:21354 ex:21350 ex:21290 ex:21403 ex:21405 ex:21461 ex:21415 ex:20322 ex:21423 ex:21416 ex:21417 ex:21511 ex:21437 ex:21494 ex:21513 ex:30992 ex:30996 ex:31010 ex:31016 ex:31023 ex:31044 ex:32829 ex:32824 ex:34233 ex:34228 ex:34222 ex:34192 ex:34513 ex:34517 ex:34634 ex:34620 ex:34613 ex:34642 ex:34756 ex:34759 ex:34836 ex:34812 ex:34791 ex:34912 ex:34915 ex:34773 ex:34761 ex:35514 ex:35521 ex:35525 ex:35524 ) ;
+    ex:role ex:Tank ;
+    FOAF:age 25 ;
+    FOAF:name "Kim_Dong-gyu"^^xsd:string .
 
 ex:marve1 a ex:Player ;
     DBpedia:country dbp:South_Korea ;
@@ -2600,6 +2529,15 @@ ex:mcgravy a ex:Player ;
     ex:role ex:Tank ;
     FOAF:age 24 ;
     FOAF:name "Caleb_McGarvey"^^xsd:string .
+
+ex:michelle a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "michelle"^^xsd:string ;
+    ex:birthday "1999-12-21T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:30176 ex:30151 ex:30161 ex:21231 ex:21271 ex:21233 ex:21223 ex:21264 ex:21217 ex:20301 ex:20305 ex:21321 ex:21248 ex:21325 ex:21334 ex:21362 ex:21315 ex:21373 ex:21348 ex:21327 ex:21329 ex:21356 ex:21451 ex:20323 ex:21453 ex:21433 ex:21389 ex:21436 ex:21426 ex:21427 ex:21428 ex:34229 ex:34194 ex:34601 ex:34757 ex:34842 ex:34821 ex:34806 ) ;
+    ex:role ex:Tank ;
+    FOAF:age 21 ;
+    FOAF:name "Choi_Min-hyuk"^^xsd:string .
 
 ex:mickie a ex:Player ;
     DBpedia:country dbp:Thailand ;
@@ -2656,7 +2594,7 @@ ex:nenne a ex:Player ;
     FOAF:name "Jeong_Yeon-kwan"^^xsd:string .
 
 ex:nevix a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "nevix"^^xsd:string ;
     ex:birthday "1996-06-24T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10223 ex:10231 ex:10235 ex:10246 ex:10247 ex:10255 ex:10261 ex:10265 ex:10565 ex:10571 ex:10280 ex:10286 ex:10291 ex:10301 ex:10303 ex:10312 ex:10321 ex:10324 ex:10577 ex:10581 ex:10335 ex:10341 ex:10346 ex:10352 ex:10358 ex:10363 ex:10373 ex:10378 ex:10590 ex:10591 ex:10443 ex:10451 ex:10631 ex:30164 ex:21126 ex:21128 ex:21244 ex:21262 ex:21273 ex:21515 ex:30991 ex:31017 ex:31024 ex:31032 ex:31036 ex:31066 ex:31054 ex:31093 ex:32855 ex:34225 ex:34196 ex:34202 ex:34495 ex:34492 ex:34624 ex:34618 ex:34605 ex:34744 ex:34749 ex:34752 ex:34834 ex:34831 ex:34804 ex:34782 ex:34891 ex:34767 ex:34719 ex:35533 ) ;
@@ -2683,7 +2621,7 @@ ex:nlaaer a ex:Player ;
     FOAF:name "Ilya_Koppalov"^^xsd:string .
 
 ex:nomy a ex:Player ;
-    DBpedia:country dbp:Mexico_national_football_team ;
+    DBpedia:country ex:Mexico ;
     ex:PlayerID "nomy"^^xsd:string ;
     ex:playedMatches ( ex:10223 ex:10231 ex:10235 ex:10246 ex:10247 ex:10255 ex:10261 ex:10265 ex:10565 ex:10571 ex:10280 ex:10286 ex:10291 ex:10301 ex:10303 ex:10312 ex:10321 ex:10324 ex:10577 ex:10581 ex:10352 ex:10358 ex:10373 ) ;
     ex:role ex:Coach ;
@@ -2699,7 +2637,7 @@ ex:nosmite a ex:Player ;
     FOAF:name "Jeong_Da-un"^^xsd:string .
 
 ex:note a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "note"^^xsd:string ;
     ex:birthday "1998-10-16T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:13121 ex:13122 ex:13123 ex:10228 ex:10250 ex:10256 ex:10267 ex:10270 ex:10567 ex:10574 ex:10283 ex:10288 ex:10295 ex:10296 ex:10307 ex:10308 ex:10314 ex:10322 ex:10581 ex:10587 ex:10337 ex:10343 ex:10348 ex:10356 ex:10361 ex:10365 ex:10369 ex:10375 ex:10592 ex:10594 ex:10543 ex:10545 ex:10446 ex:10450 ex:10461 ex:10470 ex:10475 ex:10479 ex:10485 ex:10626 ex:10632 ex:21221 ex:21213 ex:21281 ex:21223 ex:21302 ex:21312 ex:21267 ex:20302 ex:21270 ex:21297 ex:21286 ex:21325 ex:21345 ex:21314 ex:21371 ex:20314 ex:21336 ex:21318 ex:21326 ex:21402 ex:21386 ex:21320 ex:21405 ex:21425 ex:21455 ex:21418 ex:21502 ex:21457 ex:21512 ex:21485 ex:30994 ex:30998 ex:31071 ex:32817 ex:33071 ex:32853 ex:32822 ex:34232 ex:34197 ex:34241 ex:34494 ex:34501 ex:34632 ex:34616 ex:34605 ex:34741 ex:34843 ex:34809 ex:34802 ex:34780 ex:34892 ex:34901 ex:34775 ex:34771 ex:34719 ex:34715 ex:35531 ) ;
@@ -2726,7 +2664,7 @@ ex:oge a ex:Player ;
     FOAF:name "Son_Min-seok"^^xsd:string .
 
 ex:onigod a ex:Player ;
-    DBpedia:country dbp:Norway ;
+    DBpedia:country ex:Norway ;
     ex:PlayerID "onigod"^^xsd:string ;
     ex:birthday "1997-07-29T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:34616 ex:34605 ex:34741 ex:34843 ex:34809 ex:34802 ex:34780 ex:34892 ex:34901 ex:34775 ex:34771 ex:34719 ex:34715 ex:35531 ) ;
@@ -2798,6 +2736,15 @@ ex:ria a ex:Player ;
     FOAF:age 23 ;
     FOAF:name "Park_Seong-Wook"^^xsd:string .
 
+ex:rise a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "rise"^^xsd:string ;
+    ex:birthday "2001-04-30T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:21406 ex:21397 ) ;
+    ex:role ex:Support ;
+    FOAF:age 20 ;
+    FOAF:name "Lee_Won-jae"^^xsd:string .
+
 ex:roky a ex:Player ;
     DBpedia:country dbp:South_Korea ;
     ex:PlayerID "roky"^^xsd:string ;
@@ -2808,7 +2755,7 @@ ex:roky a ex:Player ;
     FOAF:name "Park_Joo-seong"^^xsd:string .
 
 ex:roolf a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "roolf"^^xsd:string ;
     ex:birthday "1995-04-04T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:34211 ex:34195 ex:34191 ex:34235 ex:34495 ex:34624 ex:34616 ex:34604 ex:34627 ex:34747 ex:34844 ex:34835 ex:34811 ex:34782 ex:34895 ex:34894 ex:34776 ex:34771 ex:34765 ex:34764 ex:34717 ex:35534 ) ;
@@ -2897,6 +2844,15 @@ ex:shadowburn a ex:Player ;
     FOAF:age 24 ;
     FOAF:name "George_Gushcha"^^xsd:string .
 
+ex:sharp a ex:Player ;
+    DBpedia:country ex:Sweden ;
+    ex:PlayerID "sharp"^^xsd:string ;
+    ex:birthday "2001-12-10T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:31060 ex:32862 ex:34231 ex:35532 ex:35539 ex:35548 ex:35547 ) ;
+    ex:role ex:DPS ;
+    FOAF:age 19 ;
+    FOAF:name "Hugo_Sahlberg"^^xsd:string .
+
 ex:sharyk a ex:Player ;
     DBpedia:country dbp:Latvia ;
     ex:PlayerID "sharyk"^^xsd:string ;
@@ -2905,7 +2861,7 @@ ex:sharyk a ex:Player ;
     FOAF:name "Normunds_Faterins"^^xsd:string .
 
 ex:shax a ex:Player ;
-    DBpedia:country dbp:Denmark ;
+    DBpedia:country ex:Denmark ;
     ex:PlayerID "shax"^^xsd:string ;
     ex:birthday "1999-04-09T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:21328 ex:21330 ex:21309 ex:21421 ex:20324 ex:20327 ex:21481 ex:21389 ex:21455 ex:32861 ex:32827 ex:34231 ex:34189 ex:34202 ex:34502 ex:34505 ex:34623 ex:34611 ex:34641 ex:34744 ex:34824 ex:34778 ex:34893 ex:34903 ex:35537 ex:35540 ex:35544 ) ;
@@ -2923,7 +2879,7 @@ ex:shaz a ex:Player ;
     FOAF:name "Jonas_Suovaara"^^xsd:string .
 
 ex:shredlock a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "shredlock"^^xsd:string ;
     ex:birthday "2001-12-08T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:34211 ex:34195 ex:34191 ex:34235 ex:34495 ex:34624 ex:34616 ex:34604 ex:34627 ex:34747 ex:34844 ex:34835 ex:34811 ex:34782 ex:34895 ex:34894 ex:34776 ex:34771 ex:34765 ex:34764 ex:34717 ex:35534 ) ;
@@ -2932,7 +2888,7 @@ ex:shredlock a ex:Player ;
     FOAF:name "Abtin_Shirvani"^^xsd:string .
 
 <http://example.org/shu_(canadian_player)> a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "shu (canadian player)"^^xsd:string ;
     ex:birthday "1994-05-18T00:00:00"^^xsd:date ;
     ex:playedMatches [ rdf:rest () ] ;
@@ -2958,8 +2914,26 @@ ex:silkthread a ex:Player ;
     FOAF:age 19 ;
     FOAF:name "Jung_Hyeong-jin"^^xsd:string .
 
+ex:sleepy a ex:Player ;
+    DBpedia:country dbp:United_States ;
+    ex:PlayerID "sleepy"^^xsd:string ;
+    ex:birthday "1998-09-16T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:10223 ex:10231 ex:10235 ex:10246 ex:10247 ex:10255 ex:10261 ex:10265 ex:10565 ex:10571 ex:10280 ex:10286 ex:10291 ex:10301 ex:10303 ex:10312 ex:10321 ex:10324 ex:10577 ex:10581 ex:10335 ex:10341 ex:10346 ex:10352 ex:10358 ex:10363 ex:10373 ex:10378 ex:10590 ex:10591 ex:10443 ex:10451 ex:10458 ex:10463 ex:10471 ex:10475 ex:10484 ex:10489 ex:10622 ex:10631 ex:21126 ex:21128 ex:21287 ex:21346 ex:21364 ex:21318 ex:21384 ex:21368 ex:21404 ex:21431 ex:21380 ex:21406 ex:21409 ) ;
+    ex:role ex:Support ;
+    FOAF:age 22 ;
+    FOAF:name "Nikola_Andrews"^^xsd:string .
+
+ex:slime a ex:Player ;
+    DBpedia:country dbp:South_Korea ;
+    ex:PlayerID "slime"^^xsd:string ;
+    ex:birthday "2000-01-12T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:30151 ex:30155 ex:30156 ex:30157 ex:21222 ex:21291 ex:21244 ex:21224 ex:21303 ex:21274 ex:21268 ex:20302 ex:20305 ex:20306 ex:21295 ex:21248 ex:21341 ex:21286 ex:21288 ex:21335 ex:21315 ex:20314 ex:20317 ex:20316 ex:21366 ex:21376 ex:21401 ex:21402 ex:21385 ex:21330 ex:21422 ex:20321 ex:20325 ex:21424 ex:21398 ex:21408 ex:21444 ex:21492 ex:21521 ex:21513 ex:30993 ex:30997 ex:33081 ex:34634 ex:34754 ex:34757 ex:34842 ex:34806 ex:34793 ) ;
+    ex:role ex:Support ;
+    FOAF:age 21 ;
+    FOAF:name "Kim_Sung-jun"^^xsd:string .
+
 ex:snillo a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "snillo"^^xsd:string ;
     ex:birthday "2000-03-02T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10316 ex:10325 ex:10576 ex:10540 ex:10542 ex:10337 ex:10342 ex:10350 ex:10354 ex:10362 ex:10363 ex:10374 ex:10588 ex:10599 ex:21282 ) ;
@@ -2968,7 +2942,7 @@ ex:snillo a ex:Player ;
     FOAF:name "Simon_Ekström"^^xsd:string .
 
 <http://example.org/snow_(brazilian_player)> a ex:Player ;
-    DBpedia:country dbp:Brazil ;
+    DBpedia:country ex:Brazil ;
     ex:PlayerID "snow (brazilian player)"^^xsd:string ;
     ex:birthday "1999-03-19T00:00:00"^^xsd:date ;
     ex:playedMatches [ rdf:rest () ] ;
@@ -3000,6 +2974,15 @@ ex:sp9rk1e a ex:Player ;
     FOAF:age 18 ;
     FOAF:name "Kim_Yeong-han"^^xsd:string .
 
+ex:spree a ex:Player ;
+    DBpedia:country ex:Belgium ;
+    ex:PlayerID "spree"^^xsd:string ;
+    ex:birthday "1995-06-05T00:00:00"^^xsd:date ;
+    ex:playedMatches ( ex:10227 ex:10281 ex:10288 ex:10300 ex:10319 ex:10578 ex:10448 ex:10450 ex:10457 ex:10473 ex:10481 ex:10624 ex:10627 ex:21177 ex:21213 ex:21179 ex:21235 ex:21130 ex:21216 ex:21218 ex:21334 ex:21314 ex:21381 ex:21347 ex:21454 ex:21443 ex:21435 ex:21474 ex:21483 ex:21459 ) ;
+    ex:role ex:Tank ;
+    FOAF:age 25 ;
+    FOAF:name "Alexandre_Vanhomwegen"^^xsd:string .
+
 ex:stand1 a ex:Player ;
     DBpedia:country dbp:South_Korea ;
     ex:PlayerID "stand1"^^xsd:string ;
@@ -3010,7 +2993,7 @@ ex:stand1 a ex:Player ;
     FOAF:name "Seo_Ji-won"^^xsd:string .
 
 ex:surefour a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "surefour"^^xsd:string ;
     ex:birthday "1994-11-04T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:13124 ex:13125 ex:13126 ex:10224 ex:10234 ex:10240 ex:10245 ex:10249 ex:10258 ex:10260 ex:10267 ex:10565 ex:10570 ex:10280 ex:10285 ex:10292 ex:10297 ex:10304 ex:10311 ex:10319 ex:10320 ex:10576 ex:10587 ex:10335 ex:10339 ex:10345 ex:10353 ex:10357 ex:10367 ex:10372 ex:10376 ex:10589 ex:10594 ex:10543 ex:10443 ex:10449 ex:10457 ex:10459 ex:10469 ex:10472 ex:10483 ex:10488 ex:10621 ex:10628 ex:10546 ex:30152 ex:30155 ex:30159 ex:21231 ex:21128 ex:21243 ex:21219 ex:21321 ex:21249 ex:21259 ex:21333 ex:21336 ex:21376 ex:21393 ex:21368 ex:21308 ex:21370 ex:21422 ex:21423 ex:21454 ex:21400 ex:21491 ex:21418 ex:21484 ex:21419 ex:30991 ex:31017 ex:31024 ex:31032 ex:31036 ex:31066 ex:31054 ex:31093 ex:32855 ex:34225 ex:34196 ex:34624 ex:34618 ex:34834 ex:34831 ) ;
@@ -3082,7 +3065,7 @@ ex:ttuba a ex:Player ;
     FOAF:name "Lee_Ho-sung"^^xsd:string .
 
 ex:tviq a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "tviq"^^xsd:string ;
     ex:birthday "1994-07-24T00:00:00"^^xsd:date ;
     ex:playedMatches ( ex:10226 ex:10230 ex:10236 ex:10242 ex:10252 ex:10257 ex:10260 ex:10265 ex:10568 ex:10575 ex:10282 ex:10287 ex:10293 ex:10296 ex:10310 ex:10313 ex:10318 ex:10320 ex:10577 ex:10582 ex:10336 ex:10342 ex:10349 ex:10356 ex:10360 ex:10364 ex:10371 ex:10377 ex:10589 ex:10591 ex:10447 ex:10452 ex:10456 ex:10459 ex:10474 ex:10478 ex:10480 ex:10486 ex:10625 ex:10632 ex:21241 ex:21232 ex:21234 ex:21214 ex:21130 ) ;
@@ -3112,7 +3095,7 @@ ex:user:ksfboi a ex:Player ;
     FOAF:name "Kyle_Frandanisa"^^xsd:string .
 
 ex:verbo a ex:Player ;
-    DBpedia:country dbp:Canada ;
+    DBpedia:country ex:Canada ;
     ex:PlayerID "verbo"^^xsd:string ;
     ex:playedMatches ( ex:10259 ex:10270 ex:10278 ex:10289 ex:10291 ex:10298 ex:10304 ex:10306 ex:10318 ex:10322 ex:10583 ex:10586 ex:10453 ) ;
     ex:role ex:Support ;
@@ -3254,7 +3237,7 @@ ex:zappis a ex:Player ;
     FOAF:name "Joonas_Alakurtti"^^xsd:string .
 
 ex:zebbosai a ex:Player ;
-    DBpedia:country dbp:Sweden ;
+    DBpedia:country ex:Sweden ;
     ex:PlayerID "zebbosai"^^xsd:string ;
     ex:playedMatches ( ex:10226 ex:10230 ex:10236 ex:10242 ex:10252 ex:10257 ex:10260 ex:10265 ex:10568 ex:10575 ex:10282 ex:10287 ex:10293 ex:10296 ex:10310 ex:10313 ex:10318 ex:10320 ex:10577 ex:10582 ex:10336 ex:10342 ex:10349 ex:10356 ex:10360 ex:10364 ex:10371 ex:10377 ex:10589 ex:10591 ex:10447 ex:10452 ex:10456 ex:10459 ex:10474 ex:10478 ex:10480 ex:10486 ex:10625 ex:10632 ) ;
     ex:role ex:Support ;
@@ -3319,6 +3302,15 @@ dbp:Africa a dbp:Continent,
         Schema:Place ;
     FOAF:name "Africa"^^xsd:string .
 
+dbp:Australia a dbp:Country,
+        dbp:Location,
+        dbp:Place,
+        dbp:PopulatedPlace,
+        Wikidata:Q6256,
+        Schema:Country,
+        Schema:Place ;
+    FOAF:name "Australia"^^xsd:string .
+
 dbp:Egypt a dbp:Country,
         dbp:Location,
         dbp:Place,
@@ -3382,7 +3374,7 @@ dbp:Mexico a dbp:Country,
         Wikidata:Q6256,
         Schema:Country,
         Schema:Place ;
-    FOAF:name "Mexico"^^xsd:string .
+    FOAF:name "México"^^xsd:string .
 
 dbp:Nepal a dbp:Country,
         dbp:Location,
@@ -3422,15 +3414,6 @@ ex:Route_66 a ex:Map ;
 ex:Watchpoint:_Gibraltar a ex:Map ;
     ex:hasLocation dbp:United_Kingdom ;
     FOAF:name "Watchpoint: Gibraltar"^^xsd:string .
-
-dbp:Australia a dbp:Country,
-        dbp:Location,
-        dbp:Place,
-        dbp:PopulatedPlace,
-        Wikidata:Q6256,
-        Schema:Country,
-        Schema:Place ;
-    FOAF:name "Australia"^^xsd:string .
 
 ex:Tournament a owl:Class .
 
@@ -4249,14 +4232,6 @@ ex:35544 a ex:Match ;
     ex:matchTeamOne ex:Washington_Justice ;
     ex:matchTeamTwo ex:Los_Angeles_Valiant ;
     ex:matchWinner ex:Washington_Justice .
-
-dbp:Canada a dbp:Country,
-        dbp:Location,
-        dbp:Place,
-        dbp:PopulatedPlace,
-        Wikidata:Q6256,
-        Schema:Country,
-        Schema:Place .
 
 ex:10356 a ex:Match ;
     ex:matchID "10356"^^xsd:string ;
@@ -6930,6 +6905,8 @@ ex:35553 a ex:Match ;
     ex:matchTeamTwo ex:Shanghai_Dragons ;
     ex:matchWinner ex:Seoul_Dynasty .
 
+dbp:Country owl:sameAs Schema:Country .
+
 ex:10223 a ex:Match ;
     ex:matchID "10223"^^xsd:string ;
     ex:matchMap ex:Dorado ;
@@ -8654,8 +8631,6 @@ ex:Numbani a ex:Map ;
     ex:hasLocation dbp:Africa ;
     FOAF:name "Numbani"^^xsd:string .
 
-dbp:Country owl:sameAs Schema:Country .
-
 ex:10225 a ex:Match ;
     ex:matchID "10225"^^xsd:string ;
     ex:matchMap ex:Junkertown ;
@@ -10128,6 +10103,8 @@ ex:35551 a ex:Match ;
     ex:matchTeamTwo ex:Shanghai_Dragons ;
     ex:matchWinner ex:San_Francisco_Shock .
 
+dbp:Place owl:sameAs Schema:Place .
+
 ex:10229 a ex:Match ;
     ex:matchID "10229"^^xsd:string ;
     ex:matchMap ex:Junkertown ;
@@ -10388,7 +10365,7 @@ ex:Dorado a ex:Map ;
     ex:hasLocation dbp:Mexico ;
     FOAF:name "Dorado"^^xsd:string .
 
-dbp:Place owl:sameAs Schema:Place .
+dbp:Organisation rdfs:subClassOf dbp:Agent .
 
 ex:10264 a ex:Match ;
     ex:matchID "10264"^^xsd:string ;
@@ -10479,8 +10456,6 @@ ex:21515 a ex:Match ;
     ex:matchWinner ex:San_Francisco_Shock .
 
 ex:Map a owl:Class .
-
-dbp:Organisation rdfs:subClassOf dbp:Agent .
 
 ex:10344 a ex:Match ;
     ex:matchID "10344"^^xsd:string ;
@@ -10581,6 +10556,11 @@ dbp:South_Korea a dbp:Country,
         Schema:Country,
         Schema:Place ;
     FOAF:name "South Korea"^^xsd:string .
+
+ex:New_York_Excelsior a Schema:SportsTeam ;
+    ex:hasLocation dbp:United_States ;
+    ex:playedMatches ( ex:13130 ex:13131 ex:10228 ex:10233 ex:10239 ex:10245 ex:10251 ex:10253 ex:10263 ex:10269 ex:10568 ex:10573 ex:10539 ex:10282 ex:10284 ex:10295 ex:10300 ex:10309 ex:10312 ex:10315 ex:10317 ex:10580 ex:10586 ex:10542 ex:10336 ex:10344 ex:10348 ex:10355 ex:10362 ex:10367 ex:10373 ex:10379 ex:10593 ex:10595 ex:10544 ex:10545 ex:10447 ex:10454 ex:10462 ex:10465 ex:10467 ex:10477 ex:10483 ex:10489 ex:10626 ex:10627 ex:10547 ex:10548 ex:30153 ex:30163 ex:30156 ex:30158 ex:21221 ex:21127 ex:21242 ex:21235 ex:21253 ex:21264 ex:21255 ex:20301 ex:21313 ex:21229 ex:21230 ex:21323 ex:21285 ex:21324 ex:21363 ex:20313 ex:20317 ex:21354 ex:21350 ex:21290 ex:21403 ex:21405 ex:21461 ex:21415 ex:20322 ex:21423 ex:21416 ex:21417 ex:21511 ex:21437 ex:21494 ex:21513 ex:30992 ex:30996 ex:31010 ex:31016 ex:31023 ex:31044 ex:32829 ex:32824 ex:34233 ex:34228 ex:34222 ex:34192 ex:34513 ex:34517 ex:34634 ex:34620 ex:34613 ex:34642 ex:34756 ex:34759 ex:34836 ex:34812 ex:34791 ex:34912 ex:34915 ex:34773 ex:34761 ex:35514 ex:35521 ex:35525 ex:35524 ) ;
+    FOAF:name "New York Excelsior" .
 
 ex:Player a owl:Class ;
     rdfs:subClassOf FOAF:Person .

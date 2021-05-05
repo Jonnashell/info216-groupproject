@@ -152,7 +152,7 @@ def get_dbpedia_resources(resources):
     try:
         response = spotlight.annotate(server, text)
         # add this response to the global variable all_resources
-        [all_resources.update({x['surfaceForm']: x}) for x in response]
+        [all_resources.update({x['surfaceForm']: x}) for x in response if x['similarityScore'] > 0.9]
     except Exception as e:
         print('REEEE', e)
 
@@ -249,22 +249,16 @@ for team, team_data in team_results.items():
 
 print("Team triples added to graph.")
 
-# query player names and nationality in DBpedia
+# query player nationalities in DBpedia
 nationalities = set([x['Has nationality'] for x in player_results.values()])
-names = dfs['player'].unique()
 
 get_dbpedia_resources(nationalities)
-get_dbpedia_resources(names)
 
 # Add player triples to graph
 for player, player_data in player_results.items():
 
     # define player_entity
-    try:
-        player_entity = URIRef(all_resources[player]['URI'])
-    except KeyError:
-        # this means player does not exist in DBpedia
-        player_entity = ex.term(player.replace(' ', '_'))
+    player_entity = ex.term(player.replace(' ', '_'))
 
     # define nationality
     try:
@@ -362,7 +356,10 @@ for (index, match_id, map_name, team_one_name, team_two_name,
         g.add((map_entity, FOAF.name, Literal(map_name, datatype=XSD.string)))
 
         # Add map entity location with DBPedia resource
-        map_resource_obj = URIRef(all_resources[map_location]['URI'])
+        try:
+            map_resource_obj = URIRef(all_resources[map_location]['URI'])
+        except KeyError:
+            map_resource_obj = ex.term(map_location)
         g.add((map_entity, ex.hasLocation, map_resource_obj))
 
         # Add types to DBPedia map resource object
