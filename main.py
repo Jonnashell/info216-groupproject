@@ -303,7 +303,7 @@ for player, player_data in player_results.items():
     g.add((player_entity, dbp_o.term('country'), player_nationality))
 
     # get all unique games a player has participated in + team name and heroes played
-    player_games_df = dfs[(dfs.player == 'tobi') & (dfs.hero != 'All Heroes')][
+    player_games_df = dfs[(dfs.player == player) & (dfs.hero != 'All Heroes')][
         ['match_id', 'team', 'hero']].drop_duplicates()
 
     # add all unique games a player has participated in to a blank node
