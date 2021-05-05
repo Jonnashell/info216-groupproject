@@ -15,7 +15,7 @@ from numpy import nan
 # Note: importing team_results, and player_results may takes a bit of time.
 #       This is due to the API terms of use described in get_liquipedia_data.py
 
-# import datasets to one big df
+# import datasets and merge to a single Pandas DataFrame
 all_dfs = []
 phs_dir = os.getcwd() + r'\phs_data'
 for sub_dir in os.listdir(phs_dir):
@@ -171,7 +171,7 @@ def get_dbpedia_resources(resources):
     # make sure resource is not already queried, to avoid unnecessary API requests
     resources = [str(x) for x in resources if x not in queried_resources]
     # verify that we still have some resources after filtering out already queried ones
-    if resources == []:
+    if not resources:
         print('All resources were already queried')
         return None
     # add resources to queried_resources
@@ -184,7 +184,7 @@ def get_dbpedia_resources(resources):
         # add this response to the global variable all_resources
         [all_resources.update({x['surfaceForm']: x}) for x in response if x['similarityScore'] > 0.9]
     except Exception as e:
-        print('REEEE', e)
+        print('An exception occurred: ', e)
 
 
 def connect_dbpedia_resources(team_data, keys):
@@ -284,13 +284,12 @@ stop = timeit.default_timer()
 print('Time: ', stop - start)
 
 # query player nationalities in DBpedia
-nationalities = set([x['Has nationality'] for x in player_results.values()])
+nationalities = set([player['Has nationality'] for player in player_results.values()])
 get_dbpedia_resources(nationalities)
 
 start = timeit.default_timer()
 # Add player triples to graph
 for player, player_data in player_results.items():
-
     # define player_entity
     player_entity = ex.term(player.replace(' ', '_'))
 
@@ -301,7 +300,7 @@ for player, player_data in player_results.items():
         # this means the nationality does not exist in DBpedia
         player_nationality = ex.term(player_data['Has nationality'].replace(' ', '_'))
     
-    # Add birthday to graph
+    # Add birthday to player entity
     try:
         birthday = '/'.join(player_data['Has birth day'].split('/')[1:4])
         birthday = datetime.strptime(birthday, '%Y/%m/%d')
@@ -385,7 +384,7 @@ tournament_matches = {}
 start = timeit.default_timer()
 # Adding match, tournament and map triples to graph
 for (index, match_id, map_name, team_one_name, team_two_name,
-    match_winner, match_start_time, tournament) in match_df.itertuples():
+     match_winner, match_start_time, tournament) in match_df.itertuples():
     # Create a term for the Match instance subject
     match_entity = ex.term(str(match_id))
 
@@ -475,17 +474,12 @@ for value in tournament_matches.keys():
     # add blank node to team_entity's played matches
     g.add((value, ex.tournamentMatches, b))
 
-
-
-
-
 print("Match, tournament and map triples added to graph")
 stop = timeit.default_timer()
 print('Time: ', stop - start)
 
-# Noen inferred triples fucker opp shitten til WebVowl, aner ikke hvorfor.
-# Kan ha noe med at den oppretter sånn 5000 tripler tho...
-# Add inferred triples to the graph
+
+# Add inferred triples to the graph (NB! OWL2 is not compatible with WebVOWL)
 # owl = owlrl.CombinedClosure.RDFS_OWLRL_Semantics(g, False, False, False)
 # owl.closure()
 # owl.flush_stored_triples()
@@ -493,4 +487,4 @@ print('Time: ', stop - start)
 
 # Print the graph to terminal
 g.serialize(destination='graph.ttl', format='ttl')
-# print(g.serialize(format='ttl').decode('utf-8'))
+print(g.serialize(format='ttl').decode('utf-8'))

@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806c4e81-7990-4cd1-809f-f24412239e56" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/get_liquipedia_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/get_liquipedia_data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_results.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +112,7 @@
       <workItem from="1619547441382" duration="40507000" />
       <workItem from="1619703183878" duration="830000" />
       <workItem from="1620136803814" duration="17377000" />
+      <workItem from="1620245396090" duration="363000" />
     </task>
     <servers />
   </component>
