@@ -211,6 +211,7 @@ for team, team_data in team_results.items():
         team_entity = ex.term(team_name)
         # add type
         g.add((team_entity, RDF.type, schema.SportsTeam))
+        g.add((team_entity, RDF.type, dbp.SportsTeam))
         
     # add team name
     g.add((team_entity, FOAF.name, Literal(team)))
@@ -308,9 +309,25 @@ for player, player_data in player_results.items():
     # add the blank node to player_entity's played matches
     g.add((player_entity, ex.playedMatches, b))
 
-    # Add team to player entity
+    # Add team to player entity (using existing team_entity in graph)
+    try:
+        player_team = player_games_df.iloc[-1, 1]  # team most recently played with
+        team_entity = [s for s, p, o in g if p == FOAF.name and o == Literal(player_team)]  # Get team entity from graph
+        g.add((player_entity, ex.playsFor, team_entity[0]))
+    except IndexError:
+        print(f"Could not find team for player {player}")
 
-    # Add hero ratios to player entity
+    # Add player's hero pick rates to a blank node
+    total_nr_picked_heroes = player_games_df.hero.value_counts().sum()
+    hero_pick_rates = [Literal(f"{hero} pick rate: {round((count / total_nr_picked_heroes) * 100, 5)}%",
+                               datatype=XSD.string) for
+                       hero, count in player_games_df.hero.value_counts().iteritems()]
+    b = BNode()
+    Collection(g, b, hero_pick_rates)
+
+    # Add the blank node pwith hero ratios to player_entity
+    g.add((player_entity, ex.playedHeroes, b))
+
 
 
 print("Player triples added to graph.")
