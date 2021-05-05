@@ -79,6 +79,8 @@ if not use_cache:
         results = {}
         for request in all_requests:
             for entity, data in request.json()['query']['results'].items():
+                if 'Has id' in data['printouts'].keys() and entity.lower() != str(data['printouts']['Has id'][0]).lower():
+                    entity = data['printouts']['Has id'][0]
                 results[entity.lower()] = {}
                 for prop, value in data['printouts'].items():
                     if len(value) > 0:
@@ -125,7 +127,7 @@ if not use_cache:
     team_list = list(dfs.team.unique())
 
     # players
-    printouts = '?Has name|?Has birth day|?Has age|?Has nationality|?Has ids|?Has role|?Modification date'
+    printouts = '?Has name|?Has birth day|?Has age|?Has nationality|?Has id|?Has role|?Modification date'
     player_results = get_entity_data(player_list, printouts, 'Has_id_sort')
 
     # teams
