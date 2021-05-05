@@ -41,6 +41,11 @@ dfs.player = dfs.player.apply(lambda x: x.lower())
 
 # Instantiate graph
 g = Graph()
+g.add(())
+<http://xmlns.com/foaf/0.1/> rdf:type owl:Ontology ;
+                             dc:title "Friend of a Friend (FOAF) vocabulary"@en;
+                             dc:description "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language."@en .
+
 
 # Namespaces
 ex = Namespace('http://example.org/')
@@ -60,20 +65,32 @@ g.bind('owl', OWL)
 
 # Classes and Class Properties. Kan legges inn i egen ontologi-fil kanskje??
 # RDFS Player-related class properties
-g.add((ex.Player, RDF.type, OWL.Class))
+g.add((FOAF.Person, RDFS.subClassOf, dbp.Agent))
 g.add((ex.Player, RDFS.subClassOf, FOAF.Person))
+g.add((ex.Player, RDF.type, OWL.Class))
 g.add((FOAF.name, RDFS.domain, ex.Player))
 g.add((FOAF.name, RDF.type, OWL.DatatypeProperty))
-g.add((FOAF.Person, RDFS.subClassOf, dbp.Agent))
 g.add((ex.PlayerID, RDF.type, OWL.DatatypeProperty))
 g.add((ex.PlayerID, RDFS.domain, ex.Player))
 g.add((ex.PlayerID, RDFS.range, RDFS.Literal))
+g.add((FOAF.age, RDFS.domain, ex.Player))
+g.add((FOAF.age, RDFS.range, RDFS.Literal))
+g.add((ex.birthday, RDFS.domain, ex.Player))
+g.add((ex.birthday, RDFS.range, RDFS.Literal))
+g.add((ex.playedHeroes, RDFS.domain, ex.Player))
+g.add((ex.playedHeroes, RDFS.range, RDFS.Literal))
+g.add((ex.role, RDFS.domain, ex.Player))
+g.add((ex.role, RDFS.range, RDFS.Literal))
 g.add((ex.playsFor, RDFS.domain, ex.Player))
 g.add((ex.playsFor, RDFS.range, dbp.SportsTeam))
 g.add((ex.playedAgainst, RDFS.subClassOf, FOAF.knows))
 g.add((ex.playedAgainst, RDF.type, OWL.SymmetricProperty))
 g.add((ex.playedAgainst, RDFS.domain, ex.Player))
 g.add((ex.playedAgainst, RDFS.range, ex.Player))
+g.add((ex.playedWith, RDFS.subClassOf, FOAF.knows))
+g.add((ex.playedWith, RDF.type, OWL.SymmetricProperty))
+g.add((ex.playedWith, RDFS.domain, ex.Player))
+g.add((ex.playedWith, RDFS.range, ex.Player))
 g.add((ex.playedMatches, RDFS.domain, ex.Player))
 g.add((ex.playedMatches, RDFS.range, ex.Match))
 
@@ -85,6 +102,12 @@ g.add((FOAF.name, RDFS.domain, schema.SportsTeam))
 g.add((ex.playedAgainst, RDFS.domain, dbp.SportsTeam))
 g.add((ex.playedAgainst, RDFS.range, dbp.SportsTeam))
 g.add((ex.playedMatches, RDFS.domain, dbp.SportsTeam))
+g.add((ex.playedMatches, RDFS.range, ex.matchID))
+g.add((ex.hasRegion, RDFS.domain, dbp.SportsTeam))
+g.add((ex.hasRegion, RDFS.range, dbp.Continent))
+g.add((ex.hasRegion, RDFS.range, schema.Continent))
+g.add((ex.hasRegion, RDFS.range, schema.Location))
+g.add((ex.hasRegion, RDFS.range, dbp.Location))
 
 # RDFS Match-related class properties
 g.add((ex.Match, RDF.type, OWL.Class))
@@ -102,22 +125,33 @@ g.add((ex.matchTeamOne, RDFS.range, dbp.SportsTeam))
 g.add((ex.matchTeamTwo, RDFS.domain, ex.Match))
 g.add((ex.matchTeamTwo, RDFS.range, dbp.SportsTeam))
 g.add((ex.matchStartTime, RDFS.domain, ex.Match))
+g.add((ex.matchStartTime, RDFS.range, RDFS.Literal))
+
 
 # RDFS Map-related class properties
 g.add((ex.Map, RDF.type, OWL.Class))
 g.add((ex.hasLocation, RDFS.domain, ex.Map))
 g.add((ex.hasLocation, RDFS.domain, dbp.SportsTeam))
+g.add((ex.hasLocation, RDFS.domain, schema.SportsTeam))
 g.add((ex.hasLocation, RDFS.range, dbp.Country))
+g.add((ex.hasLocation, RDFS.range, schema.Country))
 g.add((FOAF.name, RDFS.domain, ex.Map))
 
 # RDFS Tournament-related class properties
 g.add((ex.Tournament, RDF.type, OWL.Class))
 g.add((FOAF.name, RDFS.domain, ex.Tournament))
-g.add((ex.tournamentMatches, RDFS.domain, ex.matchID))  # usikker her, trenger å akseptere mange matchID's i array e.l
+g.add((ex.tournamentMatches, RDFS.domain, ex.matchID))
+g.add((ex.tournamentWinner, RDFS.domain, ex.Tournament))
+g.add((ex.tournamentWinner, RDFS.range, dbp.SportsTeam))
+g.add((ex.tournamentWinner, RDFS.range, schema.SportsTeam))
+g.add((ex.tournamentPrizePool, RDFS.domain, ex.Tournament))
+g.add((ex.tournamentPrizePool, RDFS.range, RDFS.Literal))
 
 # Other class properties
 g.add((dbp.Country, OWL.sameAs, schema.Country))
 g.add((dbp.Place, OWL.sameAs, schema.Place))
+g.add((dbp.Country, ex.hasRegion, dbp.Continent))
+g.add((schema.Country, ex.hasRegion, schema.Continent))
 
 print("Inital Classes and Class properties added to graph. ")
 
@@ -286,7 +320,7 @@ for player, player_data in player_results.items():
     
     # Add role to graph
     try:
-        g.add((player_entity, ex.role, ex.term(player_data['Has role'].replace(' ', '_'))))
+        g.add((player_entity, ex.role, Literal(str(player_data['Has role'].replace(' ', '_')), datatype=XSD.string)))
     except KeyError:
         # this means there is no data on the player's main role in DBpedia
         pass
@@ -327,7 +361,6 @@ for player, player_data in player_results.items():
 
     # Add the blank node pwith hero ratios to player_entity
     g.add((player_entity, ex.playedHeroes, b))
-
 
 
 print("Player triples added to graph.")
@@ -402,16 +435,16 @@ for (index, match_id, map_name, team_one_name, team_two_name,
         tournament_entity_name = tournament.replace(" ", "_")
         tournament_entity = ex.term(tournament_entity_name)
         if (tournament_entity, RDF.type, ex.Tournament) not in g:
-            tournament_matches[tournament_entity] = []
+            # tournament_matches[tournament_entity] = []
             g.add((tournament_entity, RDF.type, ex.Tournament))
             g.add((tournament_entity, FOAF.name, Literal(tournament, datatype=XSD.string)))
 
-        tounament_matches[tournament_entity].append(match_id)
+        # tournament_matches[tournament_entity].append(match_id)
 
 
 # Add match_ids to tournament entities
-for key, value in tournament_matches.iteritems():
-    pass
+# for key, value in tournament_matches.iteritems():
+#     pass
     # g.add((tournament_entity, ex.tournamentMatches, ex.term(match_id)))
 
 
