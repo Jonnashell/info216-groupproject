@@ -40,6 +40,7 @@ dfs = pd.concat(all_dfs)
 # make all player names lowercase, because of difference in Liquipedia and dataset
 dfs.player = dfs.player.apply(lambda x: x.lower())
 
+
 # Instantiate graph
 g = Graph()
 
@@ -57,9 +58,10 @@ g.bind('dbp', dbp)
 g.bind('Schema', schema)
 g.bind('DBpedia', dbp_o)
 g.bind('Wikidata', wd)
-g.bind('owl', OWL)
+g.bind('OWL', OWL)
 
-# Classes and Class Properties. Kan legges inn i egen ontologi-fil kanskje??
+
+# Classes and Class Properties for esports
 # RDFS Player-related class properties
 g.add((FOAF.Person, RDFS.subClassOf, dbp.Agent))
 g.add((ex.Player, RDFS.subClassOf, FOAF.Person))
@@ -122,7 +124,6 @@ g.add((ex.matchTeamTwo, RDFS.domain, ex.Match))
 g.add((ex.matchTeamTwo, RDFS.range, dbp.SportsTeam))
 g.add((ex.matchStartTime, RDFS.domain, ex.Match))
 g.add((ex.matchStartTime, RDFS.range, RDFS.Literal))
-
 
 # RDFS Map-related class properties
 g.add((ex.Map, RDF.type, OWL.Class))
@@ -459,11 +460,11 @@ for (index, match_id, map_name, team_one_name, team_two_name,
         tournament_entity = ex.term(tournament_entity_name)
         if (tournament_entity, RDF.type, ex.Tournament) not in g:
             tournament_matches[tournament_entity] = []
-
             g.add((tournament_entity, RDF.type, ex.Tournament))
             g.add((tournament_entity, FOAF.name, Literal(tournament, datatype=XSD.string)))
 
         tournament_matches[tournament_entity].append(match_id)
+
 
 # Add match_ids to tournament entities
 for value in tournament_matches.keys():
@@ -473,6 +474,15 @@ for value in tournament_matches.keys():
     Collection(g, b, t_matches)
     # add blank node to team_entity's played matches
     g.add((value, ex.tournamentMatches, b))
+
+for tournament_entity in tournament_matches.keys():
+    # add all match_ids for matches played in a tournament to a collection with a blank node
+    b = BNode()
+    t_matches = [ex.term(str(match)) for match in tournament_matches[tournament_entity]]
+    Collection(g, b, t_matches)
+    # add blank node to team_entity's played matches
+    g.add((tournament_entity, ex.tournamentMatches, b))
+
 
 print("Match, tournament and map triples added to graph")
 stop = timeit.default_timer()
