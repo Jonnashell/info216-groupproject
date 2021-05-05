@@ -91,6 +91,9 @@ g.add((ex.playedWith, RDFS.domain, ex.Player))
 g.add((ex.playedWith, RDFS.range, ex.Player))
 g.add((ex.playedMatches, RDFS.domain, ex.Player))
 g.add((ex.playedMatches, RDFS.range, ex.Match))
+g.add((schema.nationality, RDFS.domain, ex.Player))
+g.add((schema.nationality, RDFS.range, schema.Country))
+g.add((schema.nationality, RDFS.range, dbp.Country))
 
 # RDFS Team-related class properties
 g.add((dbp.Organisation, RDFS.subClassOf, dbp.Agent))
@@ -300,6 +303,7 @@ for player, player_data in player_results.items():
     except KeyError:
         # this means the nationality does not exist in DBpedia
         player_nationality = ex.term(player_data['Has nationality'].replace(' ', '_'))
+        g.add((player_entity, schema.nationality, player_nationality))
     
     # Add birthday to player entity
     try:
