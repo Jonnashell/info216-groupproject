@@ -56,7 +56,7 @@ g.bind('FOAF', FOAF)
 g.bind('ex', ex)
 g.bind('DBpedia', dbp)
 g.bind('Schema', schema)
-g.bind('dbp_o', dbp_o)
+g.bind('DBpediaOntology', dbp_o)
 g.bind('Wikidata', wd)
 g.bind('OWL', OWL)
 
@@ -167,8 +167,7 @@ all_resources = {}
 def get_dbpedia_resources(resources):
     """
     Requests DBpedia's API with the spotlight module to gather data about resources
-    :param resources: list of resources to query (cannot contain list of lists)
-    :return list of dicts: response from DBpedia's API
+    :param resources: iterable object of resources to query (cannot contain list of lists)
     """
     global queried_resources
     server = "https://api.dbpedia-spotlight.org/en/annotate"
@@ -249,7 +248,7 @@ for team, team_data in team_results.items():
         g.add((team_entity, RDF.type, dbp.SportsTeam))
         
     # add team name
-    g.add((team_entity, FOAF.name, Literal(team)))
+    g.add((team_entity, FOAF.name, Literal(team, datatype=XSD.string)))
 
     # loop over all resources connected to team_data
     for key, response in resources.items():
@@ -290,8 +289,6 @@ print('Time: ', stop - start)
 # query player nationalities in DBpedia
 nationalities = set([player['Has nationality'] for player in player_results.values()])
 [get_dbpedia_resources([n]) for n in nationalities]
-
-input('PAUSE')
 
 start = timeit.default_timer()
 # Add player triples to graph
@@ -350,7 +347,7 @@ for player, player_data in player_results.items():
     # Add team to player entity (using existing team_entity in graph)
     try:
         player_team = player_games_df.iloc[-1, 1]  # team most recently played with
-        team_entity = [s for s in g.subjects(predicate=FOAF.name, object=Literal(player_team))]
+        team_entity = [s for s in g.subjects(predicate=FOAF.name, object=Literal(player_team, datatype=XSD.string))]
         g.add((player_entity, ex.playsFor, team_entity[0]))
     except IndexError:
         print(f"Could not find team for player {player}")
@@ -393,6 +390,16 @@ for (index, match_id, map_name, team_one_name, team_two_name,
     # Create a term for the Match instance subject
     match_entity = ex.term(str(match_id))
 
+    # get team_entities before we rename terms
+    try:
+        team_one_entity = [s for s in g.subjects(predicate=FOAF.name, object=Literal(team_one_name, datatype=XSD.string))][0]
+        team_two_entity = [s for s in g.subjects(predicate=FOAF.name, object=Literal(team_two_name, datatype=XSD.string))][0]
+    except IndexError as e:
+        print('Could not find team_entity for a team: {}'.format(e))
+    except Exception as e:
+        print('Exception: Could not find team_entity for a team: {}'.format(e))
+
+    # create team_one_df and team_two_df before we rename terms
     temp = dfs.drop_duplicates(subset=['player', 'match_id', 'team'])
     team_one_df = temp[(temp.match_id == match_id) & (temp.team.str.lower() == team_one_name.lower())]
 
@@ -453,8 +460,8 @@ for (index, match_id, map_name, team_one_name, team_two_name,
 
     # Add more Match instance properties
     g.add((match_entity, ex.matchMap, ex.term(map_entity_name)))
-    g.add((match_entity, ex.matchTeamOne, ex.term(team_one_name)))
-    g.add((match_entity, ex.matchTeamTwo, ex.term(team_two_name)))
+    g.add((match_entity, ex.matchTeamOne, team_one_entity))
+    g.add((match_entity, ex.matchTeamTwo, team_two_entity))
     g.add((match_entity, ex.matchWinner, ex.term(match_winner)))
     g.add((match_entity, ex.matchStartTime, Literal(match_start_time, datatype=XSD.string)))
 
@@ -501,4 +508,5 @@ print('Time: ', stop - start)
 
 # Print the graph to terminal
 g.serialize(destination='graph.ttl', format='ttl')
-print(g.serialize(format='ttl').decode('utf-8'))
+# leave commented until we deliver assignment
+# print(g.serialize(format='ttl').decode('utf-8'))
