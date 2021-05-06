@@ -12,7 +12,7 @@ from rdflib.namespace import RDF, RDFS, XSD, FOAF, OWL
 from get_liquipedia_data import team_results, player_results, map_results
 from numpy import nan
 
-# Note: importing team_results, and player_results may takes a bit of time.
+# Note: importing team_results, and player_results may take a bit of time.
 #       This is due to the API terms of use described in get_liquipedia_data.py
 
 # import datasets and merge to a single Pandas DataFrame
@@ -419,21 +419,13 @@ for (index, match_id, map_name, team_one_name, team_two_name,
     team_two_df = temp[(temp.match_id == match_id) & (temp.team.str.lower() == team_two_name.lower())]
 
     # Add players pr. team
-    player_entities1 = []
-    for player in team_one_df.player.to_list():
-        _ = [player_entities1.append(s) for s in g.subjects(predicate=ex.PlayerID, object=Literal(player, datatype=XSD.string))]
+    for i, player in enumerate(team_one_df.player.to_list(), 1):
+        _ = [g.add((match_entity, ex.term('matchTeamOnePlayer{}'.format(i)), s)) for s in g.subjects(predicate=ex.PlayerID,
+                                                                                                     object=Literal(player, datatype=XSD.string))]
 
-    b1 = BNode()
-    Collection(g, b1, player_entities1)
-    g.add((match_entity, ex.matchTeamOnePlayers, b1))
-
-    player_entities2 = []
-    for player in team_two_df.player.to_list():
-        _ = [player_entities2.append(s) for s in g.subjects(predicate=ex.PlayerID, object=Literal(player, datatype=XSD.string))]
-
-    b2 = BNode()
-    Collection(g, b2, player_entities2)
-    g.add((match_entity, ex.matchTeamTwoPlayers, b2))
+    for i, player in enumerate(team_two_df.player.to_list(), 1):
+        _ = [g.add((match_entity, ex.term('matchTeamTwoPlayer{}'.format(i)), s)) for s in g.subjects(predicate=ex.PlayerID,
+                                                                                                     object=Literal(player, datatype=XSD.string))]
 
     # Adding Map instances with properties to graph
     map_entity_name = map_name.replace(' ', '_').replace("'", "")
