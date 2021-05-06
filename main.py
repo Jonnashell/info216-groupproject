@@ -289,7 +289,9 @@ print('Time: ', stop - start)
 
 # query player nationalities in DBpedia
 nationalities = set([player['Has nationality'] for player in player_results.values()])
-get_dbpedia_resources(nationalities)
+[get_dbpedia_resources([n]) for n in nationalities]
+
+input('PAUSE')
 
 start = timeit.default_timer()
 # Add player triples to graph
