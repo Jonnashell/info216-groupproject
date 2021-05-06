@@ -150,4 +150,15 @@ with open('map_results.json', 'r', encoding='utf-8') as f:
     map_results = json.load(f)
 
 
-player_results['frd'] = {"Has name": "Nathan Goebel", "Has birth day": "1/1999/8/11", "Has age": 22, "Has nationality": "United States", "Has id": 'frd', "Has role": "Tank"}
+player_results['frd'] = {"Has name": "Nathan Goebel", "Has birth day": "1/1999/8/11", "Has age": 21, "Has nationality": "United States", "Has id": 'frd', "Has role": "Tank"}
+player_results['freefeel'] = {"Has name": "Xu Peixuan", "Has birth day": "1/1995/7/29", "Has age": 25, "Has nationality": "China", "Has id": 'B612', "Has role": "Support"}
+player_results['snt'] = {"Has name": "Kim Sung-hoon", "Has birth day": "1/1994/4/13", "Has age": 27, "Has nationality": "South Korea", "Has id": 'aWesomeGuy', "Has role": "Coach"}
+player_results['mouffin'] = {"Has name": "Walid Bassal", "Has nationality": "North America", "Has id": 'Moud', "Has role": "Tank"}
+player_results['l1rs'] = {"Has name": "Kim Seung-hyun", "Has birth day": "1/2000/9/10", "Has age": 20, "Has nationality": "South Korea", "Has id": 'Ir1s', "Has role": "Support"}
+player_results['blase'] = {"Has name": "Jeffrey Tsang", "Has birth day": "1/1999/2/22", "Has age": 22, "Has nationality": "South Korea", "Has id": 'blasé', "Has role": "DPS"}
+player_results['fiveking'] = {"Has name": "Chen Zhaoyu", "Has birth day": "1/1997/12/8", "Has age": 23, "Has nationality": "China", "Has id": "SIO", "Has role": "Support"}
+
+
+
+
+
