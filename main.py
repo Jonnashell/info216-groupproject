@@ -303,8 +303,7 @@ for player, player_data in player_results.items():
     except KeyError:
         # this means the nationality does not exist in DBpedia
         player_nationality = ex.term(player_data['Has nationality'].replace(' ', '_'))
-        g.add((player_entity, schema.nationality, player_nationality))
-    
+
     # Add birthday to player entity
     try:
         birthday = '/'.join(player_data['Has birth day'].split('/')[1:4])
@@ -356,9 +355,8 @@ for player, player_data in player_results.items():
 
     # Add player's hero pick rates to a blank node
     total_nr_picked_heroes = player_games_df.hero.value_counts().sum()
-    hero_pick_rates = [Literal(f"{hero} pick rate: {round((count / total_nr_picked_heroes) * 100, 5)}%",
-                               datatype=XSD.string) for
-                       hero, count in player_games_df.hero.value_counts().iteritems()]
+    hero_pick_rates = [Literal(f"{hero} pick rate: {round((count / total_nr_picked_heroes) * 100, 5)}%",datatype=XSD.string)
+                       for hero, count in player_games_df.hero.value_counts().iteritems()]
     b = BNode()
     Collection(g, b, hero_pick_rates)
 
