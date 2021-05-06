@@ -56,7 +56,7 @@ g.bind('FOAF', FOAF)
 g.bind('ex', ex)
 g.bind('DBpedia', dbp)
 g.bind('Schema', schema)
-g.bind('DBpediaOntology', dbp_o)
+g.bind('dbp_o', dbp_o)
 g.bind('Wikidata', wd)
 g.bind('OWL', OWL)
 
@@ -175,7 +175,7 @@ def get_dbpedia_resources(resources):
     resources = [str(x) for x in resources if x not in queried_resources]
     # verify that we still have some resources after filtering out already queried ones
     if not resources:
-        print('All resources were already queried')
+        # print('All resources were already queried')
         return None
     # add resources to queried_resources
     queried_resources.update(resources)
@@ -185,7 +185,10 @@ def get_dbpedia_resources(resources):
     try:
         response = spotlight.annotate(server, text)
         # add this response to the global variable all_resources
-        [all_resources.update({x['surfaceForm']: x}) for x in response if x['similarityScore'] > 0.9]
+        [all_resources.update({x['surfaceForm']: x}) for x in response
+            if x['similarityScore'] > 0.9 or 'Schema:SportsTeam' in x['types'].split(',')]
+    except spotlight.SpotlightException:
+        pass # this means no resource was found in spotlight response. can be ignored
     except Exception as e:
         print('An exception occurred: ', e)
 
@@ -216,6 +219,16 @@ def connect_dbpedia_resources(team_data, keys):
             result.update(sponsor_dict)
     return result
 
+# Query DBPedia Spotlight for team resources
+_ = [get_dbpedia_resources([team.title()]) for team in team_results.keys()]
+
+# Query DBPedia Spotlight for map location resources
+all_map_locations = set([map_name['Has location'] for map_name in map_results.values()])
+get_dbpedia_resources([all_map_locations])
+
+# Query DBPedia Spotlight for player nationalities
+nationalities = set([player['Has nationality'] for player in player_results.values()])
+_ = [get_dbpedia_resources([n]) for n in nationalities]
 
 # Add team triples to graph
 start = timeit.default_timer()
@@ -286,12 +299,10 @@ print("Team triples added to graph.")
 stop = timeit.default_timer()
 print('Time: ', stop - start)
 
-# query player nationalities in DBpedia
-nationalities = set([player['Has nationality'] for player in player_results.values()])
-[get_dbpedia_resources([n]) for n in nationalities]
 
-start = timeit.default_timer()
+
 # Add player triples to graph
+start = timeit.default_timer()
 for player, player_data in player_results.items():
     # define player_entity
     player_entity = ex.term(player.replace(' ', '_'))
@@ -377,45 +388,35 @@ match_df["tournament"] = "Overwatch League " + match_df['match_start_date'].str.
 match_df.drop_duplicates(subset=["match_id"], keep="first", ignore_index=True, inplace=True)
 
 
-# Query DBPedia Spotlight for map location resources
-all_map_locations = set([map_name['Has location'] for map_name in map_results.values()])
-get_dbpedia_resources([all_map_locations])
-
 tournament_matches = {}
 
-start = timeit.default_timer()
 # Adding match, tournament and map triples to graph
+start = timeit.default_timer()
 for (index, match_id, map_name, team_one_name, team_two_name,
      match_winner, match_start_time, tournament) in match_df.itertuples():
     # Create a term for the Match instance subject
     match_entity = ex.term(str(match_id))
 
-    # get team_entities before we rename terms
+    # get team entities from graph
     try:
         team_one_entity = [s for s in g.subjects(predicate=FOAF.name, object=Literal(team_one_name, datatype=XSD.string))][0]
         team_two_entity = [s for s in g.subjects(predicate=FOAF.name, object=Literal(team_two_name, datatype=XSD.string))][0]
+        match_winner_entity = [s for s in g.subjects(predicate=FOAF.name, object=Literal(match_winner, datatype=XSD.string))][0]
     except IndexError as e:
-        print('Could not find team_entity for a team: {}'.format(e))
+        print('Could not find entity for a team: {}'.format(e))
     except Exception as e:
-        print('Exception: Could not find team_entity for a team: {}'.format(e))
+        print('Exception: Could not find entity for a team: {}'.format(e))
 
-    # create team_one_df and team_two_df before we rename terms
+    # Add Match instances with properties to graph
+    g.add((match_entity, RDF.type, ex.Match))
+    g.add((match_entity, ex.matchID, Literal(match_id, datatype=XSD.integer)))
+
+    # Create team_one_df and team_two_df
     temp = dfs.drop_duplicates(subset=['player', 'match_id', 'team'])
     team_one_df = temp[(temp.match_id == match_id) & (temp.team.str.lower() == team_one_name.lower())]
 
     temp = dfs.drop_duplicates(subset=['player', 'match_id', 'team'])
     team_two_df = temp[(temp.match_id == match_id) & (temp.team.str.lower() == team_two_name.lower())]
-
-    # Remove spaces from terms
-    team_one_name = team_one_name.replace(' ', '_')
-    team_two_name = team_two_name.replace(' ', '_')
-    match_winner = match_winner.replace(' ', '_')
-    map_entity_name = map_name.replace(' ', '_')
-    map_entity_name = map_entity_name.replace("'", "")
-
-    # Add Match instances with properties to graph
-    g.add((match_entity, RDF.type, ex.Match))
-    g.add((match_entity, ex.matchID, Literal(match_id, datatype=XSD.string)))
 
     # Add players pr. team
     player_entities1 = []
@@ -435,6 +436,7 @@ for (index, match_id, map_name, team_one_name, team_two_name,
     g.add((match_entity, ex.matchTeamTwoPlayers, b2))
 
     # Adding Map instances with properties to graph
+    map_entity_name = map_name.replace(' ', '_').replace("'", "")
     if (ex.term(map_entity_name), RDF.type, ex.Map) not in g:
         map_entity = ex.term(map_entity_name)
         map_location = map_results[map_name]['Has location']
@@ -462,8 +464,8 @@ for (index, match_id, map_name, team_one_name, team_two_name,
     g.add((match_entity, ex.matchMap, ex.term(map_entity_name)))
     g.add((match_entity, ex.matchTeamOne, team_one_entity))
     g.add((match_entity, ex.matchTeamTwo, team_two_entity))
-    g.add((match_entity, ex.matchWinner, ex.term(match_winner)))
-    g.add((match_entity, ex.matchStartTime, Literal(match_start_time, datatype=XSD.string)))
+    g.add((match_entity, ex.matchWinner, match_winner_entity))
+    g.add((match_entity, ex.matchStartTime, Literal(match_start_time, datatype=XSD.date)))
 
     # Add Tournament instances with properties to graph
     if tournament is not nan:
