@@ -150,10 +150,4 @@ with open('map_results.json', 'r', encoding='utf-8') as f:
     map_results = json.load(f)
 
 
-# Some players have changed their id's after playing an OWL game
-liquipedia_players = set(player_results.keys())
-dataset_players = set(dfs.player.unique())
-
-for player in (dataset_players - liquipedia_players):
-    pass
-    # add each player with their info to 'player_results' dictionary
+player_results['frd'] = {"Has name": "Nathan Goebel", "Has birth day": "1/1999/8/11", "Has age": 22, "Has nationality": "United States", "Has id": 'frd', "Has role": "Tank"}
