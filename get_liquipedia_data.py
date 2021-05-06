@@ -124,7 +124,7 @@ if not use_cache:
     dfs.player.replace('blase', 'blasé', inplace=True)
     dfs.player.replace('frd', 'frdwnr', inplace=True)
     dfs.player.replace('lr1s', 'ir1s', inplace=True)
-    
+
 
     # collect entity lists
     player_list = list(dfs.player.unique())
@@ -156,10 +156,9 @@ with open('map_results.json', 'r', encoding='utf-8') as f:
 # Some players have changed id since they played in OWL.
 # We did manual research to fill in this data, as the Liquipedia API could not provide us this data automatically
 
-# player_results['frd'] = {"Has name": "Nathan Goebel", "Has birth day": "1/1999/8/11", "Has age": 21, "Has nationality": "United States", "Has id": 'frd', "Has role": "Tank"}
-# player_results['blasé'] = {"Has name": "Jeffrey Tsang", "Has birth day": "1/1999/2/22", "Has age": 22, "Has nationality": "South Korea", "Has id": 'blasé', "Has role": "DPS"}
-# player_results['lr1s'] = {"Has name": "Kim Seung-hyun", "Has birth day": "1/2000/9/10", "Has age": 20, "Has nationality": "South Korea", "Has id": 'lr1s', "Has role": "Support"}
-
+player_results['frd'] = {"Has name": "Nathan Goebel", "Has birth day": "1/1999/8/11", "Has age": 21, "Has nationality": "United States", "Has id": 'frd', "Has role": "Tank"}
+player_results['blasé'] = {"Has name": "Jeffrey Tsang", "Has birth day": "1/1999/2/22", "Has age": 22, "Has nationality": "South Korea", "Has id": 'blasé', "Has role": "DPS"}
+player_results['lr1s'] = {"Has name": "Kim Seung-hyun", "Has birth day": "1/2000/9/10", "Has age": 20, "Has nationality": "South Korea", "Has id": 'lr1s', "Has role": "Support"}
 player_results['freefeel'] = {"Has name": "Xu Peixuan", "Has birth day": "1/1995/7/29", "Has age": 25, "Has nationality": "China", "Has id": 'freefeel', "Has role": "Support"}
 player_results['snt'] = {"Has name": "Kim Sung-hoon", "Has birth day": "1/1994/4/13", "Has age": 27, "Has nationality": "South Korea", "Has id": 'snt', "Has role": "Coach"}
 player_results['mouffin'] = {"Has name": "Walid Bassal", "Has nationality": "North America", "Has id": 'mouffin', "Has role": "Tank"}
