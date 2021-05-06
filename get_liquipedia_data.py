@@ -114,7 +114,7 @@ if not use_cache:
         df = pd.concat([pd.read_csv(os.path.join(full_path, x)) for x in os.listdir(full_path)])
         #
         # if dataset is 2020
-        if sub_dir == 'phs_2020':
+        if sub_dir == 'phs_2020' or sub_dir == 'phs_2021':
             df.rename(columns={'esports_match_id': 'match_id', 'tournament_title': 'stage',
                                'team_name': 'team', 'player_name': 'player',
                                'hero_name': 'hero'}, inplace=True)
@@ -148,3 +148,12 @@ with open('team_results.json', 'r', encoding='utf-8') as f:
     team_results = json.load(f)
 with open('map_results.json', 'r', encoding='utf-8') as f:
     map_results = json.load(f)
+
+
+# Some players have changed their id's after playing an OWL game
+liquipedia_players = set(player_results.keys())
+dataset_players = set(dfs.player.unique())
+
+for player in (dataset_players - liquipedia_players):
+    pass
+    # add each player with their info to 'player_results' dictionary
