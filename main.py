@@ -29,7 +29,7 @@ for sub_dir in os.listdir(phs_dir):
     df = pd.concat([pd.read_csv(os.path.join(full_path, x)) for x in os.listdir(full_path)])
     #
     # if dataset is 2020
-    if sub_dir == 'phs_2020':
+    if sub_dir == 'phs_2020' or sub_dir == 'phs_2021':
         df.rename(columns={'esports_match_id': 'match_id', 'tournament_title': 'stage',
                            'team_name': 'team', 'player_name': 'player',
                            'hero_name': 'hero'}, inplace=True)
@@ -38,7 +38,7 @@ for sub_dir in os.listdir(phs_dir):
 
 dfs = pd.concat(all_dfs)
 # make all player names lowercase, because of difference in Liquipedia and dataset
-dfs.player = dfs.player.apply(lambda x: x.lower())
+dfs.player = dfs.player.apply(lambda x: str(x).lower())
 
 
 # Instantiate graph
@@ -54,9 +54,9 @@ wd = Namespace('http://www.wikidata.org/entity/')
 # bind namespaces
 g.bind('FOAF', FOAF)
 g.bind('ex', ex)
-g.bind('dbp', dbp)
+g.bind('DBpedia', dbp)
 g.bind('Schema', schema)
-g.bind('DBpedia', dbp_o)
+g.bind('dbp_o', dbp_o)
 g.bind('Wikidata', wd)
 g.bind('OWL', OWL)
 
@@ -331,7 +331,7 @@ for player, player_data in player_results.items():
     g.add((player_entity, RDF.type, ex.Player))
     g.add((player_entity, ex.PlayerID, Literal(player, datatype=XSD.string)))
     g.add((player_entity, FOAF.name, Literal(player_data['Has name'], datatype=XSD.string)))
-    g.add((player_entity, dbp_o.term('country'), player_nationality))
+    g.add((player_entity, dbp_o.term('nationality'), player_nationality))
 
     # get all unique games a player has participated in + team name and heroes played
     player_games_df = dfs[(dfs.player == player) & (dfs.hero != 'All Heroes')][
