@@ -4,6 +4,9 @@
 This repository contains code and other resources for a group project in the course [INFO216](https://www.uib.no/emne/INFO216): Knowledge Graphs at the University of Bergen.
 The project group consists of three UiB students: [Jonatan Berg Romundgard](https://github.com/Jonnashell), [Ole Einar Markeset](https://www.linkedin.com/in/ole-einar-m-6ab735120/) and [Sebastian Einar Røkholt](https://github.com/SebastianRokholt). <br>
 
+For an explanation of what the project is about and our methodology, read the full report [here](https://github.com/Jonnashell/info216-groupproject/blob/master/E-sports%20Knowledge%20Graph%20Project%20Report.pdf).
+
+
 ![Project chart flow](chartflow.png)
 
 
