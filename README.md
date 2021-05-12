@@ -4,10 +4,13 @@
 This repository contains code and other resources for a group project in the course [INFO216](https://www.uib.no/emne/INFO216): Knowledge Graphs at the University of Bergen.
 The project group consists of three UiB students: [Jonatan Berg Romundgard](https://github.com/Jonnashell), [Ole Einar Markeset](https://www.linkedin.com/in/ole-einar-m-6ab735120/) and [Sebastian Einar Røkholt](https://github.com/SebastianRokholt). <br>
 
-For an explanation of what the project is about and our methodology, read the full report [here](https://github.com/Jonnashell/info216-groupproject/blob/master/E-sports%20Knowledge%20Graph%20Project%20Report.pdf).
-
+The aim of this project was to create a Knowledge Graph for the Overwatch E-Sports League using semantic technologies such as Python RDFlib, Blazegraph and DBpedia Spotlight. First, we collected data from The Overwatch Lab and the Liquipedia API. We then built a knowledge graph with players, teams, matches, tournaments and more with Python RDFLib, which generated a graph in Turtle format. This result was then imported to Blazegraph in order to run complex SPARQL queries on the final graph. We were thus able to investigate complex relationships between players, teams, game data and much more.  
 
 ![Project chart flow](chartflow.png)
+
+If you would like to read the rationale and methodology for this project, you may do so [here](https://github.com/Jonnashell/info216-groupproject/blob/master/E-sports%20Knowledge%20Graph%20Project%20Report.pdf).
+
+
 
 
 ## Quick start
